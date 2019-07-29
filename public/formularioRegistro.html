@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body{
+        margin:0;
+        font-family: sans-serif;
+        background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+        background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+    }
+    h1{
+        color: #fff;
+        text-align: center;
+    }
+    .form-register{
+        width:95%;
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        border-radius: 7px;
+    }
+    .form-titulo{
+        background:deepskyblue;
+        color: #fff;
+        padding:20px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 30px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        border-bottom: 5px solid crimson;
+    }
+    .contenedor-inputs{
+        padding: 10px 30px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    input{
+        margin-bottom: 15px;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 3px;
+        border: 1px solid darkgray;
+    }
+    .input-48{
+        width:48%;
+    }
+    .input-100{
+        width:100%;
+    }
+    .btn-enviar{
+        background: crimson;
+        color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 40px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .btn-enviar:active{
+        transform: scale(1.05);
+    }
+    .form-link{
+        width: 100%;
+        margin: 7px;
+        text-align: center;
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+    <form class="form-register">
+        <h2 class="form-titulo">Crea una cuenta</h2>
+        <div class="contenedor-inputs">
+            <input type="text" name= "nombre" placeholder="Nombre" class="input-48" id="nombre" required>
+            <input type="text" name="apellidos" placeholder="Apellidos" class="input-48" id="apellidos" required>
+            <input type="email" name="correo" placeholder="Correo" class="input-100" id="correo" required>
+            <input type="text" name="usuario" placeholder="Usuario" class="input-48" id="usuario" required>
+            <input type="password" name="clave" placeholder="Contraseña" class="input-48" id="clave" required>
+            <input type="text" name="telefono" placeholder="Teléfono" class="input-100" id="telefono" required>
+            <input type="button" value="Registrar" class="btn-enviar" onclick="validar()">
+            <p class="form-link">¿Ya tienes una cuenta? <a href="#">Ingresa aquí</a></p>
+        </div>
+    </form>
+    <script type="text/javascript">
+    // utilizar los atributos maxlength y minlength
+    function validar(){
+        var nombre, apellidos, correo, usuario, clave, telefono, expresion;
+        nombre = document.getElementById("nombre").value;
+        apellidos = document.getElementById("apellidos").value;
+        correo = document.getElementById("correo").value;
+        usuario = document.getElementById("usuario").value;
+        clave = document.getElementById("clave").value;
+        telefono = document.getElementById("telefono").value;
+
+        expresion = /\w+@\w+\.+[a-z]/;  // texto123@hotmail.com
+
+        if(nombre ==="" || apellidos ==="" || correo === "" || usuario === "" || clave === "" || telefono === ""){
+            alert("Todos los campos son obligatorios");
+            return false;
+        }
+        else if(nombre.length>30){ // Si la cantidad de caracteres que tiene supera los 30 
+            alert("El nombre es muy largo");
+            return false;
+        }
+        else if(apellidos.length>30){
+            alert("los apellidos son muy largos");
+            return false;
+        }
+        else if(correo.length>100){ 
+            alert("El correo es muy largo");
+            return false;
+        }
+        else if(!expresion.test(correo)){
+            alert("El correo no es valido");
+            return false;
+        }
+        else if(usuario.length> 20 || clave.length>20){ 
+            alert("El usuario y la clave solo deben tener 20 caracteres como maximo");
+            return false;
+        }
+        else if(telefono.length>10){ 
+            alert("El telefono es muy largo");
+            return false;
+        }
+        else if(isNaN(telefono)){ 
+            alert("El teléfono ingresado no es un número");
+            return false;
+        }
+    }
+    </script>
+</body>
+</html>
