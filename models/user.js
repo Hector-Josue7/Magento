@@ -1,34 +1,24 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-const bcrypt = require('bcrypt-nodejs')
-const crypto = require('crypto')
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
+
+const bcrypt = require('bcryptjs');
+
 const UserSchema = new Schema({
-    email: {type: String, unique: true, lowercase: true},
-    displayName: String,
-    avatar: String,
-    password: {type: String, select: false},
-    signupDate: {type: Date, default: Date.now()},
-    lastLogin: Date
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  password: { type: String, required: true },
+  date: { type: Date, default: Date.now }
+});
 
-})
+UserSchema.methods.encryptPassword = async (password) => {
+  const salt = await bcrypt.genSalt(10);
+  const hash = await bcrypt.hash(password, salt);
+  return hash;
+};
 
-UserSchema.pre('save', (next) =>{
-let user = this
-if(!user.isModified('password')) return next()
-bcrypt.genSalt(10, (err, salt) =>{
-    if (err) return next()
-    bcrypt.hash(user.password, salt, null, (err, hash) =>{
-        if(err) return next(err) 
-        user.password = hash
-        next()
-    })
-})
-})
+UserSchema.methods.matchPassword = async function (password) {
+  return await bcrypt.compare(password, this.password);
+};
 
-UserSchema.methods.gravatar = function (){
-    if(!this.email) return `https://gravatar.com/avatar/?s=200Gd=retro`
-    const md5 = crypto.createHash('md5').update(this.email).digest('hex')
-    return `https://gravatar.com/avatar/${md5}?s=200Gd=retro`
-}
+module.exports = mongoose.model('User', UserSchema);
 
-module.exports = mongoose.model('User', UserSchema)
