@@ -6,7 +6,7 @@ var esquema = new mongoose.Schema(
        Descripcion: String,
        css: String, // editor en linea syntax highlighting
        javascript: String, // editor en linea syntax highlighting
-       imagenesAsociadas: Array
+       imagenesAsociadas: Array // opcion de subir imagenes relacionadas al tema
     }
 );
 

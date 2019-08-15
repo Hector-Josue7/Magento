@@ -12,7 +12,11 @@ var esquema = new mongoose.Schema(
             favicon: String,
             Descripcion: String,
             palabrasClave: String,
-            cssExtra: String,
+         //   cssExtra: String,
+         cssExtra: {
+             paginaLista: String,
+             enlaceFijo
+         }
          
         }
 } );

@@ -6,7 +6,8 @@ var esquema = new mongoose.Schema(
   galeriaImagenes: Array,
   enlacesDescargaArchivos: Array,
   post: String,
-  Menu: String,
+  imagen: String,
+  Menu: String,  // serán componentes independientes que se podran incrustar via shortcut
   Breadcrumb: String
 
 } );

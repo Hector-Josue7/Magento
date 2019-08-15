@@ -6,11 +6,13 @@ var esquema = new mongoose.Schema(
     {
     tituloEntrada: String,
     autor:  mongoose.Schema.Types.ObjectId,
-    createdAt: {type: Date, default: Date.now},
+    fecha_hora: {type: Date, default: Date.now},
     contenidoEntrada: String,
     imagenPost: String,
     categoria: mongoose.Schema.Types.ObjectId,
     comentariosPermitidos: Boolean
+
+ 
 } );
 
-module.exports = mongoose.model('paginas',esquema);
+module.exports = mongoose.model('posts',esquema);
