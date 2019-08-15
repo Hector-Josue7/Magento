@@ -1,21 +1,10 @@
-/*
-  Theme Name: Alstar
-  Theme URL: https://bootstrapmade.com/alstar-free-parallax-bootstrap-template/
-  Author: BootstrapMade.com
-  Author URL: https://bootstrapmade.com
-*/
 
-/* ================================
-Imports
-================================= */
 @import url('font-awesome.min.css');
 @import url('simpletextrotator.css');
 @import url('overwrite.css');
 @import url('animate.css');
 
-/* ================================
-General
-================================= */
+
 
 body{
 	text-align: center;
