@@ -11,6 +11,29 @@ app.use(bodyParser.json())
 app.use(express.static("public")); //definir una carpeta como publica para que los usuarios puedan acceder a su contenido
 app.use('/api', router)
 
+//cerrar sesion
+app.get('/logout',function(req,res){
+    req.session.destroy();
+    res.send({status:1,mensaje:"Se cerró la sesión"});
+});
+
+
+//app.use(express.static("public"));
+app.get('/inicio.html', verificarAutenticacion, function (res, req, next) {  
+    res.redirect('/inicio.html');
+});
+
+
+
+function verificarAutenticacion(req, res, next) {
+    if ( req.session.codigoUsuario){
+        return next();
+    }
+    else{
+        res.redirect('/');
+    }
+}
+
 
 
 module.exports = app
