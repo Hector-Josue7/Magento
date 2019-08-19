@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+.profile-image {
+  align-self: auto;
+  width: 150px;
+  height: 150px;
+  border: 4px solid white;
+  -webkit-border-radius: 75px;
+  border-radius: 75px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+}
+.profile-image img {
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .responsive-header .profile-image {
+    float: left;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 30px;
+  }
+  .responsive-header .profile-content {
+    text-align: left;
+    margin-top: 30px;
+    overflow: hidden;
+  }
+}
+
+.perfil-new{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+h3.profile-title {
+  margin-bottom: 3px;
+  color: white;
+  font-size: 18px;
+  font-family: 'robotobold';
+  text-align: center;
+}
+.profile-description{
+  text-align: center;
+  padding-bottom: 1px;
+}
+.tag{
+  text-align: center;
+  font-size: 12px;
+  background-color: #5d5a5ad8;
+  color: white;
+  border-radius: 5px;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  cursor: pointer;
+}
+
+body{
+  background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin:0;
+    color:white;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+</style>
+  </head>
+<body>
+<br>
+
+         <h2  style ="display: flex; align-items: center; justify-content: center;" >Regístrese con nosotros</h2>
+  <br>
+  
+
+<div class="container">
+  <div class="row">
+      <div class="col-lg-4" style="color:white; margin-top:50px; margin-bottom:250px ">
+          <div id="div-img-perfil" style=" background-image: url('./img/team/ac_generico.jpg');" class="profile-image perfil-new"></div>
+         
+  
+      </div>
+    <div class="col-lg-8">
+        <form class="w-80">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+              </div>
+   
+     
+            </div>
+          
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="usuario">Usuario</label>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">@</div>
+            </div>
+            <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+          </div>
+        </div>
+     
+        <div class=" form-group col-md-6">
+            <label for="inputPassword6">Correo</label>
+          <input onkeyup="validarCorreo(this)" id="correo" class="form-control" type="text" placeholder="hector@magento.com">
+          <div class="valid-feedback">Ok</div>
+          <div class="invalid-feedback">Invalid Email</div>
+      </div>
+      </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputPassword6">Contraseña</label>
+            <input type="password" id="clave" class="form-control " placeholder="Contraseña" aria-describedby="passwordHelpInline">
+            <small id="passwordHelpInline"  style="color: white">
+                Debe tener entre 8 y 20 caracteres.
+            </small>
+          </div>
+     
+          <div class="form-group col-md-6">
+              <label for="exampleFormControlFile1">Elija su foto</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label  class=" col-form-label">Género</label>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio1">Masculino</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio2">Femenino</label>
+              </div>
+        </div>
+<label for="fechaNacimiento" class=" col-form-label">Fecha de nacimiento</label>
+    <div class="form-group col-md-5">
+  <div class="col-10">
+    <input class="form-control" type="date" value="2011-08-19" id="fechaNacimiento">
+  </div>
+ </div>
+ <!-- <label  class=" col-form-label">Fecha de nacimiento</label>
+ <div class="form-group col-md-3">
+
+    <div class="col-lg-4 col-12">
+        <select id="month" class="form-control"><option value="">Mes</option></select>
+        <div class="valid-feedback">Ok</div>
+        <div class="invalid-feedback">Month is required</div>
+    </div>
+ </div>
+ <div class="form-group col-md-3">
+    <div class="col-lg-4 col-12">
+        <select id="day" class="form-control"><option value="">Día</option></select>
+        <div class="valid-feedback">Ok</div>
+        <div class="invalid-feedback">Day is required</div>
+    </div>
+ </div>
+
+ <div class="form-group col-md-3">
+    <div class="col-lg-4 col-12">
+        <select id="year" class="form-control"><option value="">Año</option></select>
+        <div class="valid-feedback">Ok</div>
+        <div class="invalid-feedback">Year is required</div>
+    </div>
+ </div> -->
+              
+                  
+            
+    
+    </div>
+  
+            <button type="submit" class="btn btn-primary btn-block">Vamos</button><br>
+            <p class="form-link">¿Ya tienes una cuenta? <a href="./login.html">Ingresa aquí</a></p>
+          </form>
+    </div>
+
+ 
+  </div>
+    
+
+
+   
+        
+  
+</div>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script>
+    var campos = [
+    {id:'nombre', valido:false},
+    {id:'usuario', valido:false},
+    {id:'correo', valido:false},
+    {id:'clave', valido:false},
+    {id:'fechaNacimiento', valido:false}
+];
+
+
+      </script>
+</body>
+</html>

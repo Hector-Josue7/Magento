@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <title>Magento</title>
@@ -12,8 +12,8 @@
   <link href="css/style.css" rel="stylesheet" media="screen">
   <link href="color/default.css" rel="stylesheet" media="screen">
 <!--  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">-->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <link rel="stylesheet" href="css/font-awesome.min.css">
-
 
 </head>
 
@@ -31,18 +31,19 @@
         </button>
 
         <!-- Logo text or image -->
-        <a class="navbar-brand" href="index.html">Alstar</a> <!--incrustar logo aqui-->
+        <a class="navbar-brand" href="index.html"><img  style = "width:80px; height:35px" src="img/logo-de-magento.png" alt=""></a> <!--incrustar logo aqui-->
 
       </div>
       <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
           <li class="current"><a href="#intro">Home</a></li>
-          <!-- <li><a href="#about">About</a></li>-->
+           <li><a href="#about">About</a></li>
          
           <li><a href="#services">Service</a></li>
           <!--  <li><a href="#portfolio">Works</a></li>-->
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#team">Equipo</a></li>
+          <li><a href="#contact">Contactenos</a></li>
+          <li><a href="./registro.html">Registrese</a></li>
         </ul>
       </div>
     </div>
@@ -64,7 +65,7 @@
                 <h2 class="animated fadeInDown" style=" margin-bottom: 200px;">CREA SITIOS WEB EN MINUTOS</span></h2>
                
 
-                <a href="#about" class="btn-get-started animated fadeInUp">Read More</a>
+                <a href="./login.html" target="_blank" class="btn-get-started animated fadeInUp">Inicie sesión</a>
               </div>
             </div>
           </div>
@@ -77,7 +78,7 @@
                 <h2 class="animated fadeInDown" style=" margin-bottom: 200px;" >CREA SITIOS WEB EN MINUTOS</span></h2>
                 <!--  <p class="animated fadeInUp">Nuestro CMS le ofrece diversas caracteristicas para poder administrar sus contenidos, Magento es un excelente servicio para administrar sus archivos de una forma segura y sencilla, denos la oportunidad de servirle</p> -->
               
-                <a href="#about" class="btn-get-started animated fadeInUp">Read More</a>
+                <a href="./login.html" target="_blank" class="btn-get-started animated fadeInUp">Inicie sesión</a>
               </div>
             </div>
           </div>
@@ -89,7 +90,7 @@
               <div class="carousel-content">
                 <h2 class="animated fadeInDown" style=" margin-bottom: 200px;">CREA SITIOS WEB EN MINUTOS</span></h2>
                
-                <a href="#about" class="btn-get-started animated fadeInUp">Read More</a>
+                <a href="./login.html" target="_blank" class="btn-get-started animated fadeInUp">Inicie sesión</a>
               </div>
             </div>
           </div>
@@ -111,14 +112,17 @@
   </section><!-- #intro -->
 
   <!-- About -->
-  <section id="about" class="home-section bg-white">
+  <section id="about" class="home-section bg-white" style="background: #085078;  
+background: -webkit-linear-gradient(to top, #85D8CE, #085078);  
+background: linear-gradient(to top, #85D8CE, #085078); color:white
+">
       <div class="container">
         <div class="row">
           <div class="col-md-offset-2 col-md-8">
             <div class="section-heading">
-              <h2>Sobre nosotros</h2>
+              <h2 style ="color:white">Sobre nosotros</h2>
               <div class="heading-line"></div>
-              <p>Somos</p>
+              <p>Somos una empresa dedicada a proveerle servicios para elaborar sitios web de forma agil y ahorrarle todo el tiempo de estar aprendiendo a programar</p>
             </div>
           </div>
         </div>
@@ -128,144 +132,64 @@
           </div>
   
           <div class="col-md-6 content">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elite storium paralate</h2>
-            <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.</h3>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum Libero justo laoreet sit amet
-              cursus sit amet dictum sit. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend
-              donec Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum
-            </p>
+            <h3 style="color:white">Decir que un CMS es “una herramienta software para crear, administrar y gestionar un sitio web”, aunque acertado, apenas sí cubre lo que deberíamos entender por un gestor de contenidos.
+           Para entender mejor qué es un CMS Web y qué podemos hacer con él, vamos a detenernos en sus 3 funciones principales, que ya hemos apuntado:
+          Creación del sitio web. Gestión y mantenimiento del sitio web.  Administración del sitio web y del propio CMS.
+         No son éstas las únicas funciones que puede realizar una web CMS, pero sin alguna de ellas no podríamos considerarlo un verdadero gestor de contenidos.</h3>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-  <section class="page-section" id="services" style="background: black">
+  <!-- Services -->
+  <section class="page-section" id="services">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Services</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">Servicios</h2>
+          <h3 class="section-subheading text-muted">Le ofrecemos los siguientes servicios</h3>
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <span class="fa-stack fa-4x">
-              <i class="fa fa-car fa-lg" style="color:rgb(227, 234, 240)"></i>
-              <!-- <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>-->
-           
+            <i class="fas fa-circle fa-stack-2x text-success"></i>
+            <i class="fas fa-paper-plane fa-stack-1x fa-inverse"></i>
+            <!-- <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>  -->
           </span>
-          <h4 class="service-heading">E-Commerce</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <h4 class="service-heading">Suba sus archivos a la nube</h4>
+          <p class="text-muted">Desde su ordenador puede subir imagenes, videos y archivos genericos y visualizarlos de una forma amigable y sencilla</p>
         </div>
-        
-        <div class="col-md-4">
+        <div class="col-md-3">
           <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-circle fa-stack-2x text-success"></i> 
+            <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Responsive Design</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <h4 class="service-heading">Administre sus plantillas</h4>
+          <p class="text-muted">Con los servicios que le ofrecemos puede diseñar sitios web e incrustar diferentes elementos que son de gran ayuda para usted, que pueda hacer un blog para su negocio o simplemente para lo que lo considere necesario</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-circle fa-stack-2x text-success"></i> 
+            <i class="fas fa-user-friends fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Web Security</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <h4 class="service-heading">Cree diferentes tipos de usuario</h4>
+          <p class="text-muted">Puede asiganrle niveles de acceso a los usuarios para que cada uno utilize el contenido apropiado </p>
+        </div>
+        <div class="col-md-3">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-success"></i> 
+            <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Programe en tecnologias de desarrollo web</h4>
+          <p class="text-muted">Con nuestro editor en syntax highlighting puede hacer maravillas para programar sitios web a su manera y con controles que usted desee</p>
         </div>
       </div>
     </div>
   </section>
+  <br><br><br><br>
+    
 
-
-
-  
-  <!-- Services -->
-  <section id="services" class="home-section bg-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div class="section-heading">
-            <h2>Servicios</h2>
-            <div class="heading-line"></div>
-            <p>Aproveche los servicios que le brinda nuestro CMS</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div id="carousel-service" class="service carousel slide">
-
-            <!-- slides -->
-            <div class="carousel-inner">
-              <div class="item active">
-                <div class="row">
-                  <div class="col-sm-12 col-md-offset-1 col-md-6">
-                    <div class="wow bounceInLeft">
-                      <h4>Administre sus imagenes, videos y archivos genericos</h4>
-                      <p>Magento.com le permite administrar sus archivos </p>
-                    </div>
-                  </div>
-                  <div class="col-sm-12 col-md-5">
-                    <div class="screenshot wow bounceInRight">
-                      <img src="img/screenshots/1.png" class="img-responsive" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-sm-12 col-md-offset-1 col-md-6">
-                    <div class="wow bounceInLeft">
-                      <h4>Brand Identity</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna.</p>
-                    </div>
-                  </div>
-                  <div class="col-sm-12 col-md-5">
-                    <div class="screenshot wow bounceInRight">
-                      <img src="img/screenshots/2.png" class="img-responsive" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-sm-12 col-md-offset-1 col-md-6">
-                    <div class="wow bounceInLeft">
-                      <h4>Web & Mobile Apps</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna.</p>
-                    </div>
-                  </div>
-                  <div class="col-sm-12 col-md-5">
-                    <div class="screenshot wow bounceInRight">
-                      <img src="img/screenshots/3.png" class="img-responsive" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-service" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-service" data-slide-to="1"></li>
-              <li data-target="#carousel-service" data-slide-to="2"></li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Parallax 1 -->
   <section id="parallax1" class="home-section parallax" data-stellar-background-ratio="0.5">
@@ -273,8 +197,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="color-light">
-            <h2 class="wow bounceInDown" data-wow-delay="0.5s">Details are the key for perfection</h2>
-            <p class="lead wow bounceInUp" data-wow-delay="1s">We mix all detailed things together</p>
+            <h2 class="wow bounceInDown" data-wow-delay="0.5s">Los detalles son la clave de la perfección.</h2>
+            <p class="lead wow bounceInUp" data-wow-delay="1s">Mezclamos todas las cosas detalladas juntas</p>
           </div>
         </div>
       </div>
@@ -285,37 +209,12 @@
   <section id="team" class="home-section bg-white">
     <div class="container">
       <div class="row">
-        <!--
-              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
-          <div class="box-team wow bounceInUp">
-            <img src="img/team/3.jpg" alt="" class="img-circle img-responsive" />
-            <h4>Nola Maurin</h4>
-            <p>Illustrator</p>
-          </div>
-        </div>
-                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <div class="box-team wow bounceInUp" data-wow-delay="0.1s">
-            <img src="img/team/1.jpg" alt="" class="img-circle img-responsive" />
-            <h4>Dominique Vroslav</h4>
-            <p>Art Director</p>
-          </div>
-        </div>
-
-         
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.3s">
-          <div class="box-team wow bounceInUp">
-            <img src="img/team/2.jpg" alt="" class="img-circle img-responsive" />
-            <h4>Thomas Jeffersonn</h4>
-            <p>Web Designer</p>
-          </div>
-        </div>
-        -->
+    
         <div class="col-md-offset-2 col-md-8 ">
           <div class="section-heading">
-            <h2>Our Team</h2>
+            <h2>Nuestro equipo</h2>
             <div class="heading-line"></div>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum</p>
+            <p>Nuestro querido fundador Josué Ardón está constantemente buscando la forma de integrarle más funcionalidades a Magento, con el fin de brindarle más comodidad a nuestros sucriptores</p>
           </div>
         </div>
       </div>
@@ -333,7 +232,43 @@
     </div>
   </section>
 
+  <section id="parallax2" class="home-section parallax" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
 
+              <div class="color-light">
+                  <h4 class="wow bounceInDown" data-wow-delay="0.5s">Puede descargar nuestro CMS dandole click al boton que se encuentra abajo de este mensaje</h4>
+                 
+                </div><br>
+
+            <ul class="clients">
+
+                <a class="btn  btn-social btn-github" style="background: grey; width:300px; height:50px; border-radius:25%" href="https://github.com/Hector-Josue7/Magento">
+              
+                    <img src="img/clients/5.png" style="width:100px">
+                  </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- 
+    <section id="parallax1" class="home-section parallax" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="color-light">
+                <h2 class="wow bounceInDown" data-wow-delay="0.5s">Los detalles son la clave de la perfección.</h2>
+                <p class="lead wow bounceInUp" data-wow-delay="1s">Mezclamos todas las cosas detalladas juntas</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section> -->
 
   <!-- Contact -->
   <section id="contact" class="home-section bg-gray">
@@ -341,23 +276,22 @@
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <div class="section-heading">
-            <h2>Contact us</h2>
+            <h2>Contactenos</h2>
             <div class="heading-line"></div>
-            <p>If you have any question or just want to say 'hello' to Alstar web studio please fill out form below and
-              we will be get in touch with you within 24 hours. </p>
+            <p>Si tiene alguna sugerencia sobre el uso de nuestro CMS, puede ponerse en contacto en el formulario de abajo y con gusto un empleado de nuestra empresa le atenderá, estamos para ayudarle a progresar continuamente</p>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="sendmessage">Su mensaje ha sido enviado correctamente</div>
           <div id="errormessage"></div>
 
           <form action="" method="post" class="form-horizontal contactForm" role="form">
             <div class="col-md-offset-2 col-md-8">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+                <input type="text" name="name" class="form-control" id="name" placeholder="Escriba su nombre aquí" data-rule="minlen:4"
                   data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
               </div>
@@ -365,7 +299,7 @@
 
             <div class="col-md-offset-2 col-md-8">
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"
+                <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email"
                   data-msg="Please enter a valid email" />
                 <div class="validation"></div>
               </div>
@@ -373,7 +307,7 @@
 
             <div class="col-md-offset-2 col-md-8">
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4"
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4"
                   data-msg="Please enter at least 8 chars of subject" />
                 <div class="validation"></div>
               </div>
@@ -382,13 +316,13 @@
             <div class="col-md-offset-2 col-md-8">
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"
-                  placeholder="Message"></textarea>
+                  placeholder="Mensaje"></textarea>
                 <div class="validation"></div>
               </div>
             </div>
             <div class="form-group">
               <div class="col-md-offset-2 col-md-8">
-                <button type="submit" class="btn btn-theme btn-lg btn-block">Send message</button>
+                <button type="submit" class="btn btn-theme btn-lg btn-block">Enviar mensaje</button>
               </div>
             </div>
           </form>
@@ -400,13 +334,15 @@
   </section>
 
   <!-- Bottom widget -->
-  <section id="bottom-widget" class="home-section bg-white">
+  <section id="bottom-widget" class="home-section bg-white" style="background: #0F2027; 
+  background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  
+  background: linear-gradient(to top, #2C5364, #203A43, #0F2027); color:white  "> 
     <div class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="contact-widget wow bounceInLeft">
             <i class="fa fa-map-marker fa-4x"></i>
-            <h5>Main Office</h5>
+            <h5 style="color:white">Main Office</h5>
             <p>
               109 Borough High Street,<br />London SE1 1NL
             </p>
@@ -415,7 +351,7 @@
         <div class="col-md-4">
           <div class="contact-widget wow bounceInUp">
             <i class="fa fa-phone fa-4x"></i>
-            <h5>Call</h5>
+            <h5 style="color:white">Call</h5>
             <p>
               +1 111 9998 7774<br> +1 245 4544 6855
 
@@ -425,7 +361,7 @@
         <div class="col-md-4">
           <div class="contact-widget wow bounceInRight">
             <i class="fa fa-envelope fa-4x"></i>
-            <h5>Email us</h5>
+            <h5 style="color:white">Email us</h5>
             <p>
               hello@alstarstudio.com<br />sales@alstarstudio.com
             </p>
@@ -434,7 +370,7 @@
       </div>
       <div class="row mar-top30">
         <div class="col-md-12">
-          <h5>We're on social networks</h5>
+          <h5  style="color:white">Siganos en nuestras redes sociales</h5>
           <ul class="social-network">
             <li><a href="#">
                 <span class="fa-stack fa-2x">
@@ -463,28 +399,12 @@
           </ul>
         </div>
       </div>
+
+      
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>Copyright &copy; Alstar. All rights reserved.</p>
-          <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Alstar
-            -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
