@@ -14,4 +14,6 @@ router.post('/product', productCtrl.saveProduct)
 router.put('/product/:productId', productCtrl.updateProduct)
 router.delete('/product/:productId', productCtrl.deleteProduct)
 
+// el punto de acceso para administradores sera http>://dominio:puerto/admin
+
 module.exports = router
