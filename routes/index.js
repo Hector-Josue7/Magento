@@ -9,8 +9,6 @@ router.get('/', (req, res) => {
 });
 
 
-
-
 //RUTAS PARA IMAGENES
 router.get('/imagenes') // ruta para devolver todas las imagenes
 router.get('/imagenes/:imagenId') // ruta para obtener una imagen
