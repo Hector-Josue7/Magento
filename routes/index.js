@@ -1,5 +1,5 @@
 const express = require('express')
-const productCtrl = require('../controladores/product')
+//const productCtrl = require('../controladores/product')
 const router = express.Router()
 
 // RUTA INICIAL PRINCIPAL
