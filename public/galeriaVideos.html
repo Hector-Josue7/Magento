@@ -7,10 +7,11 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
         integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous" />
         <script src="js/jquery-3.4.1.min.js"></script>
+ 
     <style>
         hr {
             border-top: 1px solid #007bff;
@@ -41,9 +42,15 @@
 
         #author a {
             color: #fff;
-            text-decoration: none;
-        }
+            text-decoration: none; 
+            }
+
+            .image:hover {
+                   opacity: 0.6;
+             filter: alpha(opacity=60);
+           }
     </style>
+
 </head>
 
 <body>
@@ -81,8 +88,8 @@
                         <i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard </a>
                 </li>
                 <li>
-                    <a href="./elegirArchivo.html" class="btn-sideBar-SubMenu">
-                        <i class="zmdi zmdi-case zmdi-hc-fw"></i> Subir archivos
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-case zmdi-hc-fw"></i> Subir videos
                         <!-- <i class="zmdi zmdi-caret-down pull-right"></i> -->
                     </a>
                     <ul class="list-unstyled full-box">
@@ -175,60 +182,34 @@
                 </li>
             </ul>
         </nav>
-        <!-- Content page -->
-        
-<!-- Card -->
+        <!-- Page Content -->
 <div class="container">
-    
-        <div class="card card-cascade wider reverse jumbotron " style="margin-top:40px; width:700px">
 
-                <!-- Card image -->
-                <div class="view view-cascade overlay">
-                 
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-              
-                <!-- Card content -->
-                <div class="card-body card-body-cascade text-center">
-              
-                  <!-- Title -->
-                  <h4 class="card-title"><strong>My adventure</strong></h4>
-                  <!-- Subtitle -->
-                  <h6 class="font-weight-bold indigo-text py-2">Photography</h6>
-                  <!-- Text -->
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem perspiciatis voluptatum a, quo nobis, non commodi quia repellendus sequi nulla voluptatem dicta reprehenderit, placeat laborum ut beatae ullam suscipit veniam.
-                  </p>
-              
-                  <!-- Linkedin -->
-                  <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
-                  <!-- Twitter -->
-                  <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
-                  <!-- Dribbble -->
-                  <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
-              
-                </div>
-              
-              </div>
-</div>
-
-      <!-- Card -->
-    </section>
-            
-
-
-
-
-  
+        <h2 class="font-weight-light text-center text-lg-left mt-4" style="margin-left: 350px"  >Galeria de videos </h2>
+      
+        <hr>
+      
+        <div class="row text-center text-lg-left ">
+      
    
+            <div class="col-lg-3 col-md-4 col-6"  >
+           
+                    <a  href="./perfilVideo.html"   filter: alpha(opacity=50);" class="d-block mb-4 h-100 image">
+         
+                        <img class="img-fluid img-thumbnail " src="./img/jugar.png" alt="">
+                      </a>
+          </div>
   
-<!--galeria de imagenes-->
-<!-- Page Content -->
-<!--  -->
-      <!-- /.container -->
+  </div>
+      
+      </div>
+    </section>
+        <!-- Content page -->
+  
 
-    <!-- Notifications area -->
+
+
+    
     <section class="full-box Notifications-area">
         <div class="full-box Notifications-bg btn-Notifications-area"></div>
         <div class="full-box Notifications-body">
@@ -306,8 +287,7 @@
             </div>
         </div>
     </div>
-    <!--====== Scripts -->
-    <!-- <script src="./js/jquery-3.1.1.min.js"></script> -->
+
    
     <script src="js/sweetalert2.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -319,59 +299,21 @@
     <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="./js/main.js"></script>
 
-    <script type="text/javascript">
- 
-        $(document).ready(inicializarEventos);
-        
-        function inicializarEventos()
-        {
-        
-         $(".item").hover(entraMouse, saleMouse);
-        
-        
-        //  $("#verImagenes").click(dobleClic);
-          $("#verImagenes").click(ocultarRecuadro);
-        }
-        
-        function entraMouse()
-        {
-          $(this).css("background-color","#ff0");
-        }
-        function saleMouse()
-        {
-          $(this).css("background-color","#fff");
-        }
-        
-        function ocultarRecuadro()
-        {
-        $(".menuPrincipal").hide("slow");
-        }
-
-// function mostrarRecuadro()
-// {
-//   var x=$("#descripcion");
-//   x.show("fast");
-// }
-                                     </script>
-                                                           <!-- <script type="text/javascript">
-
-$( document ).ready(function() {
-    $('#verImagenes').click(function (e) {
-    e.preventDefault();
- $("#menuPrincipal").hide();
- $("galeriaImagenes").show();
-
+<script src="js/jquery.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  
+  <script type="text/javascript">
+    $( document ).ready(function() {
+          $( ".image" ).hover(
+    function() {
+      $( this ).append($("<span style='margin-left:90px; font-size:22px '><i class='fas fa-comments'></i> <i class='fas fa-heart'></i></span>"));
+    }, function() {
+      $( this ).find( "span:last" ).remove();
+    }
+  );
+  
   });
-});
-    
- -->
-
-<!-- Por último con este código se registra para todos los elementos "button" que dependen del div con valor de id igual a "formulario1":
-
-  var x;
-  x=$("#formulario1 button");
-  x.click(presionBoton) -->   
-        
+  </script>
 </body>
 
 </html>

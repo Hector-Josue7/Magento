@@ -42,9 +42,15 @@
 
         #author a {
             color: #fff;
-            text-decoration: none;
-        }
+            text-decoration: none; 
+            }
+
+            .image:hover {
+                   opacity: 0.6;
+             filter: alpha(opacity=60);
+           }
     </style>
+
 </head>
 
 <body>
@@ -185,30 +191,25 @@
       
         <hr>
       
-        <div class="row text-center text-lg-left">
+        <div class="row text-center text-lg-left ">
       
-     
-          <div class="col-lg-3 col-md-4 col-6">
-            <a href="./perfilImagen.html" class="d-block mb-4 h-100">
-                  <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/G9Rfc1qccH4/400x300" alt="">
-                </a>
+   
+            <div class="col-lg-3 col-md-4 col-6"  >
+           
+                    <a  href="./perfilImagen.html"   filter: alpha(opacity=50);" class="d-block mb-4 h-100 image">
+         
+                        <img class="img-fluid img-thumbnail " src="https://source.unsplash.com/G9Rfc1qccH4/400x300" alt="">
+                      </a>
           </div>
-          
-        </div>
+  
+  </div>
       
       </div>
-      <!-- /.container -->
-  
-    <!-- Tab panes -->
-   
-  
-<!--galeria de imagenes-->
-<!-- Page Content -->
-<!--  -->
-      <!-- /.container -->
 
-    <!-- Notifications area -->
-    <section class="full-box Notifications-area">
+    </section>
+    
+
+<section class="full-box Notifications-area">
         <div class="full-box Notifications-bg btn-Notifications-area"></div>
         <div class="full-box Notifications-body">
             <div class="Notifications-body-title text-titles text-center"> Notifications <i
@@ -297,61 +298,22 @@
     <script src="./js/ripples.min.js"></script>
     <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="./js/main.js"></script>
-
-    <script type="text/javascript">
- 
-        $(document).ready(inicializarEventos);
-        
-        function inicializarEventos()
-        {
-        
-         $(".item").hover(entraMouse, saleMouse);
-        
-        
-        //  $("#verImagenes").click(dobleClic);
-          $("#verImagenes").click(ocultarRecuadro);
-        }
-        
-        function entraMouse()
-        {
-          $(this).css("background-color","#ff0");
-        }
-        function saleMouse()
-        {
-          $(this).css("background-color","#fff");
-        }
-        
-        function ocultarRecuadro()
-        {
-        $(".menuPrincipal").hide("slow");
-        }
-
-// function mostrarRecuadro()
-// {
-//   var x=$("#descripcion");
-//   x.show("fast");
-// }
-                                     </script>
-                                                           <!-- <script type="text/javascript">
-
-$( document ).ready(function() {
-    $('#verImagenes').click(function (e) {
-    e.preventDefault();
- $("#menuPrincipal").hide();
- $("galeriaImagenes").show();
-
-  });
-});
-    
- -->
-
-<!-- Por último con este código se registra para todos los elementos "button" que dependen del div con valor de id igual a "formulario1":
-
-  var x;
-  x=$("#formulario1 button");
-  x.click(presionBoton) -->   
-  <script src="js/jquery.slim.min.js"></script>
+ <script src="js/jquery.slim.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+ 
+
+    $( document ).ready(function() {
+      $( ".image" ).hover(
+function() {
+  $( this ).append($("<span style='margin-left:90px; font-size:22px '><i class='fas fa-comments'></i> <i class='fas fa-heart'></i></span>"));
+}, function() {
+  $( this ).find( "span:last" ).remove();
+}
+);
+
+});
+</script>
 </body>
 
 </html>

@@ -31,6 +31,9 @@ router.get('/archivos/:archivoId') // ruta para devolver solo un video
 router.post('/archivos') // ruta para insertar un video
 
 
+router.get('/admin') // ruta para devolver administradores  http://localhost:3000/admin
+
+
 
 
 
