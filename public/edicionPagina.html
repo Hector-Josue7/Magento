@@ -6,10 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
 	<link rel="stylesheet" href="./css/main.css">
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="./froala/css/froala_editor.css">
@@ -45,29 +46,8 @@
 			margin: auto;
 			text-align: left;
 		}
-
-		#w3-exerciseform {background-color:#555555;padding:16px;color:#ffffff;}
-#w3-exerciseform .exercisewindow {background-color:#ffffff;padding:16px;color:#000000;}
-#w3-exerciseform .exerciseprecontainer {background-color:#f1f1f1;padding:16px;font-size:120%;font-family:Consolas,"Courier New", Courier, monospace;}
-#w3-exerciseform .exerciseprecontainer pre {display: block;}
-#w3-exerciseform .exerciseprecontainer input {padding:1px;border: 1px solid transparent;height:1.3em;}
-@media screen and (max-width:600px) {
-.w3-example, .w3-note, #w3-exerciseform {margin-left:-16px;margin-right:-16px;}
-.top {height:68px}
-.toptext {display:none}
-}
-
-@media only screen and (max-device-width: 480px) {
-.w3-code, .w3-codespan,#w3-exerciseform .exerciseprecontainer {font-family: 'Source Code Pro',Menlo,Consolas,monospace;}
-.w3-code {font-size:14px;}
-.w3-codespan {font-size:15px;}
-#w3-exerciseform .exerciseprecontainer {font-size:15px;}
-#w3-exerciseform .exerciseprecontainer input {padding:0;height:1.5em}
-}
-
-
 	</style>
-	<script src="./js/jquery.js"></script>
+
 </head>
 
 <body>
@@ -185,156 +165,164 @@
 				</li>
 			</ul>
 		</nav>
-		<!-- Content page -->
-		<!-- 
-			<div class="card">
-  <div class="card-header bg-dark">
-    <h3 class="card-title text-white">
-      <i class="far fa-image"></i>
-      Upload an Image
-    </h3>
-  </div>
-  {{!el titulo se la pasa junto con la imagen misma}}
-  <div class="card-body">
-    <form action="/images" method="POST" enctype="multipart/form-data">
-      <div class="form-group">
-        <div class="input-group">
-          <div class="custom-file">
-            <input
-              type="file"
-              name="image"
-              class="custom-file-input"
-              id="inputGroupFile"
-              aria-describedby="inputGroupFileAddon"
-              required
-             />
 
-            <label class="custom-file-label" for="inputGroupFile">
-              Choose file
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <input
-          type="text"
-          name="title"
-          class="form-control"
-          placeholder="Title for the Image"
-          required
-         />
+		<div class="container-fluid">
+		
+			<div class="row full-box text-center" style="padding: 30px 10px">
 
-      </div>
-      <div class="form-group">
-        <textarea
-          name="description"
-          rows="2"
-          class="form-control"
-          placeholder="Deescription for the Image"
-          required
-        ></textarea>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-success">
-          <i class="fa fa-upload"></i>
-          Upload Image
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-		 -->
-		<div class="container" >
-			<!-- <div class="page-header">
-				<h1 class="text-titles">En esta sección puede subir sus archivos</h1>
-			</div> -->
-			<div class="row" style ="background: #40484F; width:1000px; padding: 30px 10px; margin-top:30px; margin-left:50px; margin-right:auto; padding-left: 10px; border-radius:1%; color:white">
-				<!-- <form autocomplete="off" id="w3-exerciseform" action="exercise_bs3.asp?filename=exercise_bs3_badges1" method="post" target="_blank">
-<h2>Test Yourself With Exercises</h2>
-<div class="exercisewindow">
-<h2>Exercise:</h2>
-<p>After the "Comments" text, use a span element to make a badge with the number two inside.</p>
-<div class="exerciseprecontainer">
-<pre style="background-color:transparent;border:none;">
-&lt;button&gt;Comments <input name="ex1" maxlength="28" style="width: 297px;">&lt;/button&gt;
-</pre>
-</div>
-<br>
-<button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
-<p><a target="_blank" href="exercise_bs3.asp?filename=exercise_bs3_badges1">Start the Exercise</a></p>
-</div>
-</form>
- -->
- <form autocomplete="off" class=" full-box text-center" >
-	 <!-- <div class="row full-box text-center" style="padding: 30px 10px;">
-		 -->
-			<div class="col-12 col-sm-12 col-lg-12">
-					<h2>Encabezado de pagina</h2>
-					<div class="editor">
-												<div id='edit' style="margin-top: 30px;">
+				<div class="col-lg-8 col-xl-8">
+					<div class="card">
+							<form autocomplete="off" style=" background: #ECE9E6; background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6); background: linear-gradient(to top, #FFFFFF, #ECE9E6);">
+											   <!-- <div class="row full-box text-center" style="padding: 30px 10px;">
+									-->
+											   <div class="col-12 col-sm-12 col-lg-12">
+													<div class="card-header bg-dark">
+															<h3 class="card-title text-white mt-0">
+															
+															  Encabezado de pagina
+															</h3>
+														  </div>
+												
+														<div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;"> 
+													
+																<div id='edit' >
+																</div>
+															</div>
 										
-												</div>
-											</div>
-						</div>
-	
-			<div class="col-12 col-sm-12 col-lg-12">
-					<h2>Editar pagina</h2>				
-									
-					<div class="editor">
-							<div id='edit' style="margin-top: 30px;">
-					
-							</div>
-						</div>
-	
-	
-</div>
-		
-			<div class="col-12 col-sm-12 col-lg-12">
-					<h2>Pie de pagina</h2>
-					<div class="editor">
-						<div id='edit' style="margin-top: 30px;">
-				
-						</div>
+												 
+											   </div>
+											   <div class="col-12 col-sm-12 col-lg-12">
+													<div class="card-header bg-dark">
+															<h3 class="card-title text-white mt-0">
+															
+															Editar Pagina
+															</h3>
+														  </div>
+											
+												   <div class="editor"  style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
+													   <div id='edit' style="margin-top: 10px;">
+													   </div>
+												   </div>
+											   </div>
+											   <div class="col-12 col-sm-12 col-lg-12">
+													<div class="card-header bg-dark">
+															<h3 class="card-title text-white mt-0">
+															
+																	Pie de pagina
+															</h3>
+														  </div>
+											
+												   <div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
+													   <div id='edit' style="margin-top: 30px;">
+													   </div>
+												   </div>
+												   <br><br>
+											   </div>
+											   <button type="button" class=" btn-lg btn-info  btn-rounded"
+												   style="border-style: solid; width:250px"> Otras opciones <i class="fas fa-pen mr-1"></i>
+											   </button>
+											   <button type="button" class=" btn-lg btn-success  btn-rounded"
+												   style="border-style: solid; width:250px">Guardar configuración <i
+													   class="fas fa-save mr-1"></i></button>
+										  
+						   
+						   
+										   </form>
 					</div>
+				
 				</div>
-
-			<!-- <form action="">
-	
-					<div class="full-box text-center" style="padding: 30px 10px;">
-							<div class="col-11 col-sm-11 col-lg-11">
 		
-								<div class="editor">
-															<div id='edit' style="margin-top: 30px;">
-													
-															</div>
-														</div>
-									</div>
-							<div class="col-11 col-sm-11 col-lg-11">
-									
-									
-													<div class="editor">
-															<div id='edit' style="margin-top: 30px;">
-													
-															</div>
-														</div>
-									
-									
-							</div>
-							<div class="col-11 col-sm-11 col-lg-11">
-								<div class="editor">
-									<div id='edit' style="margin-top: 30px;">
-							
-									</div>
-								</div>
-							</div>
+			<div class="col-lg-4 col-xl-4">
+				<div class="card">
+					<div class="card-header bg-dark">
+					  <h3 class="card-title text-white">
+				
+					Información adicional
+					  </h3>
+					</div>
+				
+					<div class="card-body">
+					  <form action="/images" method="POST" enctype="multipart/form-data">
+			
+						<div class="form-group">
+						  <input style="border-style: solid;  border-width: 0.1px; border-color: #A4A9AD"
+							type="text"
+							name="title"
+							class="form-control"
+							placeholder="Titulo de la pagina"
+							autocomplete="off"
+							required
+						   />
+				  
 						</div>
-			</form> -->
-	 <!-- </div> -->
-
 	
+						<div class="form-group">
+						  <textarea style="border-style: solid;  border-width: 1px; border-color:#A4A9AD"
+							name="description"
+							rows="2"
+							class="form-control"
+							placeholder="Descripción de la pagina"
+							autocomplete="off"
+							required
+						  ></textarea>
+						</div>
+						<div class="form-group">
+								<label for="inputGroupFile" style="color:black"><b>Favicon</b></label>
+								<div class="input-group">
+									
+								  <div class="custom-file">
+									
+									<input
+									  type="file"
+									  name="image"
+									  class="custom-file-input"
+									  id="inputGroupFile"
+									  aria-describedby="inputGroupFileAddon"
+									  required
+									 />
+						
+									<label class="custom-file-label" for="inputGroupFile">
+								 Pulse aquí
+									</label>
+								  </div>
+								</div>
+							  </div>
+							  <div class="form-group">
+									<label for="inputGroupFile" style="color:black"><b>Logo</b></label>
+									<div class="input-group">
+										
+									  <div class="custom-file">
+										
+										<input
+										  type="file"
+										  name="image"
+										  class="custom-file-input"
+										  id="inputGroupFile"
+										  aria-describedby="inputGroupFileAddon"
+										  required
+										 />
+							
+										<label class="custom-file-label" for="inputGroupFile">
+									 Pulse aquí
+										</label>
+									  </div>
+									</div>
+								  </div>
+								  <div class="form-group">
+										<textarea style="border-style: solid;  border-width: 1px; border-color:#A4A9AD"
+										  name="description"
+										  rows="2"
+										  class="form-control"
+										  placeholder="Palabras clave"
+										  autocomplete="off"
+										  required
+										></textarea>
+									  </div>
+					  </form>
+					</div>
+				  </div>
 	
-
- </form>
+			</div>
 				
 				
 			</div>
@@ -416,8 +404,12 @@
 		</div>
 	</div>
 	<!--====== Scripts -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script src="./js/sweetalert2.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
 	<script src="./js/material.min.js"></script>
 	<script src="./js/ripples.min.js"></script>
 	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
