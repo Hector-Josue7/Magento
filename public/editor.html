@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link REL=StyleSheet HREF="css/style-editor.css" TYPE="text/css" MEDIA=screen>
+    <link REL=StyleSheet HREF="css/bootstrap4.min.css" TYPE="text/css" MEDIA=screen>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+ 
+</head>
+<body>
+<!------------------------------------------------ navbar ------------------------------------------------------------>
+<!----- ---------------------------------------------------------------------------------------------------------------- -->
+    <nav class="navbar navbar-light fixed-top" id="barra">
+        <div class="distancia" id ="iconos">
+            <a href="ordenador.html" ><i class="fas fa-arrow-alt-circle-left iconos"></i></a>
+            <a href="#"><i class="fas fa-file-code iconos2" id="btn-archivo" data-toggle="modal" data-target="#guardarArchivo"></i></a> | 
+            <a href="#"><i class="fas fa-laptop iconos2" id="btn-carpeta" data-toggle="modal" data-target="#guardarCarpeta"></i></a> |             
+            <a href="#"><i class="fas fa-database iconos2" id="btn-ofline"></i></a> | 
+            <a href="#"><i class="fas fa-save iconos2" id="btn-guardar"></i></a>           
+        </div>
+        <h5><a>Editor Emilia</a></h5>
+    </nav>
+
+<!----------------------------------------------------Titulos---------------------------------------------------------- -->
+<div class="container-fluid ">
+  <div class="row">
+      <div class="col-lg-4 caja">
+        <div class="row">
+          <div class="col-10">
+              <h3>.HTML</h3>
+          </div>
+          <div class="col-2" id="des-html">
+              
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 caja">
+          <div class="row">
+            <div class="col-10">
+                <h3>.CSS</h3>
+            </div>
+            <div class="col-2" id="des-css">
+        
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 caja">
+            <div class="row">
+              <div class="col-10">
+                  <h3>.JS</h3>
+              </div>
+              <div class="col-2" id="des-js">
+                  
+              </div>
+            </div>
+          </div>
+  </div>
+
+</div>
+
+
+<!-- -------------------------------------------------------------------------------------------------------------- ----->
+<!----------------------------------------------------cuadros Principal  ------------------------------------------------>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 cod-text" id="editorHtml"> 
+                <!-- <textarea name="editorHtml" id="html" placeholder=" HTML"></textarea>  -->
+            </div>
+            <div class="col-lg-4 cod-text" id="editorCss">
+                <!-- <textarea name="editorCss" id="css" placeholder="Css"></textarea>  -->
+            </div>
+            <div class="col-lg-4 cod-text" id="editorJs">
+                <!-- <textarea name="editorJs" id="js" placeholder="JS"></textarea>  -->
+            </div>
+        </div>
+<!-- -----------------------------------------------editor de resultados---------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+    <div class="row">
+            <div class="col-lg-12 output grid" >
+                    <iframe id="iframe" width="100%" height="250px" >Tu navegador no soporta iframes</iframe>   
+            </div>
+        </div>
+    </div>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+<!--------------------------------------------------------------------- Modal------------------------------------------- -->
+<div id="guardarArchivo" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">¡Gracias por preferirnos!</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" id="txt-nombre" placeholder="Nombre del Archivo">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" id="guardarArchivo">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <!--------------------------------------------------------------------- Modal2------------------------------------------- -->
+<div id="guardarCarpeta" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">¡Gracias por preferirnos!</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" id="txt-proyecto" placeholder="Nombre del Proyecto">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" id="btn-guardarPc">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+
+
+<!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+<script src="./js/push.min.js"></script>
+<script src="./js/controlador-editor.js"></script>
+
+
+</body>
+</html>
+ 
+
