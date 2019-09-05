@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/default.min.css">
+<link rel="stylesheet" href="resaltador/styles/default.css">
+
+<script src="resaltador/highlight.pack.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
+</head>
+<body>
+        <!-- link rel="stylesheet" href="/path/to/styles/default.css">
+        <script src="/path/to/highlight.pack.js"></script>
+   -->
+   <script>hljs.initHighlightingOnLoad();</script>
+   <pre><code class="html"><p>This is a paragraph.</p>
+    <p>This is another paragraph.</p></code></pre>
+
+    <pre><code class="plaintext"><ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+          </ul></code></pre>
+
+          <script>
+          document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+
+addEventListener('load', () => {
+  const code = document.querySelector('#code');
+  const worker = new Worker('worker.js');
+  worker.onmessage = (event) => { code.innerHTML = event.data; }
+  worker.postMessage(code.textContent);
+});
+          </script>
+
+</body>
+</html>
+
+<!--     
+    <script src="lib/codemirror.js"></script>
+<link rel="stylesheet" href="lib/codemirror.css">
+<script src="mode/javascript/javascript.js"></script>
+
+var myCodeMirror = CodeMirror(document.body);
+
+var myCodeMirror = CodeMirror(document.body, {
+  value: "function myScript(){return 100;}\n",
+  mode:  "javascript"
+});
+
+
+var myCodeMirror = CodeMirror(function(elt) {
+  myTextArea.parentNode.replaceChild(elt, myTextArea);
+}, {value: myTextArea.value});
+
+var myCodeMirror = CodeMirror.fromTextArea(myTextArea);
+
+
+//Aquí hay un ejemplo simple del uso de RequireJS para cargar CodeMirror:
+
+
+require([
+  "cm/lib/codemirror", "cm/mode/htmlmixed/htmlmixed"
+], function(CodeMirror) {
+  CodeMirror.fromTextArea(document.getElementById("code"), {
+    lineNumbers: true,
+    mode: "htmlmixed"
+  });
+});
+
+
+require.config({
+  packages: [{
+    name: "codemirror",
+    location: "../path/to/codemirror",
+    main: "lib/codemirror"
+  }]
+});
+
+-->
