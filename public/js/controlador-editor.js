@@ -1,39 +1,45 @@
-// var valor=false;
-function update(){
-  
+// function update(){
+//     var res =document.getElementById('iframe').contentWindow.document;
 
-    res.open();
-
-    res.write('<style>'+ec.getValue()+'</style>');
-    res.write('<script>'+ ejs.getValue()+'</script>');
-    res.close(); 
-}
+//     res.open();
+//     res.write(eh.getValue());
+//     res.write('<style>'+ec.getValue()+'</style>');
+//     res.write('<script>'+ ejs.getValue()+'</script>');
+//     res.close(); 
+// }
 function setEditor(){
-
+    // window.eh = ace.edit('editorHtml');
+    // eh.setTheme("ace/theme/cobalt");
+    // eh.getSession().setMode("ace/mode/html");
+    // eh.getSession().on('change',function(){
+    //     update();
+    // });
 
     window.ec = ace.edit('editorCss');
     ec.setTheme("ace/theme/cobalt");
     ec.getSession().setMode("ace/mode/css");
-    ec.getSession().on('change',function(){
-        update();
-    });
+    // ec.getSession().on('change',function(){
+    //     update();
+    // });
 
     window.ejs = ace.edit('editorJs');
     ejs.setTheme("ace/theme/cobalt");
     ejs.getSession().setMode("ace/mode/css");
-    ejs.getSession().on('change',function(){
-        update();
-    });
+    // ejs.getSession().on('change',function(){
+    //     update();
+    // });
 }
 setEditor();
-update();
+// update();
 
 var db;   
 
 $(document).ready(function(){
     verificarArchivos();
     obtenerSesion();
-
+    $("#des-html").append(
+        `<a href="" download="Archivos Html" id="descargar" ><i class="fas fa-download"></i></a>`
+    )
     $("#des-css").append(
         `<a href="" download="Archivos css" id="descargar1" ><i class="fas fa-download"></i></a>`
     )
@@ -94,7 +100,10 @@ function verificarArchivos(){
                     if(res[i].codigoProyecto==codProyecto){
                         switch(res[i].extencion) {
                             case 1: eh.setValue(res[i].contenido);
-                          
+                            document.getElementById("des-html").innerHTML="";
+                            $("#des-html").append(
+                                `<a href="" download="Archivos Html" id="descargar" ><i class="fas fa-download"></i></a>`
+                            )
                             contenidoDeArchivos=res[i].contenido;
                             elem = document.getElementById("descargar");
 
