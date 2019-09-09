@@ -2,56 +2,37 @@
 <html lang="es">
 
 <head>
-	<title>Inicio</title>
+<title>Inicio</title>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" href="./css/main.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	 <link rel="stylesheet" href="css/bootstrap.min.css"> 
-	<link REL=StyleSheet HREF="css/style-editor.css" TYPE="text/css" MEDIA=screen>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap4.min.css">
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" href="./froala/css/froala_editor.css">
-	<link rel="stylesheet" href="./froala/css/froala_style.css">
-	<link rel="stylesheet" href="./froala/css/plugins/code_view.css">
-	<link rel="stylesheet" href="./froala/css/plugins/colors.css">
-	<link rel="stylesheet" href="./froala/css/plugins/emoticons.css">
-	<link rel="stylesheet" href="./froala/css/plugins/image_manager.css">
-	<link rel="stylesheet" href="./froala/css/plugins/image.css">
-	<link rel="stylesheet" href="./froala/css/plugins/line_breaker.css">
-	<link rel="stylesheet" href="./froala/css/plugins/table.css">
-	<link rel="stylesheet" href="../../css/plugins/table.css">
-	<link rel="stylesheet" href="./froala/css/plugins/char_counter.css">
-	<link rel="stylesheet" href="./froala/css/plugins/video.css">
-	<link rel="stylesheet" href="./froala/css/plugins/fullscreen.css">
-	<link rel="stylesheet" href="./froala/css/plugins/file.css">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+ 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" type="text/css">
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-	<style type="text/css">
-		.imagenes,
-		.videos,
-		.archivosGenericos {
-			background: #43C6AC;
-			background: -webkit-linear-gradient(to bottom, #191654, #43C6AC);
-			background: linear-gradient(to bottom, #191654, #43C6AC);
-		}
+	<!-- <script src="js/jquery.js"></script> -->
+   <link rel="stylesheet" href="./css/main.css" type="text/css">      <!-- aqui tira errores -->
 
-		body {
-			text-align: center;
-		}
+ <link rel="stylesheet" HREF="./css/style-editor.css" type="text/css">
 
-		div.editor {
-			width: 81%;
-			margin: auto;
-			text-align: left;
-		}
-	</style>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" type="text/css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css">
+ <link rel="stylesheet" href="./css/bootstrap4.min.css" type="text/css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/froala_editor.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/froala_style.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/plugins/code_view.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/plugins/colors.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/plugins/emoticons.css" type="text/css">
 
+ <link rel="stylesheet" href="./froala/css/plugins/image_manager.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/plugins/image.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/plugins/line_breaker.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/plugins/table.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/plugins/char_counter.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/plugins/video.css" type="text/css">
+ <link rel="stylesheet" href="./froala/css/plugins/fullscreen.css" type="text/css">
+	<link rel="stylesheet" href="./froala/css/plugins/file.css" type="text/css">
+  
 </head>
 
 <body>
@@ -174,69 +155,68 @@
 		
 			<div class="row full-box text-center" style="padding: 30px 10px">
 
-				<div class="col-lg-8 col-xl-8">
-					<div class="card">
-							<form autocomplete="off" style=" background: #ECE9E6; background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6); background: linear-gradient(to top, #FFFFFF, #ECE9E6);">
-											   <!-- <div class="row full-box text-center" style="padding: 30px 10px;">
-									-->
-											   <div class="col-12 col-sm-12 col-lg-12">
-													<div class="card-header bg-dark">
-															<h3 class="card-title text-white mt-0">
+					<div class="col-lg-9 col-xl-9">
+							<div class="card">
+									<form autocomplete="off" style=" background: #ECE9E6; background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6); background: linear-gradient(to top, #FFFFFF, #ECE9E6);">
+													   <!-- <div class="row full-box text-center" style="padding: 30px 10px;">
+											-->
+													   <div class="col-12 col-sm-12 col-lg-12">
+															<div class="card-header bg-dark">
+																	<h3 class="card-title text-white mt-0">
+																	
+																	  Encabezado de pagina
+																	</h3>
+																  </div>
+														
+																<div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;"> 
 															
-															  Encabezado de pagina
-															</h3>
-														  </div>
+																		<div id='edit' >
+																		</div>
+																	</div>
 												
-														<div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;"> 
+														 
+													   </div>
+													   <div class="col-12 col-sm-12 col-lg-12">
+															<div class="card-header bg-dark">
+																	<h3 class="card-title text-white mt-0">
+																	
+																	Editar Pagina
+																	</h3>
+																  </div>
 													
-																<div id='edit' >
-																</div>
-															</div>
-										
-												 
-											   </div>
-											   <div class="col-12 col-sm-12 col-lg-12">
-													<div class="card-header bg-dark">
-															<h3 class="card-title text-white mt-0">
-															
-															Editar Pagina
-															</h3>
-														  </div>
-											
-												   <div class="editor"  style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
-													   <div id='edit' style="margin-top: 10px;">
+														   <div class="editor"  style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
+															   <div id='edit' style="margin-top: 10px;">
+															   </div>
+														   </div>
 													   </div>
-												   </div>
-											   </div>
-											   <div class="col-12 col-sm-12 col-lg-12">
-													<div class="card-header bg-dark">
-															<h3 class="card-title text-white mt-0">
-															
-																	Pie de pagina
-															</h3>
-														  </div>
-											
-												   <div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
-													   <div id='edit' style="margin-top: 30px;">
+													   <div class="col-12 col-sm-12 col-lg-12">
+															<div class="card-header bg-dark">
+																	<h3 class="card-title text-white mt-0">
+																	
+																			Pie de pagina
+																	</h3>
+																  </div>
+													
+														   <div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
+															   <div id='edit' style="margin-top: 30px;">
+															   </div>
+														   </div>
+														   <br>
 													   </div>
-												   </div>
-												   <br><br>
-											   </div>
-											   <button type="button" class=" btn-lg btn-info  btn-rounded"
-												   style="border-style: solid; width:250px"> Otras opciones <i class="fas fa-pen mr-1"></i>
-											   </button>
-											   <button type="button" class=" btn-lg btn-success  btn-rounded"
-												   style="border-style: solid; width:250px">Guardar configuración <i
-													   class="fas fa-save mr-1"></i></button>
-										  
-						   
-						   
-										   </form>
-					</div>
-				
-				</div>
+											
+													   <!-- <button type="button" class="btn-block  btn-success  btn-rounded"
+														   style="border-style: solid; margin:20px auto">Guardar configuración <i
+															   class="fas fa-save mr-1"></i></button> -->
+															   <button type="button" class="btn-success btn-lg"  style="border-style: solid; width:500px; margin-bottom: 20px;" ><b>Guardar configuración</b>  <i class="fas fa-save mr-1"></i> </button>
+												  
+								   
+								   
+												   </form>
+							</div>
+						
+						</div>
 		
-			<div class="col-lg-4 col-xl-4">
+			<div class="col-lg-3 col-xl-3">
 				<div class="card">
 					<div class="card-header bg-dark">
 					  <h3 class="card-title text-white">
@@ -328,19 +308,7 @@
 							
 									
 										  
-									
-
-	<!--     
-        <div class="col-lg-4 caja">
-            <div class="row">
-              <div class="col-10">
-                  <h3>.JS</h3>
-              </div>
-              <div class="col-2" id="des-js">
-                  
-              </div>
-            </div>
-          </div> -->
+							
 					  </form>
 					</div>
 				  </div>
@@ -474,6 +442,7 @@
 	</div>
 	<!--====== Scripts -->
 
+
 	<script src="./js/sweetalert2.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -514,12 +483,8 @@
 	<script src="./js/controlador-editor.js"></script>
 
 	<script type="text/javascript">
-		$.material.init();
-		$(document).ready(function () {
-			$(".imagenes").hover(function () {
-				$(".imagenes").addClass(".imagenes");
-			});
-		});
+
+
 		(function () {
 			new FroalaEditor("#edit", {
 				// Set the list of available shortcuts.

@@ -1,28 +1,4 @@
-/*
-== malihu jquery custom scrollbar plugin ==
-Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
-*/
 
-
-
-/*
-CONTENTS: 
-	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
-	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
-	3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
-	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
-	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
-	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
-		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
-*/
-
-
-
-/* 
-------------------------------------------------------------------------------------------------------------------------
-1. BASIC STYLE  
-------------------------------------------------------------------------------------------------------------------------
-*/
 
 	.mCustomScrollbar{ -ms-touch-action: pinch-zoom; touch-action: pinch-zoom; /* direct pointer events to js */ }
 	.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ -ms-touch-action: auto; touch-action: auto; }
@@ -365,7 +341,8 @@ yx-axis
 	.mCSB_scrollTools .mCSB_buttonDown,
 	.mCSB_scrollTools .mCSB_buttonLeft,
 	.mCSB_scrollTools .mCSB_buttonRight{
-		background-image: url("../assets/icons/mCSB_buttons.png"); /* css sprites */
+	
+		/* css sprites */
 		background-repeat: no-repeat;
 		opacity: 0.4; filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; 
 	}
@@ -1262,3 +1239,29 @@ yx-axis
 	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }
 	
 	/* ---------------------------------------- */
+
+	/*
+== malihu jquery custom scrollbar plugin ==
+Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
+*/
+
+
+
+/*
+CONTENTS: 
+	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
+	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
+	3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
+	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
+	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
+	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
+		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
+*/
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+1. BASIC STYLE  
+------------------------------------------------------------------------------------------------------------------------
+*/
