@@ -9,10 +9,10 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/bootstrap3.min.css">
 	<link rel="stylesheet" href="css/bootstrap4.min.css">
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.0/css/select.dataTables.min.css">
-<link rel="stylesheet" href="css/editor.dataTables.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet"
+
+
 <link rel="stylesheet" href="css/font-awesome.min.css"> <!--verificar la version-->
 
 </head>
@@ -103,106 +103,148 @@
 		<!-- Content page -->
 		<div class="container">
 			<div class="page-header">
-				<h2 class="text-titles" style="text-align: center"><b>Creación y administración de páginas</b>
+				<h2 class="text-titles" style="text-align: center"><b>Edición de la página estática</b>
 					<h2>
 			</div> 
-			<div class="form-group">
-				<input type="text" class="form-control pull-right" style="width:20%" id="search" placeholder="Type to search table...">
-			   </div><br>
-			<!-- <div class="row" style="display: flex;align-items: center; justify-content: center;">
-				<div class="col-lg-10">                             
-				 <table id="myTable" class="table table-dark display"></table>                
-				</div>                                        
-			</div>      -->
-		
-		
-			<!-- <div class="table-responsive col-lg-8">
-				<table class="table table-hover text-center">
-					<thead>
-						<tr>
-							<th class="text-center">#</th>
-							<th class="text-center">Code</th>
-							<th class="text-center">Name</th>
-							<th class="text-center">Status</th>
-							<th class="text-center">Update</th>
-							<th class="text-center">Delete</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>100</td>
-							<td>Mathematics</td>
-							<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-							<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-							<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>500</td>
-							<td>Science</td>
-							<td>Active</td>
-							<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-							<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>300</td>
-							<td>Social</td>
-							<td>Active</td>
-							<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-pin  zmdi-hc-3x"></i></a></td>
-							<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>700</td>
-							<td>English</td>
-							<td>Active</td>
-							<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-							<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-						</tr>
-					</tbody>
-				</table>
-				<ul class="pagination pagination-sm">
-					  <li class="disabled"><a href="#!">«</a></li>
-					  <li class="active"><a href="#!">1</a></li>
-					  <li><a href="#!">2</a></li>
-					  <li><a href="#!">3</a></li>
-					  <li><a href="#!">4</a></li>
-					  <li><a href="#!">5</a></li>
-					  <li><a href="#!">»</a></li>
-				</ul>
-			</div> -->
-
-			<form method= "POST" class="form-inline">
-				<div>
-					<input type="text" name="id" placeholder="ID" class="form-control" id="id_numero">
-					<input type="text" name="name" placeholder="Name" class="form-control" id="nombre">
-	
-					<!-- <input type="text" name="address" placeholder="Address" class="form-control" id="direccion"> -->
-					<button type="button" class="btn-info" id="btn-add">Añadir nuevo</button>
-				</div>
-			</form>
-		<hr>
-		<table class="table col-lg-8">  
-			<thead class="thead-dark">
-				<tr>
-					<th>ID</th>
-					<th>Name</th>
-				   <th>Ver</th>
-					<th>Actualizar</th>
-					<th>Eliminar</th>
-				</tr>
-			</thead>
-			<tbody>
+		<div class="row" style="display: flex; align-items: center; justify-content: center;">
+		<div class="col-lg-10">
+				<div class="card" style="background: #0f0c29; 
+				background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+				background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+				"> 
+						<div class="card-header bg-dark">
+						  <h3 class="card-title text-white">
+						
+					Editor HTML tipo wysiwyg
+						  </h3>
+						</div>
 			
-			</tbody>
-			<tfoot></tfoot>
-		</table>
-		 </div>
+						<div class="card-body">
+						  <form >
+							
+							<textarea name="content" id="editor"></textarea> <br><br>
 		
-	
+							<div class="form-row" >
+									<div class="col-md-4 mb-3">
+									  <label for="validationCustom01" style ="color:white">Titulo</label>
+									  <input type="text" class="form-control" id="validationCustom01" placeholder="Ej: elSitioNuevo"  required>
+								
+									</div>
+									<div class="col-md-4 mb-3">
+									  <label for="validationCustom02"  style ="color:white">Titulo en el menú</label>
+									  <input type="text" class="form-control" id="validationCustom02" placeholder="Ej: menuPagina"  required>
+								
+									</div>
+									<div class="col-md-4 mb-3">
+									  <label for="validationCustomUsername"  style ="color:white">URL</label>
+									  <div class="input-group">
+									
+										<input type="text" class="form-control" id="validationCustomUsername" placeholder="Ej: www.magentoi.com" aria-describedby="inputGroupPrepend" required>
 
+									  </div>
+									</div>
+								  </div>
+					<div class="form-row">
+						<div class="col-6 mb-3">
+								<div class="form-group">
+									
+										<textarea style ="background: white" name="description" id="descripcionPaginaEstatica" rows="3"  class="form-control" placeholder="Descripción" required></textarea>
+								</div>
+						</div>
+						<div class="col-6 mb-3">
+								<div class="form-group">
+										<textarea style ="background: white" name="description" rows="3"  class="form-control" placeholder="Palabras clave" required></textarea>
+								</div>
+						</div>
+					</div>
+							<div class="form-row">
+									<div class="col-md-6 mb-3">
+											<label for="validationCustom01"  style ="color:white">Página padre</label>
+											<input type="text" class="form-control" id="validationCustom01" placeholder="Ej: elSitioNuevo"  required>
+									  
+										  </div>
+										  <div class="col-md-4 mb-3" style="margin-left: 120px">
+											    <div class="custom-control custom-radio">
+														<input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+														<label class="custom-control-label" for="customControlValidation2"  style ="color:white">Activa</label>
+													  </div>
+													  <div class="custom-control custom-radio mb-3">
+														<input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+														<label class="custom-control-label" for="customControlValidation3"  style ="color:white">Inactiva</label>
+														<div class="invalid-feedback">More example invalid feedback text</div>
+													  </div>
+										  </div>
+							</div>	
+							<div class="form-row">
+								<!-- Material inline 1 -->
+								<div class="col-md-4 mb-3">
+										<div class="form-check form-check-inline">
+												<input type="checkbox" class="form-check-input" id="materialInline1">
+												<label class="form-check-label" for="materialInline1"  style ="color:white">Incluir encabezado</label>
+											  </div>
+								</div>
+								<div class="col-md-4 mb-3">
+	  <!-- Material inline 2 -->
+	  <div class="form-check form-check-inline">
+			<input type="checkbox" class="form-check-input" id="materialInline2">
+			<label class="form-check-label" for="materialInline2"  style ="color:white">Incluir pie de página</label>
+		</div>
+								</div>
+								<div class="col-md-4 mb-3">
+	  <!-- Material inline 3 -->
+	  <div class="form-check form-check-inline">
+			<input type="checkbox" class="form-check-input" id="materialInline3">
+			<label class="form-check-label" for="materialInline3"  style ="color:white">Breadcrumd</label>
+		</div>
+								</div>
+
+	  
+
+	  
+
+							</div>	  <br>
+							<br>
+							<br>
+					
+					
+						
+									<div class="form-row">
+											<button style ="height:50px; font-size: 25px; font-weight: bold" class="btn btn-block btn-rounded aqua-gradient" >Crear Página</button>
+									</div>
+						
+				
+						  </form>
+						</div>
+				
+					  </div>
+		</div>
+				
+	
+	
+					
+		
+		</div>
+			
+
+
+		 </div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		 <!-- Footer -->
+<footer class="page-footer font-small blue">
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">© 2018 Copyright:
+		  <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+		</div>
+		<!-- Copyright -->
+	  
+	  </footer>
+	  <!-- Footer -->
 
 	</section>
 	<!-- Notifications area -->
@@ -290,47 +332,19 @@
 	<script src="./js/main.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/jquery.dynamicTable-1.0.0.js"></script>
-	<script src="js/tabla-creacion-paginas.js"></script>
+
 	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
 	<script src="https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js"></script>
-	
+	<script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+	<script>
+			ClassicEditor
+				.create( document.querySelector( '#editor' ) )
+				.catch( error => {
+					console.error( error );
+				} );
+		</script>
 
-<script>
-$(function(){
-$('#btn-add').click(function(){
-// declaracion de variables
-var _id = $('input[name="id"]').val();
-var _name = $('input[name="name"]').val();
-
-var _tel = $('input[name ="tel"]').val();
-
-
-var iconoEliminar = `<a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete  zmdi-hc-2x"></i></a>`
-var iconoActualizar = `<a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh  zmdi-hc-2x"></i></a>`
-var iconoVer = `<a href="#!" class="btn btn-info btn-raised btn-xs"><i class="zmdi zmdi-eye  zmdi-hc-2x"></i></a>`
-var _tr =`<tr>
-		   <td>${_id}</td>
-		   <td>${_name}</td>
-		   <td>${iconoVer}</td>
-		   <td>${iconoActualizar}</td>
-		   <td>${iconoEliminar}</td>
-	    </tr>`;
-	$('tbody').append(_tr);
-
-limpiar();
-
- });
-});
-
-
-function limpiar(){
-    document.getElementById('id_numero').value = '';
-    document.getElementById('nombre').value = '';
-    document.getElementById('telefono').value = '';
-    document.getElementById('direccion').value = '';
- }
-</script>
 <!-- 
 	<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 	<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
