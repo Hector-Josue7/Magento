@@ -13,11 +13,13 @@
 
 <link rel="stylesheet" href="css/font-awesome.min.css"> <!--verificar la version-->
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
 
-<style>
-
-
-</style>
 </head>
 
 <body style="font-size:15px">
@@ -73,13 +75,13 @@
 						</a>
 		 
 					</li>
+				  
 					<li>
 							<a href="administracionPost.html" class="btn-sideBar-SubMenu">
 								<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Entradas/Posts
 							</a>
 			 
 						</li>
-	
 				</ul>
 			</div>
 		</section>
@@ -112,71 +114,69 @@
 		<!-- Content page -->
 		<div class="container">
 			<div class="page-header">
-				<h2 class="text-titles" style="text-align: center"><b>Creación y administración de páginas</b>
+				<h2 class="text-titles" style="text-align: center"><b>Creación y administración de entradas/posts</b>
 					<h2>
 			</div> 
+		<div class="row">
+			<div class="col-lg-8">
+					<div class="card"  style="background: #0f0c29; 
+					background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+					background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+					">
+
+							<div class="card-header bg-dark">
+							  <h3 class="card-title text-white">
+				
+							  </h3>
+							</div>
+						  
+							<div class="card-body">
+							  <form action="/images" method="POST" enctype="multipart/form-data">
+						  
+								
+								<div class="form-group">
+								  <input type="text" style="background: white" name="title" class="form-control" placeholder="Titulo de la entrada" required>
+								</div>
 		
-<!-- Card -->
-<div class="row"  style ="display: flex; align-items: center; justify-content: center;">
-	<div class="col-lg-4">
-			<div class="card">
+								
+								<textarea name="content" id="editor"></textarea> <br><br>
+		
+								<div class="form-group">
+										<div class="input-group">
+										  <div class="custom-file">
+											<input type="file" name="image" class="custom-file-input" id="inputGroupFile" aria-describedby="inputGroupFileAddon" required/>
+											<label class="custom-file-label" for="inputGroupFile">Imagen representativa al archivo</label>
+										  </div>
+										</div>
+									  </div>
 
-					<!-- Card image -->
-					<div class="view overlay">
-					  <img class="card-img-top" src="./img/pagina_web_estatica.jpg" alt="Card image cap" style="height: 170px">
-					  <a href="#!">
-						<div class="mask rgba-white-slight"></div>
-					  </a>
-					</div>
-				  
-					<!-- Card content -->
-					<div class="card-body">
-				  
-					  <!-- Title -->
-					  <h3 class="card-title">Páginas web estaticas</h3>
-					  <!-- Text -->
-					  <p class="card-text">Este tipo de paginas se visualizará un editor HTML tipo wysiwyg. En dichas páginas se 
-						  podrán incrustar diferentes shortcuts o códigos cortos para generar contenido dinámico<br>
-					
-					  </p>
-					  <!-- Button -->
-					  <a href="listaPaginaEstatica.html" class="btn btn-primary btn-block" style="color:white">Button</a>
-				  
-					</div>
-				  
-				  </div>
-				  <!-- Card -->
-	</div>
-	<div class="col-lg-4">
-			<div class="card">
-
-					<!-- Card image -->
-					<div class="view overlay">
-					  <img class="card-img-top" src="./img/post.jpg" alt="Card image cap" >
-					  <a href="#!">
-						<div class="mask rgba-white-slight"></div>
-					  </a>
-					</div>
-				  
-					<!-- Card content -->
-					<div class="card-body">
-				  
-					  <!-- Title -->
-					  <h4 class="card-title">Páginas de entradas o posts</h4>
-					  <!-- Text -->
-					  <p class="card-text">Este tipo de páginas se seleccionará una categoría de posts o entradas y se mostraran en un formato
-						  previamente definido en orden cronológico
-					  </p>
-					  <!-- Button -->
-					  <a href="listaPost.html" class="btn btn-primary btn-block" style="color:white">Button</a>
-				  
-					</div>
-				  
-				  </div>
-				  <!-- Card -->
-	</div>
-</div>
-
+							
+									<div class="form-group">
+											<label  for="myTable" style="color:white">Categorias disponibles</label>
+                                        	<table id="myTable" class="table table-dark"></table>                
+									</div>
+								
+											                                  
+									<!-- Material switch -->
+									<div class="custom-control custom-switch " >
+											<input type="checkbox" class="custom-control-input input-lg" id="customSwitch1" size="15">
+											<label class="custom-control-label" for="customSwitch1" style="color:white">¿Se permiten comentarios?</label>
+										  </div>                 
+								
+								<!-- <div class="form-group">
+								  <textarea name="description" rows="2" class="form-control" placeholder="Deescription for the Image" required></textarea>
+								</div>
+								<div class="form-group">
+								  <button class="btn btn-success">
+									<i class="fa fa-upload"></i> Upload Image
+								  </button>
+								</div> -->
+							  </form>
+							</div>
+						  </div>
+			</div>
+		</div>
+		
 
 
 
@@ -270,10 +270,16 @@
 	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="./js/main.js"></script>
 	<script src="js/popper.min.js"></script>
-
-
-
-
+	<script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+<script src="js/jquery.dynamicTable-1.0.0.js"></script>
+	<script src="js/tabla-creacion-paginas.js"></script>
+	<script>
+			ClassicEditor
+				.create(document.querySelector('#editor'))
+				.catch(error => {
+					console.error(error);
+				});
+		</script>
 
 
 

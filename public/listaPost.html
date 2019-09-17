@@ -88,6 +88,12 @@
 					</a>
 
 				</li>
+				<li>
+                        <a href="administracionPost.html" class="btn-sideBar-SubMenu">
+                            <i class="zmdi zmdi-card zmdi-hc-fw"></i>  Entradas/Posts
+                        </a>
+         
+                    </li>
 
 			</ul>
 		</div>
@@ -260,71 +266,44 @@
 					</div>
 				</div>
 		
-			<!-- <div class="row">
-				<div class="col-lg-8 ">
-					<div class="card">
-						<div class="card-header">
-							<ul class="nav nav-tabs bg-dark" id="myTab" role="tablist">
-								<li class="nav-item">
-									<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-										aria-controls="home" aria-selected="true">Haz una publicación</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-										aria-controls="profile" aria-selected="false">Imagenes</a>
-								</li>
-							</ul>
-						</div>
-						<div class="card-body">
-							<div class="tab-content" id="myTabContent">
-								<div class="tab-pane fade show active" id="home" role="tabpanel"
-									aria-labelledby="home-tab">
-									<div class="form-group">
-										<label class="sr-only" for="message">post</label>
-										<textarea class="form-control" id="message" rows="3"
-											placeholder="What are you thinking?"></textarea>
-									</div>
-
-								</div>
-								<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-									<div class="custom-file" style="color:black">
-										<input type="file" class="custom-file-input" id="validatedCustomFile" required>
-										<label class="custom-file-label" for="validatedCustomFile">Choose
-											file...</label>
-										<div class="invalid-feedback">Example invalid custom file feedback</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card-footer">
-						<div class="btn-toolbar justify-content-between">
-
-							<div class="btn-group">
-								<select class="mdb-select md-form">
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Option 1</option>
-									<option value="2">Option 2</option>
-									<option value="3">Option 3</option>
-								</select>
-							</div>
-							<div class="btn-group" style="margin-top:20px ">
-								<button type="button" style="width: 200px; height:40px"
-									class=" btn-lg btn-success btn-block ">compartir</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
+		
 		</div>
 
 
-
+<!-- <div class="card mt-2">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h3>Comments</h3>
+    <button class="btn btn-info" id="btn-toggle-comment">
+      <i class="fa fa-comments-o"></i> Post a Comment
+    </button>
+  </div>
+  <div class="card-body">
+   
+    <ul class="list-group p-4">
+      {{#each comments}}
+      <li class="list-group-item">
+        <div class="row">
+          <a href="#" class="col text-center">
+            <img src="http://gravatar.com/avatar/{{gravatar}}?d=monsterid&s=45" />
+          </a>
+          <blockquote class="col">
+            <p class="lead">{{comment}}</p>
+            <footer class="blockquote-footer">
+              {{name}}- {{timeago timestamp}}
+            </footer>
+          </blockquote>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+ -->
 
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8">
-					<div class="card ">
+				<div class="col-lg-8" style="margin-bottom:50px; margin-top: 50px">
+					<div class="card" style="background: rgb(252, 249, 249)">
 						<div class="card-header">
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="d-flex justify-content-between align-items-center">
@@ -373,236 +352,31 @@
 						</div>
 						<div class="card-footer">
 							<a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-							<a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
+							<a href="#"id="btn-toggle-comment" class="card-link"><i class="fa fa-comment"></i> Comment</a>
 							<a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-						</div>
-					</div>
-
-				</div>
-				<div class="col-lg-8">
-					<div class="card ">
-						<div class="card-header">
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-									</div>
-									<div class="ml-2">
-										<div class="h5 m-0">@LeeCross</div>
-										<div class="h7 text-muted">Miracles Lee Cross</div>
-									</div>
-								</div>
-								<div>
-									<div class="dropdown">
-										<button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
-											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="fa fa-ellipsis-h"></i>
+							<blockquote id="post-comment">
+									<form action="/images/{{ image.uniqueId }}/comment" method="POST">
+								
+									  <div class="form-group">
+										<textarea name="comment" class="form-control" rows="2" placeholder="Your Comment"></textarea>
+									  </div>
+									  <div class="form-group">
+										<button class="btn btn-success" id="btn-comment">
+										  <i class="fa fa-comment"></i> Post
 										</button>
-										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-											<div class="h6 dropdown-header">Configuration</div>
-											<a class="dropdown-item" href="#">Save</a>
-											<a class="dropdown-item" href="#">Hide</a>
-											<a class="dropdown-item" href="#">Report</a>
-										</div>
-									</div>
-								</div>
-							</div>
+									  </div>
+									</form>      
+								  </blockquote>
+						
 
-						</div>
-						<div class="card-body">
-							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> Hace 40 min</div>
-							<a class="card-link" href="#">
-								<h5 class="card-title">Totam non adipisci hic! Possimus ducimus amet, dolores illo ipsum
-									quos
-									cum.</h5>
-							</a>
-
-							<p class="card-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt fugit reprehenderit
-								consectetur exercitationem odio,
-								quam nobis? Officiis, similique, harum voluptate, facilis voluptas pariatur dolorum
-								tempora sapiente
-								eius maxime quaerat.
-								<a href="https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU"
-									target="_blank">https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU</a>
-							</p>
-						</div>
-						<div class="card-footer">
-							<a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-							<a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-							<a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
 						</div>
 					</div>
-
+<!--     <button class="btn btn-info" id="btn-toggle-comment">
+      <i class="fa fa-comments-o"></i> Post a Comment
+    </button> -->
 				</div>
-				<div class="col-lg-8">
-					<div class="card ">
-						<div class="card-header">
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-									</div>
-									<div class="ml-2">
-										<div class="h5 m-0">@LeeCross</div>
-										<div class="h7 text-muted">Miracles Lee Cross</div>
-									</div>
-								</div>
-								<div>
-									<div class="dropdown">
-										<button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
-											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="fa fa-ellipsis-h"></i>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-											<div class="h6 dropdown-header">Configuration</div>
-											<a class="dropdown-item" href="#">Save</a>
-											<a class="dropdown-item" href="#">Hide</a>
-											<a class="dropdown-item" href="#">Report</a>
-										</div>
-									</div>
-								</div>
-							</div>
 
-						</div>
-						<div class="card-body">
-							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> Hace 40 min</div>
-							<a class="card-link" href="#">
-								<h5 class="card-title">Totam non adipisci hic! Possimus ducimus amet, dolores illo ipsum
-									quos
-									cum.</h5>
-							</a>
-
-							<p class="card-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt fugit reprehenderit
-								consectetur exercitationem odio,
-								quam nobis? Officiis, similique, harum voluptate, facilis voluptas pariatur dolorum
-								tempora sapiente
-								eius maxime quaerat.
-								<a href="https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU"
-									target="_blank">https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU</a>
-							</p>
-						</div>
-						<div class="card-footer">
-							<a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-							<a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-							<a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-						</div>
-					</div>
-
-				</div>
-				<div class="col-lg-8">
-					<div class="card ">
-						<div class="card-header">
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-									</div>
-									<div class="ml-2">
-										<div class="h5 m-0">@LeeCross</div>
-										<div class="h7 text-muted">Miracles Lee Cross</div>
-									</div>
-								</div>
-								<div>
-									<div class="dropdown">
-										<button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
-											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="fa fa-ellipsis-h"></i>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-											<div class="h6 dropdown-header">Configuration</div>
-											<a class="dropdown-item" href="#">Save</a>
-											<a class="dropdown-item" href="#">Hide</a>
-											<a class="dropdown-item" href="#">Report</a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-						<div class="card-body">
-							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> Hace 40 min</div>
-							<a class="card-link" href="#">
-								<h5 class="card-title">Totam non adipisci hic! Possimus ducimus amet, dolores illo ipsum
-									quos
-									cum.</h5>
-							</a>
-
-							<p class="card-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt fugit reprehenderit
-								consectetur exercitationem odio,
-								quam nobis? Officiis, similique, harum voluptate, facilis voluptas pariatur dolorum
-								tempora sapiente
-								eius maxime quaerat.
-								<a href="https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU"
-									target="_blank">https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU</a>
-							</p>
-						</div>
-						<div class="card-footer">
-							<a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-							<a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-							<a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-						</div>
-					</div>
-
-				</div>
-				<div class="col-lg-8">
-					<div class="card ">
-						<div class="card-header">
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="mr-2">
-										<img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-									</div>
-									<div class="ml-2">
-										<div class="h5 m-0">@LeeCross</div>
-										<div class="h7 text-muted">Miracles Lee Cross</div>
-									</div>
-								</div>
-								<div>
-									<div class="dropdown">
-										<button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
-											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="fa fa-ellipsis-h"></i>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-											<div class="h6 dropdown-header">Configuration</div>
-											<a class="dropdown-item" href="#">Save</a>
-											<a class="dropdown-item" href="#">Hide</a>
-											<a class="dropdown-item" href="#">Report</a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-						<div class="card-body">
-							<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> Hace 40 min</div>
-							<a class="card-link" href="#">
-								<h5 class="card-title">Totam non adipisci hic! Possimus ducimus amet, dolores illo ipsum
-									quos
-									cum.</h5>
-							</a>
-
-							<p class="card-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt fugit reprehenderit
-								consectetur exercitationem odio,
-								quam nobis? Officiis, similique, harum voluptate, facilis voluptas pariatur dolorum
-								tempora sapiente
-								eius maxime quaerat.
-								<a href="https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU"
-									target="_blank">https://mega.nz/#!1J01nRIb!lMZ4B_DR2UWi9SRQK5TTzU1PmQpDtbZkMZjAIbv97hU</a>
-							</p>
-						</div>
-						<div class="card-footer">
-							<a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-							<a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-							<a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-						</div>
-					</div>
-
-				</div>
+		
 			</div>
 		</div>
 
@@ -700,7 +474,17 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
 	<script src="./js/push.min.js"></script>
-
+	<script>
+			$(function() {
+			  // Post Toggle View
+			  $('#post-comment').hide();
+			  $('#btn-toggle-comment').click(e => {
+				e.preventDefault();
+				$('#post-comment').slideToggle();
+			  });
+			  });
+			
+			</script>
 
 </body>
 
