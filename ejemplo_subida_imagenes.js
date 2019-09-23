@@ -58,3 +58,62 @@ extension: {type:String, required:true}
 var Imagen = mongoose.model("Imagen", img_schema);
 
 module.exports = Imagen
+//*********************************************************************************************** *
+
+// npm install --save express-formidable
+//colocar en app.js
+var User = require("./models/user").User;
+var cookieSession = require("cookie-session");
+var session_middleware = require("./middlewares/session");
+var fs = require("fs");
+
+var formidable = require("express-formidable");
+
+//middlewares
+// esta es la carpeta temporal en la que se guardara la imagen
+applicationCache.use(formidable.parse({ keepExtensions:true}));
+
+// hay un input tipo file con id = archivo y name = archivo
+// usar peticion sincrona para hacer esto
+// colocar enctype="multipart/form-data"
+
+router.route("/imagenes")
+.get (function (req,res){
+Imagen.find({creator:res.locals.user._id}, function(err, imagenes){
+if(err) {res.redirect("/app"); return;}
+res.render("app/imagenes/index", {imagenes: imagenes});
+});
+})
+.post(function(req,res){
+//console.log(req.body.archivo)
+var extension = req.body.archivo.name.split(".").pop(); // esto devuelve un arreglo donde separa 
+var data ={
+title: req.body.title,
+creator: res.locals.user._id,
+extension: extension
+}
+var imagen = new Imagen(data);
+Imagen.save(function(err){
+if(!err){
+fs.rename(req.body.archivo.path, "public/imagenes/"+imagen._id +"."+ extension); // se usa el _id para no repetir los nombres de las imagenes
+res.redirect("/app/imagenes/"+imagen._id)
+} else{
+    console.log(imagen);
+    res.render(err);
+}
+});
+});
+
+// models
+
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+var img_schema = new Schema({
+title: {type: String, required:true},
+creator: {type: Schema.Types.ObjectId, ref: "User"},
+extension: {type:String, required:true}
+});
+
+var Imagen = mongoose.model("Imagen", img_schema);
+
+module.exports = Imagen;

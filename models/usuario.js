@@ -27,3 +27,19 @@ UserSchema.methods.encryptPassword = async (contrasena) => {
       };
 
 module.exports = mongoose.model('usuarios', UserSchema );
+
+ // define a schema
+//  var personSchema = new Schema({
+//   name: {
+//     first: String,
+//     last: String
+//   }
+// });
+
+// // compile our model
+// var Person = mongoose.model('Person', personSchema);
+
+// // create a document
+// var axl = new Person({
+//   name: { first: 'Axl', last: 'Rose' }
+// });

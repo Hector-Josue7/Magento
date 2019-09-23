@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/bootstrap3.min.css">
 	<link rel="stylesheet" href="css/bootstrap4.min.css">
 
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.css">
 <link rel="stylesheet" href="css/font-awesome.min.css"> <!--verificar la version-->
 
 
@@ -74,20 +74,30 @@
 		 
 					</li>
 					<li>
-						<a href="administracionPost.html" class="btn-sideBar-SubMenu">
-							<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Entradas/Posts
-						</a>
-		 
-					</li>
-
+							<a href="administracionPost.html" class="btn-sideBar-SubMenu">
+								<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Entradas/Posts
+							</a>
+			 
+						</li>
+						
 					<li>
 						<a href="plantillas.html" class="btn-sideBar-SubMenu">
 							<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Plantillas o temas
 						</a>
 		 
 					</li>
-
-	
+					<li>
+						<a href="creacionUsuarios.html" class="btn-sideBar-SubMenu">
+							<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Creación de usuarios
+						</a>
+		 
+					</li>
+					<li>
+							<a href="creacionRoles.html" class="btn-sideBar-SubMenu">
+								<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Creación de roles
+							</a>
+			 
+						</li>
 				</ul>
 			</div>
 		</section>
@@ -120,14 +130,51 @@
 		<!-- Content page -->
 		<div class="container">
 			<div class="page-header">
-				<h2 class="text-titles" style="text-align: center"><b>Creación y administración de entradas/Posts</b>
+				<h2 class="text-titles" style="text-align: center"><b>Creación y administración de roles</b>
 					<h2>
 			</div> 
 		
-
-
-
-
+<div class="row" style="margin:auto">
+	<div class="col-lg-8">
+			<div class="card">
+					<div class="card-header bg-dark">
+					  <h3 class="card-title text-white">
+					
+						Crea un nuevo rol
+					  </h3>
+					</div>
+				
+					<div class="card-body">
+					  <form action="/images" method="POST" enctype="multipart/form-data">
+						
+						<div class="form-group">
+						  <input type="text" name="title" class="form-control" placeholder="Tituto para el rol" required/>
+				        </div>
+						<div class="form-group">
+						  <textarea name="description" rows="2" class="form-control" placeholder="Descripción del rol" required></textarea>
+						</div>
+						Paginas a las cuales tiene acceso el rol: <select multiple name="imagenes" id="imagenes" class="form-control">
+								<option value="img/slide1.jpg">img/slide1.jpg</option>
+								<option value="img/slide2.jpg">img/slide2.jpg</option>
+								<option value="img/slide3.jpg">img/slide3.jpg</option>
+								<option value="img/slide4.jpg">img/slide4.jpg</option>
+								<option value="img/slide5.jpg">img/slide5.jpg</option>
+								<option value="img/slide6.jpg">img/slide6.jpg</option>
+							</select>
+						<div class="form-group">
+						  <button class="btn btn-success" style="color:white">
+							<i class="fa fa-upload"></i>
+							Cargar nuevo rol
+						  </button>
+						</div>
+					  </form>
+					</div>
+				  </div>
+	</div>
+	
+</div>
+			
+		
 
 		 </div>
 		
