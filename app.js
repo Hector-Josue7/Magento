@@ -2,10 +2,14 @@ const express = require("express")
 var  bodyParser = require('body-parser')
 const path = require('path');
 var upload = require('./routes/upload')
+var paginasEstaticas = require('./routes/paginas-estaticas-routers');
 const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use('/upload', upload);
+app.use('/paginaestatica',paginasEstaticas);
+
+
 app.use(express.static(path.join(__dirname, './public')));
 module.exports = app;
 
