@@ -24,7 +24,7 @@ module.exports = router;
 
 
 //Eliminar un usuario
-router.delete('/:id',function(req,res){
+router.delete('/eliminaPagina/:id',function(req,res){
     paginaestatica.remove({_id:req.params.id})
     .then((result)=>{
         res.send(result);
