@@ -100,15 +100,20 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
   
       </div>
     <div class="col-lg-8">
-        <form class="w-80">
+        <!-- <form class="w-80"> -->
             <div class="form-row">
+
               <div class="form-group col-md-6">
                 <label for="nombre">Nombre</label>
                 <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                <div class="valid-feedback">Ok</div>
+                <div class="invalid-feedback">Primer nombre es requerido</div>
               </div>
               <div class="form-group col-md-6">
                 <label for="apellido">Apellido</label>
                 <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                <div class="valid-feedback">Ok</div>
+                <div class="invalid-feedback">Apellido es requerido</div>
               </div>
    
      
@@ -122,108 +127,71 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
               <div class="input-group-text">@</div>
             </div>
             <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">El nombre de usuario es requerido</div>
           </div>
         </div>
      
         <div class=" form-group col-md-6">
-            <label for="inputPassword6">Correo</label>
+            <label for="correo">Correo</label>
           <input onkeyup="validarCorreo(this)" id="correo" class="form-control" type="text" placeholder="hector@magento.com">
           <div class="valid-feedback">Ok</div>
-          <div class="invalid-feedback">Invalid Email</div>
+          <div class="invalid-feedback">Correo invalido</div>
       </div>
       </div>
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="inputPassword6">Contraseña</label>
+            <label for="clave">Contraseña</label>
             <input type="password" id="clave" class="form-control " placeholder="Contraseña" aria-describedby="passwordHelpInline">
-            <small id="passwordHelpInline"  style="color: white">
+            <!-- <small id="passwordHelpInline"  style="color: white">
                 Debe tener entre 8 y 20 caracteres.
-            </small>
+            </small> -->
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">Password is required</div>
           </div>
      
           <div class="form-group col-md-6">
-              <label for="exampleFormControlFile1">Elija su foto</label>
-              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              <label for="foto-perfil">Elija su foto</label>
+              <input type="file" class="form-control-file" id="foto-perfil">
             </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-3">
-            <label  class=" col-form-label">Género</label>
-            <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label" for="customRadio1">Masculino</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label" for="customRadio2">Femenino</label>
-              </div>
+            Genero<br>
+            <label><input name="gender" type="radio" value="F">Femenino</label>
+            <label><input name="gender" type="radio" value="M">Masculino</label>
+         
         </div>
-<label for="fechaNacimiento" class=" col-form-label">Fecha de nacimiento</label>
-    <div class="form-group col-md-5">
-  <div class="col-10">
-    <input class="form-control" type="date" value="2011-08-19" id="fechaNacimiento">
-  </div>
- </div>
- <!-- <label  class=" col-form-label">Fecha de nacimiento</label>
- <div class="form-group col-md-3">
-
-    <div class="col-lg-4 col-12">
-        <select id="month" class="form-control"><option value="">Mes</option></select>
-        <div class="valid-feedback">Ok</div>
-        <div class="invalid-feedback">Month is required</div>
-    </div>
- </div>
- <div class="form-group col-md-3">
-    <div class="col-lg-4 col-12">
-        <select id="day" class="form-control"><option value="">Día</option></select>
-        <div class="valid-feedback">Ok</div>
-        <div class="invalid-feedback">Day is required</div>
-    </div>
- </div>
-
- <div class="form-group col-md-3">
-    <div class="col-lg-4 col-12">
-        <select id="year" class="form-control"><option value="">Año</option></select>
-        <div class="valid-feedback">Ok</div>
-        <div class="invalid-feedback">Year is required</div>
-    </div>
- </div> -->
-              
-                  
-            
-    
-    </div>
-  
-            <button type="submit" class="btn btn-primary btn-block">Vamos</button><br>
-            <p class="form-link">¿Ya tienes una cuenta? <a href="./login.html">Ingresa aquí</a></p>
-          </form>
-    </div>
 
  
+        Cumpleaños
+       <div class="col-lg-2 col-12">
+            <select id="day" class="form-control"><option value="">Día</option></select>
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">Day is required</div>
+        </div>
+        <div class="col-lg-2 col-12">
+            <select id="month" class="form-control"><option value="">Mes</option></select>
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">Month is required</div>
+        </div>
+        <div class="col-lg-2 col-12">
+            <select id="year" class="form-control"><option value="">Año</option></select>
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">Year is required</div>
+        </div>
+</div>
+<button onclick="registrarUsuario()" id="boton-registro" type="button" class="btn btn-primary btn-block">Vamos</button><br>
+    <p class="form-link">¿Ya tienes una cuenta? <a href="./login.html">Ingresa aquí</a></p>
+  <!-- </form> -->
   </div>
-    
-
-
-   
-        
-  
+</div>
 </div>
 
-
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      <script>
-    var campos = [
-    {id:'nombre', valido:false},
-    {id:'usuario', valido:false},
-    {id:'correo', valido:false},
-    {id:'clave', valido:false},
-    {id:'fechaNacimiento', valido:false}
-];
-
-
-      </script>
+ <script src="js/controlador-registro-usuarios.js"></script>
 </body>
 </html>

@@ -43,3 +43,38 @@ module.exports = mongoose.model('usuarios', UserSchema );
 // var axl = new Person({
 //   name: { first: 'Axl', last: 'Rose' }
 // });
+
+
+// var mongoose = require("mongoose");
+
+// var esquema = new mongoose.Schema(
+//     {
+       
+//         nombre : String,
+//         apellido : String,
+//         usuario : String,
+//         correo : String,
+//         contrasena : String,
+//         foto : String,
+//         idFacebook : String,
+//         idPlan: mongoose.Schema.Types.ObjectId,
+//         genero:String,
+//         fechaNacimiento:Date,
+//         fechaRegistro:Date,
+//         tarjeta:{
+//                 tipo:String,
+//                 numero:String,
+//                 ccv:String,
+//                 propietario:String,
+//                 mesExpiracion:String,
+//                 anioExpiracion:String
+//         }
+
+
+
+     
+// }
+
+// );
+
+// module.exports = mongoose.model('usuarios',esquema);
