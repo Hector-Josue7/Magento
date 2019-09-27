@@ -1,29 +1,22 @@
 const express = require("express") 
 var  bodyParser = require('body-parser')
-//const expressLayouts = require('express-ejs-layouts')
 const path = require('path');
-//------------------
-var upload = require('./routes/upload')
-var paginasEstaticas = require('./routes/paginas-estaticas-routers');
-//var locked = require('./routes/locked');
-//----------------------------------------------
 const app = express();
+
+//MIDDLEWARES
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-//app.use(expressLayouts) 
-//--------------------------------
-require('./routes')(app);
-//require('./routes/main')(app);
-app.use('/upload', upload);
-app.use('/paginaestatica',paginasEstaticas);
-//--------------------------------
+// EJS MOTOR DE VISTAS CONFIGURACION
 app.set('views',__dirname + '/public');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
+//ACCESO A LOS ROUTERS
+require('./routes/usuarios-router')(app);
 
 app.use(express.static(path.join(__dirname, './public')));
 module.exports = app;
+
 
 //var formidable = require("express-formidable");
 //var errorHandler = require('errorhandler'); // npm install errorhandler

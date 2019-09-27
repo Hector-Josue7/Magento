@@ -1,32 +1,74 @@
 var mongoose = require("mongoose");
-
+const { Schema } = mongoose;
 const bcrypt = require('bcryptjs');
-var UserSchema  = new mongoose.Schema(
+
+var UserSchema  = new Schema(
     {
        
-        nombre :  { type: String, required: true },
-        apellido :  { type: String, required: true },
-        usuario :  { type: String, required: true },
-        correo : { type: String, required: true },
-        clave :  { type: String, required: true },
-        foto : String,
-        genero:String,
-        idTipoUsuario: mongoose.Schema.Types.ObjectId,
-        fechaNacimiento:Date,
+        Nombre :  String,
+        Apellido : String,
+        Usuario :  String,
+        Correo : String,
+        Clave : String,
+        // foto : String,
+        gender:String,
+        // idTipoUsuario: mongoose.Schema.Types.ObjectId,
+        birthdate:mongoose.SchemaTypes.Mixed, 
         fechaRegistro: {type: Date, default: Date.now},
         } );
 
-UserSchema.methods.encryptPassword = async (contrasena) => {
-        const salt = await bcrypt.genSalt(10);
-        const hash = await bcrypt.hash(clave, salt);
-        return hash;
-      };
-      
-      UserSchema.methods.matchPassword = async function (clave) {
-        return await bcrypt.compare(contrasena, this.clave);
-      };
+
+
+
+        
+UserSchema.methods.encryptPassword = async (Clave) => {
+  const salt = await bcrypt.genSalt(10);
+  const hash = await bcrypt.hash(Clave, salt);
+  return hash;
+};
+
+UserSchema.methods.matchPassword = async function (Clave) {
+  return await bcrypt.compare(Clave, this.Clave);
+};
 
 module.exports = mongoose.model('usuarios', UserSchema );
+
+
+// var esquema = new mongoose.Schema({
+//   firstName:String,
+//   lastName:String,
+//   email:String,
+//   password:String,
+//   birthdate:mongoose.SchemaTypes.Mixed, 
+//   gender:String
+// });
+// let parametros = `firstName=${persona.firstName}
+//&lastName=${persona.lastName}
+//&email=${persona.email}
+//&password=${persona.password}
+//&month=${persona.birthdate.month}
+//&day=${persona.birthdate.day}
+//&year=${persona.birthdate.year}
+//&gender=${persona.gender}`;
+
+
+
+
+
+
+
+
+
+// var esquema = new mongoose.Schema({
+//   firstName:String,
+//   lastName:String,
+//   email:String,
+//   password:String,
+//   birthdate:mongoose.SchemaTypes.Mixed, 
+//   gender:String
+// });
+
+
 
  // define a schema
 //  var personSchema = new Schema({
