@@ -20,8 +20,9 @@ module.exports = function(app)
 app.post('/registro', async function(req,res , next){ // http://localhost:3000/registro     (2) 
 let user = await Usuario.findOne({ correo: req.body.correo });
   if (user) {
-     return res.status(400).send('That user already exisits!');
- } else {
+    return res.status(400).send('That user already exisits!');
+ //res.status(200).redirect('/registro');
+    } else {
      user = new Usuario({
         nombre: req.body.nombre,
         apellido: req.body.apellido,

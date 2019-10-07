@@ -38,7 +38,8 @@ module.exports = function(app)
   
 
 app.get('/logout',async function (req, res, next) {  // http://localhost:3000/logout       se destruye la sesion actual
-    req.session.destroy(); 
+   // req.logout();  
+   req.session.destroy(); 
     res.redirect("/login");
    });
   

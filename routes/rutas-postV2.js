@@ -30,6 +30,10 @@ module.exports = app => {
          res.status(500).json({ msg: 'Error al obtener la imagen del usuario', error: err });
       }
 });
+
+  /*==================================
+   Actualizar imagen de perfil del user
+   ===================================*/
 router.patch('/', userValidators.updateUserImage, authMiddleware.isAuth, async (req, res) => {
         try {
          // Valido que venga la imagen
@@ -81,7 +85,7 @@ router.patch('/changePassword', userValidators.changePassword, authMiddleware.is
          res.status(500).json({ msg: 'Error al acutalizar la contraseña del usuario', error: err });
       }
    });
-   
+   // no eliminar esta linea de abajo, sin ella el router no funciona
  app.use(router);
 }
 

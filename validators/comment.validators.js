@@ -1,7 +1,7 @@
 const { body, header, param } = require('express-validator/check');
 const { sanitize } = require('express-validator/filter');
 
-const checkErrors = require('../services/validation.service');
+const checkErrors = require('../modulos/validation.service');
 
 module.exports = {
 

@@ -11,6 +11,6 @@ const commentSchema = new Schema({
    dislikedBy: [{ type: Schema.Types.ObjectId, ref: 'usuario' }]
 }, { timestamps: true });
 
-const Comment = mongoose.model('comentario', commentSchema);
+const Comment = mongoose.model('Comentario', commentSchema);
 
 module.exports = Comment;
