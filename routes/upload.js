@@ -34,5 +34,6 @@ router.post('/', [multer.single('attachment')], function (req, res, next) {
         router.get('/success', function (req, res, next) {
             var {fileName} = req.query
             res.render('uploadOK.ejs', {fileName})
+   
           })
 module.exports = router

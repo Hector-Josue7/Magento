@@ -12,16 +12,6 @@ const ImageSchema = new Schema({
   usuarioDueño:  mongoose.Schema.Types.Mixed
 });
 
-// ImageSchema.virtual('uniqueId')
-//   .get(function () {
-//     return this.filename.replace(path.extname(this.filename), '');
-//   });
+
 
 module.exports = mongoose.model('Imagenes', ImageSchema);
-
-
-
-
-
-
-

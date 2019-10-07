@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Inicio</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../public/css/main.css">
+ <!-- FONT AWESOME -->
+ <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+ -->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+ crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/ebcee96589.js"></script>
+
+<!-- <link rel="stylesheet" href="../public/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="../public/css/bootstrap3.min.css">
+
+	<style type="text/css">
+		.imagenes,
+		.videos,
+		.archivosGenericos {
+			background: #43C6AC;
+			background: -webkit-linear-gradient(to bottom, #191654, #43C6AC);
+			background: linear-gradient(to bottom, #191654, #43C6AC);
+		}
+	</style>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+</head>
+
+<body>
+
+ <!-- SideBar -->
+ <section class="full-box cover dashboard-sideBar">
+        <div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+        <div class="full-box dashboard-sideBar-ct">
+            <!--SideBar Title -->
+            <div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title"> Magento <i
+                    class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+            </div>
+            <!-- SideBar User info -->
+            <div class="full-box dashboard-sideBar-UserInfo">
+                <figure class="full-box">
+		
+					<img src="../public/img/team/ac_generico.jpg" alt="UserIcon" />
+
+					<figcaption class="text-center text-titles">hjjghkgkjhh</figcaption>	
+				</figure>
+                <ul class="full-box list-unstyled text-center">
+                    <li>
+                        <a href="#!">
+                            <i class="zmdi zmdi-settings"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="btn-exit-system">
+                            <i class="zmdi zmdi-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- SideBar Menu -->
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+				<li>
+					<a href="/home">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Menu principal </a>
+				</li>
+				<li>
+					<a href="/elegirarchivo" class="btn-sideBar-SubMenu" style="padding-top:1px">
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> imagenes, videos y archivos 
+						<!-- <i class="zmdi zmdi-caret-down pull-right"></i> -->
+					</a>
+   
+				</li>
+				<li>
+					<a href="/edicionpagina" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Administrar pagina principal
+					</a>
+
+				</li>
+				<li>
+					<a href="/eleccionpagina" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> creación de páginas 
+					</a>
+	 
+				</li>
+				<li>
+						<a href="/listapaginapost" class="btn-sideBar-SubMenu">
+							<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Entradas/Posts
+						</a>
+		 
+					</li>
+					
+				<li>
+					<a href="/plantillas" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Plantillas o temas
+					</a>
+	 
+				</li>
+				<li>
+					<a href="/creacionusuarios" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Creación de usuarios
+					</a>
+	 
+				</li>
+				<li>
+						<a href="/creacionroles" class="btn-sideBar-SubMenu">
+							<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Creación de roles
+						</a>
+		 
+					</li>
+			</ul>
+        </div>
+    </section>
+	<!-- Content page-->
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="full-box dashboard-Navbar">
+			<ul class="full-box list-unstyled text-right">
+				<li class="pull-left">
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+				</li>
+				<li>
+					<a href="#!" class="btn-Notifications-area">
+						<i class="zmdi zmdi-notifications-none"></i>
+						<span class="badge">7</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-search">
+						<i class="zmdi zmdi-search"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-modal-help">
+						<i class="zmdi zmdi-help-outline"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Content page -->
+		<div class="container-fluid">
+			<div class="page-header">
+				<h1 class="text-titles">En esta sección puede subir sus archivos</h1>
+			</div>
+			<div class="row">
+				<div class="full-box text-center" style="padding: 30px 10px;">
+					<div class="col-12 col-sm-6 col-lg-4">
+						<div class="imagenes">
+							<article class="full-box tile">
+								<div class="full-box tile-title text-center text-titles text-uppercase"> IMAGENES </div>
+								<div class="full-box tile-icon text-center">
+									<i class="zmdi zmdi-collection-folder-image"></i>
+								</div>
+								<div class="full-box tile-number text-titles">
+									<p class="full-box">7</p>
+								
+								</div>
+							</article>
+							<div class="card-footer text-muted">
+								<div class="row">
+									<a href="./galeriaImagenes.html" class="btn btn-secondary"
+										title="Ver todas las imagenes" id="verImagenes"
+										data-placement="bottom"><i class="fas fa-eye fa-lg"></i></a>
+									<a href="#" class="btn btn-default btn-rounded mb-4" data-toggle="modal"
+										data-target="#subirImagenes"> <i class="fas fa-cloud-upload-alt fa-lg"
+											style="margin-left:50px;"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-4">
+						<div class="videos">
+							<article class="full-box tile">
+								<div class="full-box tile-title text-center text-titles text-uppercase"> VIDEOS </div>
+								<div class="full-box tile-icon text-center">
+									<i class="zmdi zmdi-collection-video"></i>
+								</div>
+								<div class="full-box tile-number text-titles">
+									<p class="full-box">10</p>
+								
+								</div>
+							</article>
+							<div class="card-footer text-muted">
+								<div class="row">
+									<a href="./galeriaVideos.html" class="btn btn-secondary" title="Ver todos los videos"
+										data-toggle="tooltip"
+										data-placement="bottom"><i class="fas fa-eye fa-lg"></i></a>
+									<a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal"
+										data-target="#subirVideos"> <i class="fas fa-cloud-upload-alt fa-lg"
+											style="margin-left:50px;"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-4">
+						<div class="archivosGenericos">
+							<article class="full-box tile">
+								<div class="full-box tile-title text-center text-titles text-uppercase"> ARCHIVOS
+									GENERICOS </div>
+								<div class="full-box tile-icon text-center">
+									<i class="zmdi zmdi-file"></i>
+								</div>
+								<div class="full-box tile-number text-titles">
+									<p class="full-box">70</p>
+									
+								</div>
+							</article>
+							<div class="card-footer text-muted">
+								<div class="row">
+									<a href="./galeriaArchivos.html" class="btn btn-secondary" title="Ver todos los archivos genericos"
+										data-toggle="tooltip" data-placement="bottom"><i
+											class="fas fa-eye fa-lg"></i></a>
+									<a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal"
+										data-target="#subirArchivos"> <i class="fas fa-cloud-upload-alt fa-lg"
+											style="margin-left:50px;"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- modal para subir imagenes -->
+	<div class="modal fade" id="subirImagenes" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class=" modal-header bg-dark" style="background: #43C6AC;  
+				background: -webkit-linear-gradient(to bottom, #191654, #43C6AC);  
+				background: linear-gradient(to bottom, #191654, #43C6AC); ">
+					<h3 class="modal-title" style=" text-align: center; color:white; font-weight: bold"
+						id="exampleModalLongTitle">Suba una imagen</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+			
+
+					<form  action="/subirfoto" method="POST" enctype="multipart/form-data">
+					
+							<div class="input-group">
+								<div class="custom-file">
+								  <input type="file"  onchange="return fileValidation();" name="image" class="custom-file-input" id="image" />
+								
+							
+								  <div id="imagePreview"></div>
+
+								  <label class="custom-file-label" for="inputGroupFile">Elija el archivo</label>
+								</div>
+							  </div>
+				
+				
+						<div class="form-group">
+							<input type="text" id="title" name="title" class="form-control" placeholder="Titulo para la imagen" required />
+						</div>
+						<div class="form-group">
+							<textarea id="description" name="description" rows="2" class="form-control" placeholder="Descripción de la imagen" required></textarea>
+						</div>
+
+						<button type="button" class="btn btn-danger" style="color:white" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-success" id="btn-carga-imagen" name="btn-carga-imagen"   style="background: rgb(73, 170, 73); color:white" > 
+				<i class="fa fa-upload"></i> Cargar imagen </button>
+                 <!--  onclick="nuevaImagen()" -->
+						</form>
+
+				</div>
+
+			
+			
+		
+			</div>
+		</div>
+	</div>
+
+	<!-- modal para subir videos -->
+	<div class="modal fade" id="subirVideos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class=" modal-header bg-dark" style="background: #43C6AC;  
+				background: -webkit-linear-gradient(to bottom, #191654, #43C6AC);  
+				background: linear-gradient(to bottom, #191654, #43C6AC); ">
+					<h3 class="modal-title" style=" text-align: center; color:white; font-weight: bold"
+						id="exampleModalLongTitle">Suba un video</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form class="md-form">
+						<div class="file-field big">
+							<a class="btn-floating btn-lg amber darken-2 mt-0 float-left">
+								<i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+								<input type="file" multiple>
+							</a>
+						</div>
+					</form>
+					<!-- <div class="form-group">
+										<label for="exampleFormControlTextarea1">Example textarea</label>
+										<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+									  </div> -->
+					<div class="form-group">
+						<input
+							type="text"
+							name="title"
+							class="form-control"
+							placeholder="Titulo para el video"
+							required />
+					</div>
+					<div class="form-group">
+						<textarea
+							name="description"
+							rows="2"
+							class="form-control"
+							placeholder="Descripción de el video"
+							required></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" style="color:white" data-dismiss="modal">Close</button>
+					<button class="btn btn-success" type="button" style="background: rgb(73, 170, 73); color:white">
+						<i class="fa fa-upload"></i> Cargar video </button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal para subir archivos genericos -->
+	<div class="modal fade" id="subirArchivos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class=" modal-header bg-dark" style="background: #43C6AC;  
+				background: -webkit-linear-gradient(to bottom, #191654, #43C6AC);  
+				background: linear-gradient(to bottom, #191654, #43C6AC); ">
+					<h3 class="modal-title" style=" text-align: center; color:white; font-weight: bold"
+						id="exampleModalLongTitle">Suba un archivo generico</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form class="md-form">
+						<div class="file-field big">
+							<a class="btn-floating btn-lg amber darken-2 mt-0 float-left">
+								<i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+								<input type="file" multiple>
+							</a>
+						</div>
+					</form>
+					<!-- <div class="form-group">
+										<label for="exampleFormControlTextarea1">Example textarea</label>
+										<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+									  </div> -->
+					<div class="form-group">
+						<input
+							type="text"
+							name="title"
+							class="form-control"
+							placeholder="Titulo para el archivo"
+							required />
+					</div>
+					<div class="form-group">
+						<textarea
+							name="description"
+							rows="2"
+							class="form-control"
+							placeholder="Descripción del archivo"
+							required></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" style="color:white" data-dismiss="modal">Close</button>
+					<button class="btn btn-success" type="button" style="background: rgb(73, 170, 73); color:white">
+						<i class="fa fa-upload"></i> Cargar archivo </button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Notifications area -->
+	<section class="full-box Notifications-area">
+		<div class="full-box Notifications-bg btn-Notifications-area"></div>
+		<div class="full-box Notifications-body">
+			<div class="Notifications-body-title text-titles text-center"> Notifications <i
+					class="zmdi zmdi-close btn-Notifications-area"></i>
+			</div>
+			<div class="list-group">
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-alert-triangle"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">17m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+				<div class="list-group-separator"></div>
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-alert-octagon"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">15m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+				<div class="list-group-separator"></div>
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-help"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">10m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+					</div>
+				</div>
+				<div class="list-group-separator"></div>
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-info"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">8m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Dialog help -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="Dialog-Help">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Help</h4>
+				</div>
+				<div class="modal-body">
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt beatae esse velit ipsa sunt
+						incidunt aut voluptas, nihil reiciendis maiores eaque hic vitae saepe voluptatibus. Ratione
+						veritatis a unde autem! </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary btn-raised" data-dismiss="modal"><i
+							class="zmdi zmdi-thumb-up"></i> Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--====== Scripts -->
+	<!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+	<script src="../public/js/jquery-3.4.1.min.js"></script>
+	<script src="../public/js/sweetalert2.min.js"></script>
+	<script src="../public/js/bootstrap.min.js"></script>
+	<script src="../public/js/material.min.js"></script>
+	<script src="../public/js/ripples.min.js"></script>
+	<script src="../public/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../public/js/main.js"></script>
+ <script src="../public/js/ctrl-subida-imagenes.js"></script>
+
+ <!-- <script>
+ function nuevaImagen(){
+	// let parametros = `contenidoPost=${$('#contenido-post').val()}&imagen=${$('#url-imagen').val()}`;
+	let parametros = `inputGroupFile=${$('#inputGroupFile').val()} &title=${$('#title').val()}&description=${$('#description').val()}`;
+    console.log(parametros);
+
+    $.ajax({
+        url:`/usuarios/${$('#usuario-actual').val()}/posts/`,
+        method:'POST',
+        data:parametros,
+        dataType:'json',
+        success:(res)=>{
+            console.log(res);
+        },
+        error:(error)=>{
+            console.error(error);
+        }
+    });
+}
+ </script> -->
+
+</body>
+
+</html>

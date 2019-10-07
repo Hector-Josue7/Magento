@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Student</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../public/css/main.css">
+	<link rel="stylesheet" href="../public/css/bootstrap3.min.css">
+	<link rel="stylesheet" href="../public/css/bootstrap4.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
+	 <link rel="stylesheet" href="../public/css/font-awesome.min.css">
+	<!--verificar la version-->
+
+</head>
+
+<body style="font-size:15px">
+	<!-- SideBar -->
+	<section class="full-box cover dashboard-sideBar">
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+		<div class="full-box dashboard-sideBar-ct">
+			<!--SideBar Title -->
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title"> Magento <i
+					class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+			</div>
+			<!-- SideBar User info -->
+			<div class="full-box dashboard-sideBar-UserInfo">
+				<figure class="full-box">
+					<img src="../public/img/team/ac_generico.jpg" alt="UserIcon" />
+					<figcaption class="text-center text-titles">User Name</figcaption>
+				</figure>
+				<ul class="full-box list-unstyled text-center">
+					<li>
+						<a href="#!">
+							<i class="zmdi zmdi-settings"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#!" class="btn-exit-system">
+							<i class="zmdi zmdi-power"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- SideBar Menu -->
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+                <li>
+                    <a href="/home">
+                        <i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Menu principal </a>
+                </li>
+                <li>
+                    <a href="/elegirarchivo" class="btn-sideBar-SubMenu" style="padding-top:1px">
+                        <i class="zmdi zmdi-case zmdi-hc-fw"></i> imagenes, videos y archivos 
+                        <!-- <i class="zmdi zmdi-caret-down pull-right"></i> -->
+                    </a>
+   
+                </li>
+                <li>
+                    <a href="/edicionpagina" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Administrar pagina principal
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/eleccionpagina" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-card zmdi-hc-fw"></i> creación de páginas 
+                    </a>
+     
+                </li>
+                <li>
+                        <a href="/listapaginapost" class="btn-sideBar-SubMenu">
+                            <i class="zmdi zmdi-card zmdi-hc-fw"></i>  Entradas/Posts
+                        </a>
+         
+                    </li>
+                    
+                <li>
+                    <a href="/plantillas" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-card zmdi-hc-fw"></i>  Plantillas o temas
+                    </a>
+     
+                </li>
+                <li>
+                    <a href="/creacionusuarios" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-card zmdi-hc-fw"></i>  Creación de usuarios
+                    </a>
+     
+                </li>
+                <li>
+                        <a href="/creacionroles" class="btn-sideBar-SubMenu">
+                            <i class="zmdi zmdi-card zmdi-hc-fw"></i>  Creación de roles
+                        </a>
+         
+                    </li>
+            </ul>
+		</div>
+	</section>
+	<!-- Content page-->
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="full-box dashboard-Navbar">
+			<ul class="full-box list-unstyled text-right">
+				<li class="pull-left">
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+				</li>
+				<li>
+					<a href="#!" class="btn-Notifications-area">
+						<i class="zmdi zmdi-notifications-none"></i>
+						<span class="badge">7</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-search">
+						<i class="zmdi zmdi-search"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-modal-help">
+						<i class="zmdi zmdi-help-outline"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Content page -->
+		<div class="container">
+			<div class="page-header">
+				<h2 class="text-titles" style="text-align: center"><b>Edición de la página estática</b>
+					<h2>
+			</div>
+			<div class="row" style="display: flex; align-items: center; justify-content: center;">
+				<div class="col-lg-10">
+					<div class="card" style="background: #0f0c29; 
+				background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+				background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+				">
+						<div class="card-header bg-dark">
+							<h3 class="card-title text-white">
+
+								Editor HTML tipo wysiwyg
+							</h3>
+						</div>
+
+						<div class="card-body">
+							<form>
+
+								<textarea name="content" id="editor"></textarea> <br><br>
+
+								<div class="form-row">
+									<div class="col-md-4 mb-3">
+										<label for="validationCustom01" style="color:white">Titulo</label>
+										<input type="text" class="form-control" id="validationCustom01"
+											placeholder="Ej: elSitioNuevo" required>
+
+									</div>
+									<div class="col-md-4 mb-3">
+										<label for="validationCustom02" style="color:white">Titulo en el menú</label>
+										<input type="text" class="form-control" id="validationCustom02"
+											placeholder="Ej: menuPagina" required>
+
+									</div>
+									<div class="col-md-4 mb-3">
+										<label for="validationCustomUsername" style="color:white">URL</label>
+										<div class="input-group">
+
+											<input type="text" class="form-control" id="validationCustomUsername"
+												placeholder="Ej: www.magentoi.com" aria-describedby="inputGroupPrepend"
+												required>
+
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-6 mb-3">
+										<div class="form-group">
+
+											<textarea style="background: white" name="description"
+												id="descripcionPaginaEstatica" rows="3" class="form-control"
+												placeholder="Descripción" required></textarea>
+										</div>
+									</div>
+									<div class="col-6 mb-3">
+										<div class="form-group">
+											<textarea style="background: white" name="description" rows="3"
+												class="form-control" placeholder="Palabras clave" required></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-md-6 mb-3">
+										<label for="validationCustom01" style="color:white">Página padre</label>
+										<input type="text" class="form-control" id="validationCustom01"
+											placeholder="Ej: elSitioNuevo" required>
+
+									</div>
+									<div class="col-md-4 mb-3" style="margin-left: 120px">
+										<div class="custom-control custom-radio">
+											<input type="radio" class="custom-control-input"
+												id="customControlValidation2" name="radio-stacked" required>
+											<label class="custom-control-label" for="customControlValidation2"
+												style="color:white">Activa</label>
+										</div>
+										<div class="custom-control custom-radio mb-3">
+											<input type="radio" class="custom-control-input"
+												id="customControlValidation3" name="radio-stacked" required>
+											<label class="custom-control-label" for="customControlValidation3"
+												style="color:white">Inactiva</label>
+											<div class="invalid-feedback">More example invalid feedback text</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<!-- Material inline 1 -->
+									<div class="col-md-4 mb-3">
+										<div class="form-check form-check-inline">
+											<input type="checkbox" class="form-check-input" id="materialInline1">
+											<label class="form-check-label" for="materialInline1"
+												style="color:white">Incluir encabezado</label>
+										</div>
+									</div>
+									<div class="col-md-4 mb-3">
+										<!-- Material inline 2 -->
+										<div class="form-check form-check-inline">
+											<input type="checkbox" class="form-check-input" id="materialInline2">
+											<label class="form-check-label" for="materialInline2"
+												style="color:white">Incluir pie de página</label>
+										</div>
+									</div>
+									<div class="col-md-4 mb-3">
+										<!-- Material inline 3 -->
+										<div class="form-check form-check-inline">
+											<input type="checkbox" class="form-check-input" id="materialInline3">
+											<label class="form-check-label" for="materialInline3"
+												style="color:white">Breadcrumd</label>
+										</div>
+									</div>
+								</div><br>
+								<br><br>
+								<div class="form-row">
+									<button style="height:50px; font-size: 25px; font-weight: bold"
+										class="btn btn-block btn-rounded aqua-gradient">Crear Página</button>
+								</div>
+
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<!-- Footer -->
+		<footer class="page-footer font-small blue">
+
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">© 2018 Copyright:
+				<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+			</div>
+			<!-- Copyright -->
+
+		</footer>
+		<!-- Footer -->
+
+	</section>
+	<!-- Notifications area -->
+	<section class="full-box Notifications-area">
+		<div class="full-box Notifications-bg btn-Notifications-area"></div>
+		<div class="full-box Notifications-body">
+			<div class="Notifications-body-title text-titles text-center"> Notifications <i
+					class="zmdi zmdi-close btn-Notifications-area"></i>
+			</div>
+			<div class="list-group">
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-alert-triangle"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">17m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+				<div class="list-group-separator"></div>
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-alert-octagon"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">15m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+				<div class="list-group-separator"></div>
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-help"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">10m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+					</div>
+				</div>
+				<div class="list-group-separator"></div>
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-info"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">8m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Dialog help -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="Dialog-Help">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Help</h4>
+				</div>
+				<div class="modal-body">
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt beatae esse velit ipsa sunt
+						incidunt aut voluptas, nihil reiciendis maiores eaque hic vitae saepe voluptatibus. Ratione
+						veritatis a unde autem! </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary btn-raised" data-dismiss="modal"><i
+							class="zmdi zmdi-thumb-up"></i> Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--====== Scripts -->
+	<script src="../public/js/jquery-3.4.1.min.js"></script>
+	<script src="../public/js/sweetalert2.min.js"></script>
+	<script src="../public/js/bootstrap.min.js"></script>
+	<script src="../public/js/material.min.js"></script>
+	<script src="../public/js/ripples.min.js"></script>
+	<script src="../public/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../public/js/main.js"></script>
+	<script src="../public/js/popper.min.js"></script>
+	<script src="../public/js/jquery.dynamicTable-1.0.0.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js"></script>
+	<script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+	<script>
+		ClassicEditor
+			.create(document.querySelector('#editor'))
+			.catch(error => {
+				console.error(error);
+			});
+	</script>
+</body>
+</html>

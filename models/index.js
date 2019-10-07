@@ -1,5 +1,5 @@
 module.exports = {
-    Imagen: require('./imagenes')
-   
+    Imagen: require('./Imagenes'),
+    Usuario: require('./usuario')
   };
   

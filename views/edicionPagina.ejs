@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Inicio</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+ 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" type="text/css">
+	<script type="text/javascript" src="../public/js/jquery-3.4.1.min.js"></script>
+   <link rel="stylesheet" href="../public/css/main.css" type="text/css">      <!-- aqui tira errores -->
+ <link rel="stylesheet" href="../public/css/bootstrap3.min.css">
+ <link rel="stylesheet" HREF="../public/css/style-editor.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" type="text/css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css">
+ <link rel="stylesheet" href="../public/css/bootstrap4.min.css" type="text/css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/froala_editor.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/froala_style.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/plugins/code_view.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/plugins/colors.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/plugins/emoticons.css" type="text/css">
+
+ <link rel="stylesheet" href="../public/froala/css/plugins/image_manager.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/plugins/image.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/plugins/line_breaker.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/plugins/table.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/plugins/char_counter.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/plugins/video.css" type="text/css">
+ <link rel="stylesheet" href="../public/froala/css/plugins/fullscreen.css" type="text/css">
+	<link rel="stylesheet" href="../public/froala/css/plugins/file.css" type="text/css">
+  
+	<style>
+	body{
+		font-size: 15px;
+	}
+	</style>
+</head>
+
+<body>
+ <!-- SideBar -->
+ <section class="full-box cover dashboard-sideBar">
+        <div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+        <div class="full-box dashboard-sideBar-ct">
+            <!--SideBar Title -->
+            <div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title"> Magento <i
+                    class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+            </div>
+            <!-- SideBar User info -->
+            <div class="full-box dashboard-sideBar-UserInfo">
+                <figure class="full-box">
+                    <img src="../public/img/team/ac_generico.jpg" alt="UserIcon" />
+                    <figcaption class="text-center text-titles">User Name</figcaption>
+                </figure>
+                <ul class="full-box list-unstyled text-center">
+                    <li>
+                        <a href="#!">
+                            <i class="zmdi zmdi-settings"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="btn-exit-system">
+                            <i class="zmdi zmdi-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- SideBar Menu -->
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+				<li>
+					<a href="/home">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Menu principal </a>
+				</li>
+				<li>
+					<a href="/elegirarchivo" class="btn-sideBar-SubMenu" style="padding-top:1px">
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> imagenes, videos y archivos 
+						<!-- <i class="zmdi zmdi-caret-down pull-right"></i> -->
+					</a>
+   
+				</li>
+				<li>
+					<a href="/edicionpagina" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Administrar pagina principal
+					</a>
+
+				</li>
+				<li>
+					<a href="/eleccionpagina" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> creación de páginas 
+					</a>
+	 
+				</li>
+				<li>
+						<a href="/listapaginapost" class="btn-sideBar-SubMenu">
+							<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Entradas/Posts
+						</a>
+		 
+					</li>
+					
+				<li>
+					<a href="/plantillas" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Plantillas o temas
+					</a>
+	 
+				</li>
+				<li>
+					<a href="/creacionusuarios" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Creación de usuarios
+					</a>
+	 
+				</li>
+				<li>
+						<a href="/creacionroles" class="btn-sideBar-SubMenu">
+							<i class="zmdi zmdi-card zmdi-hc-fw"></i>  Creación de roles
+						</a>
+		 
+					</li>
+			</ul>
+        </div>
+    </section>
+	<!-- Content page-->
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="full-box dashboard-Navbar">
+			<ul class="full-box list-unstyled text-right">
+				<li class="pull-left">
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+				</li>
+				<li>
+					<a href="#!" class="btn-Notifications-area">
+						<i class="zmdi zmdi-notifications-none"></i>
+						<span class="badge">7</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-search">
+						<i class="zmdi zmdi-search"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-modal-help">
+						<i class="zmdi zmdi-help-outline"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="container-fluid">
+		
+			<div class="row full-box text-center" style="padding: 30px 10px">
+
+					<div class="col-lg-8 col-xl-8">
+							<div class="card">
+									<form autocomplete="off" style=" background: #ECE9E6; background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6); background: linear-gradient(to top, #FFFFFF, #ECE9E6);">
+													   <!-- <div class="row full-box text-center" style="padding: 30px 10px;">
+											-->
+													   <div class="col-12 col-sm-12 col-lg-12">
+															<div class="card-header bg-dark">
+																	<h3 class="card-title text-white mt-0">
+																	
+																	  Encabezado de pagina
+																	</h3>
+																  </div>
+														
+																<!-- <div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;"> 
+															
+																		<div id='edit' >
+																		</div>
+																	</div> -->
+																	<!-- <textarea id="demo" class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
+																		<br/>
+																		<p style="text-align: center;"><img src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png" class="img-fluid"></p>
+																		<h1 style="text-align: center;">MDBootstrap</h1>
+																		<p style="text-align: center;">WYSIWYG Editor</p>
+																		<p style="text-align: center;"><a href="https://mdbootstrap.com" target="_blank" contenteditable="false" style="font-size: 1rem; text-align: left;">MDBootstrap.com</a>&nbsp;© 2018</p>
+																		<p style="text-align: left;"><b>Features:</b></p>
+																		<p style="text-align: left;">
+																			<ul>
+																				<li>Changing block type</li>
+																				<li>Text formatting (bold, italic, strikethrough, underline)</li>
+																				<li>Setting text color</li>
+																				<li>Text aligning</li>
+																				<li>Inserting links</li>
+																				<li>Inserting pictures</li>
+																				<li>Creating a list (bulled or numbered)</li>
+																			</ul>
+																			<p><b>Options:</b></p>
+																			<ul>
+																				<li>Translations</li>
+																				<li>Using your own color palette</li>
+																				<li>Disabling/enabling tooltips</li>
+																			</ul>
+																		</p>
+																	  </textarea> -->
+
+																	  <textarea id="demoTranslations">
+																		<p style="text-align: center;"><img src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png" class="img-fluid"></p>
+																		<h1 style="text-align: center;">MDBootstrap</h1>
+																		<p style="text-align: center;">WYSIWYG Editor</p>
+																		<p style="text-align: center;"><a href="https://mdbootstrap.com" target="_blank" contenteditable="false" style="font-size: 1rem; text-align: left;">MDBootstrap.com</a>&nbsp;© 2018</p>
+																	  </textarea>
+																	  
+														 
+													   </div>
+													   <div class="col-12 col-sm-12 col-lg-12">
+															<div class="card-header bg-dark">
+																	<h3 class="card-title text-white mt-0">
+																	
+																	Editar Pagina
+																	</h3>
+																  </div>
+													
+														   <div class="editor"  style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
+															   <div id='edit' style="margin-top: 10px;">
+															   </div>
+														   </div>
+													   </div>
+													   <div class="col-12 col-sm-12 col-lg-12">
+															<div class="card-header bg-dark">
+																	<h3 class="card-title text-white mt-0">
+																	
+																			Pie de pagina
+																	</h3>
+																  </div>
+													
+														   <div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
+															   <div id='edit' style="margin-top: 30px;">
+															   </div>
+														   </div>
+														   <br>
+													   </div>
+											
+													   <!-- <button type="button" class="btn-block  btn-success  btn-rounded"
+														   style="border-style: solid; margin:20px auto">Guardar configuración <i
+															   class="fas fa-save mr-1"></i></button> -->
+															   <button type="button" class="btn-success btn-lg"  style="border-style: solid; width:500px; margin-bottom: 20px;" ><b>Guardar configuración</b>  <i class="fas fa-save mr-1"></i> </button>
+												  
+								   
+								   
+												   </form>
+							</div>
+						
+						</div>
+		
+			<div class="col-lg-4 col-xl-4">
+				<div class="card">
+					<div class="card-header bg-dark">
+					  <h3 class="card-title text-white">
+				
+					Información adicional
+					  </h3>
+					</div>
+				
+					<div class="card-body">
+					  <form action="/images" method="POST" enctype="multipart/form-data">
+			
+						<div class="form-group">
+						  <input style="border-style: solid;  border-width: 0.1px; border-color: #A4A9AD"
+							type="text"
+							name="title"
+							class="form-control"
+							placeholder="Titulo de la pagina"
+							autocomplete="off"
+							required
+						   />
+				  
+						</div>
+	
+						<div class="form-group">
+						  <textarea style="border-style: solid;  border-width: 1px; border-color:#A4A9AD"
+							name="description"
+							rows="2"
+							class="form-control"
+							placeholder="Descripción de la pagina"
+							autocomplete="off"
+							required
+						  ></textarea>
+						</div>
+						<div class="form-group">
+								<label for="inputGroupFile" style="color:black"><b>Favicon</b></label>
+								<div class="input-group">
+									
+								  <div class="custom-file">
+									
+									<input
+									  type="file"
+									  name="image"
+									  class="custom-file-input"
+									  id="inputGroupFile"
+									  aria-describedby="inputGroupFileAddon"
+									  required
+									 />
+						
+									<label class="custom-file-label" for="inputGroupFile">
+								 Pulse aquí
+									</label>
+								  </div>
+								</div>
+							  </div>
+							  <div class="form-group">
+									<label for="inputGroupFile" style="color:black"><b>Logo</b></label>
+									<div class="input-group">
+										
+									  <div class="custom-file">
+										
+										<input
+										  type="file"
+										  name="image"
+										  class="custom-file-input"
+										  id="inputGroupFile"
+										  aria-describedby="inputGroupFileAddon"
+										  required
+										 />
+							
+										<label class="custom-file-label" for="inputGroupFile">
+									 Pulse aquí
+										</label>
+									  </div>
+									</div>
+								  </div>
+								  <div class="form-group">
+										<textarea style="border-style: solid;  border-width: 1px; border-color:#A4A9AD"
+										  name="description"
+										  rows="2"
+										  class="form-control"
+										  placeholder="Palabras clave"
+										  autocomplete="off"
+										  required
+										></textarea>
+									  </div>
+
+				
+									
+							
+									
+										  
+							
+					  </form>
+					</div>
+				  </div>
+	
+			</div>
+				
+				
+			</div>
+		
+
+
+		</div>
+
+		<div class="container ">
+				<div class="row">
+		
+					<div class="col-lg-6 caja">
+						<div class="row">
+						  <div class="col-10">
+							  <h3>.CSS</h3>
+						  </div>
+						  <div class="col-2" id="des-css">
+					  
+						  </div>
+						</div>
+					  </div>
+					  <div class="col-lg-6 caja">
+						  <div class="row">
+							<div class="col-10">
+								<h3>.JS</h3>
+							</div>
+							<div class="col-2" id="des-js">
+								
+							</div>
+						  </div>
+						</div>
+				</div>
+			  
+			  </div>
+			  
+			  
+			  <!-- -------------------------------------------------------------------------------------------------------------- ----->
+			  <!----------------------------------------------------cuadros Principal  ------------------------------------------------>
+				  <div class="container">
+					  <div class="row">
+				
+						  <div class="col-lg-6 cod-text" id="editorCss">
+							  <!-- <textarea name="editorCss" id="css" placeholder="Css"></textarea>  -->
+						  </div>
+						  <div class="col-lg-6 cod-text" id="editorJs">
+							  <!-- <textarea name="editorJs" id="js" placeholder="JS"></textarea>  -->
+						  </div>
+					  </div>
+					  </div>
+
+	</section>
+	<!-- Notifications area -->
+	<section class="full-box Notifications-area">
+		<div class="full-box Notifications-bg btn-Notifications-area"></div>
+		<div class="full-box Notifications-body">
+			<div class="Notifications-body-title text-titles text-center"> Notifications <i
+					class="zmdi zmdi-close btn-Notifications-area"></i>
+			</div>
+			<div class="list-group">
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-alert-triangle"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">17m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+				<div class="list-group-separator"></div>
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-alert-octagon"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">15m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+				<div class="list-group-separator"></div>
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-help"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">10m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+					</div>
+				</div>
+				<div class="list-group-separator"></div>
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="zmdi zmdi-info"></i>
+					</div>
+					<div class="row-content">
+						<div class="least-content">8m</div>
+						<h4 class="list-group-item-heading">Tile with a label</h4>
+						<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Dialog help -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="Dialog-Help">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Help</h4>
+				</div>
+				<div class="modal-body">
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt beatae esse velit ipsa sunt
+						incidunt aut voluptas, nihil reiciendis maiores eaque hic vitae saepe voluptatibus. Ratione
+						veritatis a unde autem! </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary btn-raised" data-dismiss="modal"><i
+							class="zmdi zmdi-thumb-up"></i> Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--====== Scripts -->
+
+
+	<script src="../public/js/sweetalert2.min.js"></script>
+	<script src="../public/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="../public/js/material.min.js"></script>
+	<script src="../public/js/ripples.min.js"></script>
+	<script src="../public/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../public/js/main.js"></script>
+
+	<script type="text/javascript" src="../public/froala/js/froala_editor.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/align.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/code_beautifier.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/code_view.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/colors.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/draggable.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/emoticons.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/font_size.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/font_family.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/image.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/file.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/image_manager.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/line_breaker.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/link.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/lists.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/paragraph_format.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/paragraph_style.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/video.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/table.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/url.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/entities.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/char_counter.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/inline_style.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/save.min.js"></script>
+	<script type="text/javascript" src="../public/froala/js/plugins/fullscreen.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+	<script src="../public/js/push.min.js"></script>
+	<script src="../public/js/controlador-editor.js"></script>
+
+	<script type="text/javascript">
+
+
+		(function () {
+			new FroalaEditor("#edit", {
+				// Set the list of available shortcuts.
+				shortcutsEnabled: ['bold', 'italic'],
+				// Disable shortcut hints.
+				shortcutsHint: false
+			})
+		})()
+	</script>
+</body>
+
+</html>

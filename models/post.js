@@ -1,18 +1,17 @@
-// se crearan bloques de contenido informativo para luego ser utilizado
-// en paginas o mediante shortcuts
-var mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-var esquema = new mongoose.Schema(
-    {
-    tituloEntrada: String,
-    autor:  mongoose.Schema.Types.ObjectId,
-    fecha_hora: {type: Date, default: Date.now},
-    contenidoEntrada: String,
-    imagenPost: String,
-    categoria: mongoose.Schema.Types.ObjectId,
-    comentariosPermitidos: Boolean
+const postSchema = new Schema({
+   title: { type: String, required: true, minlength: 3, maxlength: 50 },
+   body: { type: String, required: true, minlength: 3 },
+   usuario: { type: Schema.Types.ObjectId, ref: 'usuario', required: true },
+   likes: { type: Number, default: 0 },
+   dislikes: { type: Number, default: 0 },
+   likedBy: [{ type: Schema.Types.ObjectId, ref: 'usuario' }],
+   dislikedBy: [{ type: Schema.Types.ObjectId, ref: 'usuario' }],
+   comments: [{ type: Schema.Types.ObjectId, ref: 'comment' }]
+}, { timestamps: true });
 
- 
-} );
+const Post = mongoose.model('post', postSchema);
 
-module.exports = mongoose.model('posts',esquema);
+module.exports = Post;

@@ -6,22 +6,22 @@ const ImageSchema = new Schema({
   title: { type: String },
   description: { type: String },
   filename: { type: String },
-//   views: { type: Number, default: 0 },
-//   likes: { type: Number, default: 0 },
+  tipoArchivo: {
+    nombre: String,
+    extension: String,
+    icono: String
+        },
+
   timestamp: { type: Date, default: Date.now },
   usuarioDueño:  mongoose.Schema.Types.Mixed
 });
 
-// ImageSchema.virtual('uniqueId')
-//   .get(function () {
-//     return this.filename.replace(path.extname(this.filename), '');
-//   });
+ImageSchema.virtual('uniqueId')
+  .get(function () {
+    return this.filename.replace(path.extname(this.filename), '');
+  });
 
 module.exports = mongoose.model('Imagenes', ImageSchema);
-
-
-
-
 
 
 
