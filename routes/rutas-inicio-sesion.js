@@ -1,6 +1,6 @@
 
 const router = require('express').Router();
-const authValidators = require('../validators/auth.validators');
+// const authValidators = require('../validators/auth.validators');
 const authMiddleware = require('../modulos/middleware');
 const {Usuario} = require('../models');
 const authService = require('../modulos/autenticacion');
@@ -10,7 +10,7 @@ module.exports = app => {
   /*=====================
    Crear una cuenta nueva
    =====================*/
-router.post('/registro', authValidators.signUp, async (req, res) => { // http://localhost:3000/registro
+router.post('/registro', async (req, res) => { // http://localhost:3000/registro
 
       try {
          // Corro las 2 promesas en paralelo y espero q terminen ambas
@@ -73,7 +73,7 @@ router.post('/registro', authValidators.signUp, async (req, res) => { // http://
 /*===============
    Login de usuario
    ===============*/
-router.post('/signIn', authValidators.signIn, async (req, res) => {
+router.post('/signIn', async (req, res) => {
 
       try {
          // Espero hasta encontrar el usuario
@@ -115,7 +115,7 @@ router.post('/signIn', authValidators.signIn, async (req, res) => {
 /*===============
    Refrescar Token
    ===============*/
-router.get('/refreshToken', authValidators.refreshToken, authMiddleware.isAuth,  async (req, res) => {
+router.get('/refreshToken', authMiddleware.isAuth,  async (req, res) => {
 
       try {
          const user = await User.findById(req.body.userId).exec();
@@ -143,7 +143,7 @@ router.get('/refreshToken', authValidators.refreshToken, authMiddleware.isAuth, 
    Chequea el Username
    ===================*/
 // Consultar disponibilidad de nombre de usuario
-router.get('/checkUsername', authValidators.checkUsername, async (req, res) => {
+router.get('/checkUsername', async (req, res) => {
 
       try {
          // Espero hasta encontrar (o no) al usuario
@@ -164,7 +164,7 @@ router.get('/checkUsername', authValidators.checkUsername, async (req, res) => {
 /*================
    Chequea el Email, Consultar disponibilidad de email
    =================*/
-router.get('/checkEmail', authValidators.checkEmail, async (req, res) => {
+router.get('/checkEmail', async (req, res) => {
 
       try {
          // Espero hasta encontrar (o no) al usuario

@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-<title>Inicio</title>
+	<title>Inicio</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
@@ -16,20 +16,7 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css">
  <link rel="stylesheet" href="../public/css/bootstrap4.min.css" type="text/css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/froala_editor.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/froala_style.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/plugins/code_view.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/plugins/colors.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/plugins/emoticons.css" type="text/css">
 
- <link rel="stylesheet" href="../public/froala/css/plugins/image_manager.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/plugins/image.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/plugins/line_breaker.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/plugins/table.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/plugins/char_counter.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/plugins/video.css" type="text/css">
- <link rel="stylesheet" href="../public/froala/css/plugins/fullscreen.css" type="text/css">
-	<link rel="stylesheet" href="../public/froala/css/plugins/file.css" type="text/css">
   
 	<style>
 	body{
@@ -163,43 +150,9 @@
 																	</h3>
 																  </div>
 														
-																<!-- <div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;"> 
-															
-																		<div id='edit' >
-																		</div>
-																	</div> -->
-																	<!-- <textarea id="demo" class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
-																		<br/>
-																		<p style="text-align: center;"><img src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png" class="img-fluid"></p>
-																		<h1 style="text-align: center;">MDBootstrap</h1>
-																		<p style="text-align: center;">WYSIWYG Editor</p>
-																		<p style="text-align: center;"><a href="https://mdbootstrap.com" target="_blank" contenteditable="false" style="font-size: 1rem; text-align: left;">MDBootstrap.com</a>&nbsp;© 2018</p>
-																		<p style="text-align: left;"><b>Features:</b></p>
-																		<p style="text-align: left;">
-																			<ul>
-																				<li>Changing block type</li>
-																				<li>Text formatting (bold, italic, strikethrough, underline)</li>
-																				<li>Setting text color</li>
-																				<li>Text aligning</li>
-																				<li>Inserting links</li>
-																				<li>Inserting pictures</li>
-																				<li>Creating a list (bulled or numbered)</li>
-																			</ul>
-																			<p><b>Options:</b></p>
-																			<ul>
-																				<li>Translations</li>
-																				<li>Using your own color palette</li>
-																				<li>Disabling/enabling tooltips</li>
-																			</ul>
-																		</p>
-																	  </textarea> -->
+											
 
-																	  <textarea id="demoTranslations">
-																		<p style="text-align: center;"><img src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png" class="img-fluid"></p>
-																		<h1 style="text-align: center;">MDBootstrap</h1>
-																		<p style="text-align: center;">WYSIWYG Editor</p>
-																		<p style="text-align: center;"><a href="https://mdbootstrap.com" target="_blank" contenteditable="false" style="font-size: 1rem; text-align: left;">MDBootstrap.com</a>&nbsp;© 2018</p>
-																	  </textarea>
+																	  <textarea  name="content" style = "height:100px" id="editorEncabezado"></textarea> <br><br>
 																	  
 														 
 													   </div>
@@ -211,10 +164,12 @@
 																	</h3>
 																  </div>
 													
-														   <div class="editor"  style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
+														   <!-- <div class="editor"  style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
 															   <div id='edit' style="margin-top: 10px;">
 															   </div>
-														   </div>
+														   </div> -->
+														   <textarea  name="content" style = "height:100px" id="editorPagina"></textarea> <br><br>
+													
 													   </div>
 													   <div class="col-12 col-sm-12 col-lg-12">
 															<div class="card-header bg-dark">
@@ -224,25 +179,26 @@
 																	</h3>
 																  </div>
 													
-														   <div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
+														   <!-- <div class="editor" style="margin-left:5px; margin-top: 10px; margin-bottom: 20px; width: auto;">
 															   <div id='edit' style="margin-top: 30px;">
 															   </div>
-														   </div>
+														   </div> -->
+														   <textarea  name="content" style = "height:100px" id="editorPiePagina"></textarea> <br><br>
 														   <br>
 													   </div>
 											
-													   <!-- <button type="button" class="btn-block  btn-success  btn-rounded"
-														   style="border-style: solid; margin:20px auto">Guardar configuración <i
-															   class="fas fa-save mr-1"></i></button> -->
 															   <button type="button" class="btn-success btn-lg"  style="border-style: solid; width:500px; margin-bottom: 20px;" ><b>Guardar configuración</b>  <i class="fas fa-save mr-1"></i> </button>
 												  
 								   
 								   
 												   </form>
 							</div>
+
+						
 						
 						</div>
 		
+			
 			<div class="col-lg-4 col-xl-4">
 				<div class="card">
 					<div class="card-header bg-dark">
@@ -329,25 +285,25 @@
 										  required
 										></textarea>
 									  </div>
-
-				
-									
-							
-									
-										  
-							
-					  </form>
+									 </form>
 					</div>
-				  </div>
 	
-			</div>
 				
+			  </div>
+
+ <!-- Modal -->
+				  
+
+			</div>
+	
 				
 			</div>
 		
 
 
 		</div>
+
+	
 
 		<div class="container ">
 				<div class="row">
@@ -467,9 +423,12 @@
 			</div>
 		</div>
 	</div>
+
 	<!--====== Scripts -->
-
-
+	<script type="text/javascript" src="../public/js/jquery-3.4.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="../public/js/sweetalert2.min.js"></script>
 	<script src="../public/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -480,47 +439,13 @@
 	<script src="../public/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="../public/js/main.js"></script>
 
-	<script type="text/javascript" src="../public/froala/js/froala_editor.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/align.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/code_beautifier.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/code_view.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/colors.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/draggable.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/emoticons.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/font_size.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/font_family.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/image.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/file.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/image_manager.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/line_breaker.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/link.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/lists.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/paragraph_format.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/paragraph_style.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/video.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/table.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/url.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/entities.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/char_counter.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/inline_style.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/save.min.js"></script>
-	<script type="text/javascript" src="../public/froala/js/plugins/fullscreen.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+	<script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+
 	<script src="../public/js/push.min.js"></script>
-	<script src="../public/js/controlador-editor.js"></script>
+	<script src="../public/js/ctrl-editor.js"></script>
 
-	<script type="text/javascript">
-
-
-		(function () {
-			new FroalaEditor("#edit", {
-				// Set the list of available shortcuts.
-				shortcutsEnabled: ['bold', 'italic'],
-				// Disable shortcut hints.
-				shortcutsHint: false
-			})
-		})()
-	</script>
 </body>
 
 </html>

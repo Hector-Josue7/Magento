@@ -7,7 +7,7 @@ module.exports = {
 
       const payload = {
          sub: user._id,
-         role: user.tipoUsuario,
+         tipoUsuario: user.tipoUsuario,
          iat: moment().unix(), // Current time
          exp: moment().add(1, 'd').unix() // 1 dia hasta que expire el token
       }

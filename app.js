@@ -22,7 +22,7 @@
  //app.use(cookieParser());
  app.set('views', path.join(__dirname, 'views'));
  app.set('view engine', 'ejs');
- app.set('views',__dirname + 'views')
+ app.set('views',__dirname + '/views')
  app.use(session({secret: 'secret', resave: true, saveUninitialized: true}));
   //  app.use(multer({dest: path.join(__dirname, './public/img/cargaImagenes')}).single('image')); 
  
@@ -31,10 +31,10 @@
   app.use('/uploads',express.static(path.join(__dirname,'./public/img/cargaImagenes')));
 
  //routes
- //require('./routes/rutas-post')(app);
- //require('./routes/rutas-get')(app);
+ require('./routes/rutas-post')(app);
+ require('./routes/rutas-get')(app);
+//require('./routes/rutas-inicio-sesion')(app);
 // app.use('/api', routes);
-require('./routes/rutas-inicio-sesion')(app);
 
 //manejador de errores
 app.use(function (req, res, next) {

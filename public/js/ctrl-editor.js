@@ -78,3 +78,11 @@ $(document).ready(function(){
     
 
 });
+
+
+ClassicEditor.create(document.querySelector('#editorEncabezado')).catch(error => {
+        console.error(error);});
+ClassicEditor.create(document.querySelector('#editorPagina')).catch(error => {
+        console.error(error);});
+ClassicEditor.create(document.querySelector('#editorPiePagina')).catch(error => {
+        console.error(error);});
