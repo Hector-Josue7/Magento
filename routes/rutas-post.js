@@ -6,12 +6,13 @@ const path = require('path');
 var session = require("express-session");
 var multer = require('multer');
 var upload = multer({dest: './public/img/cargaImagenes/temp/'});
+var uploadPaginaPrincipal = multer({dest: './public/img/paginaPrincipal/temp/'});
 var util = require('util');
 var  lodash = require('lodash');
 var bcrypt = require('bcryptjs');
 var  Joi = require('joi');
 var jwt = require('jsonwebtoken');
-const { Imagen, Usuario } = require('../models');
+const { Imagen, Usuario, paginaPrincipal } = require('../models');
 
 
 module.exports = function(app)
@@ -82,6 +83,54 @@ app.post('/subirfoto', upload.array('image', 1), function(req, res) {  // http:/
       res.status(200).redirect('/galeriaimagenes') }
    });
 }
+});
+
+
+app.post('/paginaestatica' ,  function(req, res) {  // http://localhost:3000/paginaestatica
+
+//    for(var x=0;x<req.files.length;x++) {
+//       fs.createReadStream('./public/img/paginaPrincipal/temp/'+req.files[x].filename).pipe(fs.createWriteStream('./public/img/paginaPrincipal/'+req.files[x].originalname)); //copiamos el archivo a la carpeta definitiva de fotos
+//       fs.unlink('./public/img/paginaPrincipal/temp/'+req.files[x].filename); //borramos el archivo temporal creado
+//       const newPaginaPrincipal = new paginaEstatica({
+//          editorEncabezado: req.body.editorEncabezado,
+//          editorPagina: req.body.editorPagina,
+//          editorPiePagina: req.body.editorPiePagina,
+//          tituloPagina: req.body.tituloPagina,
+//          descripcionPagina: req.body. descripcionPagina,
+//           logoPagina: req.files[x].originalname,
+//           palabrasClave: req.body.palabrasClave,
+//           editorCss: req.body.editorCss,
+//           editorJs: req.body.editorJs
+// });
+//      newPaginaPrincipal.save((err, pagina_guardada) =>{
+//       if(err) {res.status(500).send({message: `Error al salvar en la base de datos: ${err}`})}
+//       else{
+//    // res.status(200).redirect('/galeriaimagenes') 
+// console.log('Se ha guardado la pagina principal')
+// }});
+
+// }
+let newPaginaPrincipal = new paginaPrincipal({
+          editorEncabezado: req.body.editorEncabezado,
+               editorPagina: req.body.editorPagina,
+               editorPiePagina: req.body.editorPiePagina,
+               tituloPagina: req.body.tituloPagina,
+               descripcionPagina: req.body. descripcionPagina,
+            
+                palabrasClave: req.body.palabrasClave,
+                editorCss: req.body.editorCss,
+                editorJs: req.body.editorJs
+   }); 
+   newPaginaPrincipal.save()
+      .then(function(obj){
+         res.send(obj);
+         res.end();
+     })
+     .catch(function(error){
+         res.send(error);
+         res.end();
+     });
+
 });
 
 //FIN

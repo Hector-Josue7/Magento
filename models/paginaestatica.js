@@ -1,20 +1,14 @@
 var mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-var esquema = new mongoose.Schema(
+var esquema = new Schema(
     {
-        tituloPagina: String,
-        encabezado_editor: String,
-        pie_pagina_editor: String,
-        contenido_editor: String,
-        favicon: String,
-        logotipo: String,
-        descripcion: String,
-        palabras_clave: String,
-        css_extra: String,
-        javascript_extra: String
-        
-  
-   
-} );
+    
+        editor_html_wysiwyg: String,
+        shortcuts: Array,
+        pagina:{type: Schema.Types.ObjectId, ref: 'pagina', required: false}
 
-module.exports = mongoose.model('paginasEstaticas',esquema);
+    });
+
+var paginaEstatica = mongoose.model('paginaEstatica', esquema);
+module.exports = paginaEstatica;

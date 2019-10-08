@@ -6,8 +6,12 @@ var esquema = new mongoose.Schema(
     {
        
         tipoUsuario : String, // aqui pueden insertarse usuario_administrador, registrado y no registrado
-        // acceso: boolean;
-}
+         acceso:{type: Boolean, default: false}
+        // precio : String,
+        // tiempo: String,
+        // caracteristicas : Array,
+        // disponibilidad: Array
+    }
 
 );
 

@@ -152,7 +152,7 @@
 														
 											
 
-																	  <textarea  name="content" style = "height:100px" id="editorEncabezado"></textarea> <br><br>
+																	  <textarea  name="content" style = "height:100px" name="editorEncabezado" id="editorEncabezado"></textarea> <br><br>
 																	  
 														 
 													   </div>
@@ -168,7 +168,7 @@
 															   <div id='edit' style="margin-top: 10px;">
 															   </div>
 														   </div> -->
-														   <textarea  name="content" style = "height:100px" id="editorPagina"></textarea> <br><br>
+														   <textarea  name="content" style = "height:100px" name = "editorPagina" id="editorPagina"></textarea> <br><br>
 													
 													   </div>
 													   <div class="col-12 col-sm-12 col-lg-12">
@@ -183,11 +183,11 @@
 															   <div id='edit' style="margin-top: 30px;">
 															   </div>
 														   </div> -->
-														   <textarea  name="content" style = "height:100px" id="editorPiePagina"></textarea> <br><br>
+														   <textarea  name="content" style = "height:100px" name="editorPiePagina" id="editorPiePagina"></textarea> <br><br>
 														   <br>
 													   </div>
 											
-															   <button type="button" class="btn-success btn-lg"  style="border-style: solid; width:500px; margin-bottom: 20px;" ><b>Guardar configuración</b>  <i class="fas fa-save mr-1"></i> </button>
+															   <button type="button" onclick="registrarPaginaPrincipal()" class="btn-success btn-lg"  style="border-style: solid; width:500px; margin-bottom: 20px;" ><b>Guardar configuración</b>  <i class="fas fa-save mr-1"></i> </button>
 												  
 								   
 								   
@@ -214,7 +214,8 @@
 						<div class="form-group">
 						  <input style="border-style: solid;  border-width: 0.1px; border-color: #A4A9AD"
 							type="text"
-							name="title"
+							name="tituloPagina",
+							id="tituloPagina",
 							class="form-control"
 							placeholder="Titulo de la pagina"
 							autocomplete="off"
@@ -225,7 +226,8 @@
 	
 						<div class="form-group">
 						  <textarea style="border-style: solid;  border-width: 1px; border-color:#A4A9AD"
-							name="description"
+							name="descripcionPagina",
+                             id ="descripcionPagina",
 							rows="2"
 							class="form-control"
 							placeholder="Descripción de la pagina"
@@ -241,7 +243,8 @@
 									
 									<input
 									  type="file"
-									  name="image"
+									  name="favicon",
+									  id="favicon",
 									  class="custom-file-input"
 									  id="inputGroupFile"
 									  aria-describedby="inputGroupFileAddon"
@@ -262,7 +265,8 @@
 										
 										<input
 										  type="file"
-										  name="image"
+										  name="logoPagina"
+										  id="logoPagina"
 										  class="custom-file-input"
 										  id="inputGroupFile"
 										  aria-describedby="inputGroupFileAddon"
@@ -277,7 +281,8 @@
 								  </div>
 								  <div class="form-group">
 										<textarea style="border-style: solid;  border-width: 1px; border-color:#A4A9AD"
-										  name="description"
+										  name="palabrasClave",
+										  id="palabrasClave"
 										  rows="2"
 										  class="form-control"
 										  placeholder="Palabras clave"
@@ -338,10 +343,10 @@
 				  <div class="container">
 					  <div class="row">
 				
-						  <div class="col-lg-6 cod-text" id="editorCss">
+						  <div class="col-lg-6 cod-text"  name="editorCss" id="editorCss">
 							  <!-- <textarea name="editorCss" id="css" placeholder="Css"></textarea>  -->
 						  </div>
-						  <div class="col-lg-6 cod-text" id="editorJs">
+						  <div class="col-lg-6 cod-text" name="editorJs" id="editorJs">
 							  <!-- <textarea name="editorJs" id="js" placeholder="JS"></textarea>  -->
 						  </div>
 					  </div>
