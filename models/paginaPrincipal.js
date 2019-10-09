@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 //Schema: Define la estructura de los objetos que se guardaran en una coleccion.
 var esquema = new mongoose.Schema({
 
-
     editorEncabezado: String,
     editorPagina: String,
     editorPiePagina: String,
@@ -14,7 +13,8 @@ var esquema = new mongoose.Schema({
     palabrasClave: String,
     editorCss: String,
     editorJs: String,
-    idCreador : {type: mongoose.Schema.Types.ObjectId, ref: 'usuario', required: true},
+    idCreador : {type: mongoose.Schema.Types.ObjectId, 
+        ref: 'usuario', required: true},
    fechaCreacion : {type: Date, default: Date.now},
     ultimaModificacion : {type: Date, default: Date.now},
 });

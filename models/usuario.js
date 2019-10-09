@@ -15,15 +15,27 @@ var mongoose = require("mongoose");
       birthdate:mongoose.SchemaTypes.Mixed, 
       fechaRegistro: {type: Date, default: Date.now},
       // tipoUsuario: { type: String, enum: ['administrador', 'usuario_generico'], required: false, default: 'usuario_generico' },
-      tipoUsuario:{type: Schema.Types.ObjectId, ref: 'tipoUsuario', required: false},
-      tipoUsuario: {},
-      imagenes: Array,
-      videos: Array,
-      archivosGenericos: Array
+      tipoUsuario:{type: Schema.Types.ObjectId,
+                   ref: 'tipoUsuario', 
+                   required: false,
+                   nombreTipoUsuario: String,
+                   default: 'usuario_generico' },
+   
+    paginasPostAccesos: [{type: Schema.Types.ObjectId,
+                    ref: 'paginaPost', 
+                    required: false,
+                    tituloPaginaPost: String,
+                   descripcion: String}],
+    paginasEstaticasAccesos: [{type: Schema.Types.ObjectId,
+                      ref: 'paginaEstatica', 
+                      required: false,
+                      tituloPaginaEstatica: String,
+                      descripcion: String}],
+
     }, { timestamps: true });
 
-var User = mongoose.model('usuario', UserSchema);
-module.exports = User;
+var usuario = mongoose.model('usuarios', UserSchema);
+module.exports = usuario;
 
 
 

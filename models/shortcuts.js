@@ -1,23 +1,25 @@
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-//Schema: Define la estructura de los objetos que se guardaran en una coleccion.
-var esquema = new mongoose.Schema({
+var esquema = new Schema(
+    {
+   loginPaginaPost:  {type: Schema.Types.ObjectId, ref: 'paginaPost',required: false},
+    galeriaImagenes:  [{ type: Schema.Types.ObjectId, ref: 'imagenes'}], // Ejemplo: {tipo:'galeria',imagenes:['56bcvb5545shjh65','56bcvb5545shjh66','56bcvb5545shjh67']}
+    enlacesDescargaArchivosPaginasPost:  [{ type: Schema.Types.ObjectId, ref: 'paginaPost'}],
+    paginaPost :{type: Schema.Types.ObjectId, ref: 'paginaPost',required: false} , // Ejemplo:{tipo:'entrada',id:'56bcvb5545shjh44'
+    imagen: {type: Schema.Types.ObjectId, ref: 'imagenes',required: false, title: String},
+    menusPaginaPost:[{type: Schema.Types.ObjectId, ref: 'paginaPost',required: false}] , // Los menús serán componentes independientes que se podrán incrustar vía shortcut.
+    // breadcrumbPaginaPost: Array,
+    //breadcrumbPaginaPost: {type: Schema.Types.ObjectId, ref: 'paginaPost',required: false, titulo: String},
 
-
-    editorEncabezado: String,
-    editorPagina: String,
-    editorPiePagina: String,
-    tituloPagina: String,
-    descripcionPagina: String, 
-    favicon: String,
-    logoPagina: String,
-    palabrasClave: String,
-    editorCss: String,
-    editorJs: String,
-    idCreador : {type: mongoose.Schema.Types.ObjectId, ref: 'usuario', required: true},
-   fechaCreacion : {type: Date, default: Date.now},
-    ultimaModificacion : {type: Date, default: Date.now},
 });
 
-//El primer parametro tiene que ser el nombre de la coleccion en mongo (puede ser el singular)
-module.exports = mongoose.model('paginaPrincipal',esquema);
+var paginaPost = mongoose.model('shortcut', esquema);
+module.exports = paginaPost;
+/*
+Un administrador podrá incrustar diversos recursos en 
+páginas o entradas utilizando secuencias de caracteres 
+los cuales deberán estar bien definidos. El formato
+ propuesto para dichos shorcuts es JSON.
+*/
+

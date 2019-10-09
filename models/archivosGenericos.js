@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const path = require('path');
 
-const ImageSchema = new Schema({
+const esquema = new Schema({
   title: { type: String },
   description: { type: String },
   filename: { type: String },
@@ -12,16 +12,17 @@ const ImageSchema = new Schema({
     icono: String
         },
 
-  timestamp: { type: Date, default: Date.now },
-  usuarioDueño:  mongoose.Schema.Types.Mixed
-});
+  // timestamp: { type: Date, default: Date.now },
+  fecha_ingreso:  { type: Date, default: Date.now },
+  idCreador : {type: mongoose.Schema.Types.ObjectId, ref: 'usuario', required: true},
+} , { timestamps: true });
 
-ImageSchema.virtual('uniqueId')
-  .get(function () {
-    return this.filename.replace(path.extname(this.filename), '');
-  });
 
-module.exports = mongoose.model('Imagenes', ImageSchema);
+
+
+
+var archivosGenericos = mongoose.model('archivosGenericos', esquema);
+module.exports = archivosGenericos;
 
 
 

@@ -9,7 +9,8 @@ const ImageSchema = new Schema({
 //   views: { type: Number, default: 0 },
 //   likes: { type: Number, default: 0 },
   timestamp: { type: Date, default: Date.now },
-  usuarioDueño:  mongoose.Schema.Types.Mixed
+  idCreador : {type: mongoose.Schema.Types.ObjectId, ref: 'usuario', required: true},
+
 });
 
 

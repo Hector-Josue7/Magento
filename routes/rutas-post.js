@@ -12,16 +12,17 @@ var  lodash = require('lodash');
 var bcrypt = require('bcryptjs');
 var  Joi = require('joi');
 var jwt = require('jsonwebtoken');
-const { Imagen, Usuario, paginaPrincipal } = require('../models');
+const { imagenes, usuario, paginaPrincipal } = require('../models');
 
 
 module.exports = function(app)
 {
 // registro de usuarios
 app.post('/registro', async function(req,res , next){ // http://localhost:3000/registro     (2) 
-let user = await Usuario.findOne({ correo: req.body.correo });
+let user = await usuario.findOne({ correo: req.body.correo });
   if (user) {
     return res.status(400).send('That user already exisits!');
+    
  //res.status(200).redirect('/registro');
     } else {
      user = new Usuario({
@@ -30,6 +31,7 @@ let user = await Usuario.findOne({ correo: req.body.correo });
         usuario: req.body.usuario,
         correo: req.body.correo,
         clave: req.body.clave,
+        foto: '../public/img/team/ac_generico.jpg',
         gender: req.body.gender,
         birthdate:{
         day: req.body.day,
@@ -56,10 +58,10 @@ const validPassword = await bcrypt.compare(req.body.clave, user.clave);
 if (!validPassword) {
     return res.status(400).send('Credenciales invalidas');
 }
-const token = jwt.sign({ _id: user._id }, 'PrivateKey');
-// req.session.correoUsuario = req.params.correo;    // se desea establecer algunas variables de sesion
-// req.session.codigoUsuario = user._id;
-// req.session.codigoTipoUsuario = user.tipoUsuario;
+// const token = jwt.sign({ _id: user._id }, 'PrivateKey');
+ req.session.correoUsuario = req.params.correo;    // se desea establecer algunas variables de sesion
+ req.session.codigoUsuario = user._id;
+ req.session.codigoTipoUsuario = user.tipoUsuario;
 // res.redirect(`/${user._id}/inicio`);
 res.status(200).redirect('/home');
 });
@@ -86,7 +88,7 @@ app.post('/subirfoto', upload.array('image', 1), function(req, res) {  // http:/
 });
 
 
-app.post('/paginaestatica' ,  function(req, res) {  // http://localhost:3000/paginaestatica
+app.post('/paginaestatica' ,  function(req, res) {  // http://localhost:3000/paginaestatica      seria recomendable reescribir la ruta cuando se loguee el usuario asi http://localhost:3000/:id_usuario/paginaPrincipal
 
 //    for(var x=0;x<req.files.length;x++) {
 //       fs.createReadStream('./public/img/paginaPrincipal/temp/'+req.files[x].filename).pipe(fs.createWriteStream('./public/img/paginaPrincipal/'+req.files[x].originalname)); //copiamos el archivo a la carpeta definitiva de fotos
@@ -112,14 +114,13 @@ app.post('/paginaestatica' ,  function(req, res) {  // http://localhost:3000/pag
 // }
 let newPaginaPrincipal = new paginaPrincipal({
           editorEncabezado: req.body.editorEncabezado,
-               editorPagina: req.body.editorPagina,
-               editorPiePagina: req.body.editorPiePagina,
-               tituloPagina: req.body.tituloPagina,
-               descripcionPagina: req.body. descripcionPagina,
-            
-                palabrasClave: req.body.palabrasClave,
-                editorCss: req.body.editorCss,
-                editorJs: req.body.editorJs
+          editorPagina: req.body.editorPagina,
+          editorPiePagina: req.body.editorPiePagina,
+          tituloPagina: req.body.tituloPagina,
+          descripcionPagina: req.body. descripcionPagina,
+          palabrasClave: req.body.palabrasClave,
+          editorCss: req.body.editorCss,
+          editorJs: req.body.editorJs
    }); 
    newPaginaPrincipal.save()
       .then(function(obj){

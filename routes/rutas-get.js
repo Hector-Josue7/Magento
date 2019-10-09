@@ -9,7 +9,7 @@ var  lodash = require('lodash');
 var bcrypt = require('bcryptjs');
 var  Joi = require('joi');
 var jwt = require('jsonwebtoken');
-const { Imagen, Usuario } = require('../models');
+const { imagen, usuario } = require('../models');
 var upload = multer({dest: './public/img/cargaImagenes/temp/'});
 
 
