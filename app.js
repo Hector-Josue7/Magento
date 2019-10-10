@@ -33,6 +33,7 @@
  //routes
  require('./routes/rutas-post')(app);
  require('./routes/rutas-get')(app);
+ //require ('./routes/paginas-estaticas-routers')(app);
 //require('./routes/rutas-inicio-sesion')(app);
 // app.use('/api', routes);
 

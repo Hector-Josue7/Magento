@@ -19,5 +19,5 @@ idAdministrador : {type: Schema.Types.ObjectId,
 
     }, { timestamps: true });
 
-var User = mongoose.model('usuario', esquema);
-module.exports = User;
+var creacion_usuarios = mongoose.model('creacion_usuarios', esquema);
+module.exports = creacion_usuarios;

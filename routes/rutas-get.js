@@ -1,30 +1,25 @@
 var express = require('express');
 var bodyParser = require("body-parser");
-var  mongoose = require("mongoose");
-var session = require("express-session");
-const path = require('path');
 var multer = require('multer');
-const fs = require('fs-extra');
-var  lodash = require('lodash');
 var bcrypt = require('bcryptjs');
-var  Joi = require('joi');
-var jwt = require('jsonwebtoken');
-const { imagen, usuario } = require('../models');
+
+
+// const { imagen, usuario, tipousuario } = require('../models');
 var upload = multer({dest: './public/img/cargaImagenes/temp/'});
 
-
-
-
+var usuario = require('../models/usuario');
+var tipoUsuario = require('../models/tipousuario');
+var paginaEstatica = require('../models/paginaestatica');
 module.exports = function(app)
 {
      app.get('/',function(req,res){ // http://localhost:3000/       (1)
         res.render('index')
      });
      
-     app.get('/registro',function(req, res){  // http://localhost:3000/registro    (2) 
+     app.get('/registro',function(req, res){  // http://localhost:3000/registro   (2) 
        res.render('registro');
       });
-    app.get('/login', async function(req, res, next){   // http://localhost:3000/login     (3)
+    app.get('/login', function(req, res, next){   // http://localhost:3000/login     (3)
         res.render('login');
        });
     app.get(`/home`,  function (req, res, next) { // http://localhost:3000/home     (4)
@@ -74,9 +69,7 @@ app.get('/galeriaimagenes', function(req,res){ // http://localhost:3000/galeriai
   app.get('/eleccionpagina', function(req,res){ // http://localhost:3000/eleccionpagina
     res.render('eleccionPagina');
   });
-  app.get('/eleccionpagina', function(req,res){ // http://localhost:3000/eleccionpagina
-    res.render('eleccionPagina');
-  });
+ 
   app.get('/galeriaarchivos', function(req,res){ // http://localhost:3000/galeriaarchivos
     res.render('galeriaArchivos');
   });
@@ -112,4 +105,46 @@ app.get('/galeriaimagenes', function(req,res){ // http://localhost:3000/galeriai
   app.get('/plantillas', function(req,res){ // http://localhost:3000/plantillas
     res.render('plantillas');
   });
+
+
+  // peticion para obtener tipos de usuario 
+
+  
+// app.get("/i",function(req,res){ // http://localhost:3000/i
+//   tipoUsuario.find().sort({orden:1})
+//   .then(data=>{
+//       res.send(data);
+//   })
+//   .catch(error=>{
+//       res.send(error);
+//   });
+// });
+
+
+//Obtener el listado de las categorias
+app.get("/tipousuario",function(req,res){  // http://localhost:3000/tipousuario
+  tipoUsuario.find()
+  .then(data=>{
+      res.send(data);
+  })
+  .catch(error=>{
+      res.send(error);
+  });
+});
+
+app.get('/paginaestatica', function(req, res){ // http://localhost:3000/paginaestatica
+  paginaEstatica.find()
+
+  .then((data)=>{
+    res.send(data[0]);//Se le pone 0 para que solo envie un json y no un arreglo con un json
+    res.end();
+})
+.catch((error)=>{
+    res.send(error);
+    res.end();
+});
+
+
+
+});
     }

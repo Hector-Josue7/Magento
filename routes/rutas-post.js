@@ -7,45 +7,122 @@ var session = require("express-session");
 var multer = require('multer');
 var upload = multer({dest: './public/img/cargaImagenes/temp/'});
 var uploadPaginaPrincipal = multer({dest: './public/img/paginaPrincipal/temp/'});
-var util = require('util');
+
 var  lodash = require('lodash');
 var bcrypt = require('bcryptjs');
-var  Joi = require('joi');
-var jwt = require('jsonwebtoken');
-const { imagenes, usuario, paginaPrincipal } = require('../models');
 
 
+// const { imagenes, usuario, paginaPrincipal } = require('../models');
+var usuario = require('../models/usuario');
+ var tipousuario = require('../models/tipousuario');
+ var paginaEstatica =require('../models/paginaestatica');
+// var objImagen = require('../models/Imagenes');
 module.exports = function(app)
 {
 // registro de usuarios
-app.post('/registro', async function(req,res , next){ // http://localhost:3000/registro     (2) 
-let user = await usuario.findOne({ correo: req.body.correo });
+app.post('/registro',  function(req, res ){ // http://localhost:3000/registro     (2) 
+let user =  usuario.findOne({ correo: req.body.correo });
   if (user) {
-    return res.status(400).send('That user already exisits!');
+    return res.status(400).send('Ya existe un usuario registrado con ese correo');
     
  //res.status(200).redirect('/registro');
+
+
+
+ //   var p = new pelicula({
+//           nombre: req.body.nombre,
+//           descripcion: req.body.descripcion,
+//           caratula:req.body.caratula,
+//           categoria: {
+//                   _id: req.body.categoria,
+//                   nombre: req.body.nombreCategoria
+//           },
+//           calificacion: req.body.calificacion,
+//           imagenes: req.body.imagenes,
+//           original: req.body.original
+//   });
+
     } else {
-     user = new Usuario({
+     user = new usuario({
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         usuario: req.body.usuario,
         correo: req.body.correo,
         clave: req.body.clave,
-        foto: '../public/img/team/ac_generico.jpg',
+     //   foto: '../public/img/team/ac_generico.jpg',
         gender: req.body.gender,
         birthdate:{
         day: req.body.day,
         month: req.body.month,
         year: req.body.year
+     },
+     tipoUsuario: {
+
+_id: req.body.tipoUsuario,
+// _id: req.body.nombreTipoUsuario,
+nombreTipoUsuario: req.body.nombreTipoUsuario
+
      }
+
+
   });
-   const salt = await bcrypt.genSalt(10);
-   user.clave = await bcrypt.hash(user.clave, salt);
-   await user.save();
-   res.send(lodash.pick(user, ['_id', 'nombre', 'correo']));
+
+
+   const salt =  bcrypt.genSalt(10);
+   user.clave = bcrypt.hash(user.clave, salt);
+   console.log(JSON.stringify({
+    nombre: req.body.nombre,
+    apellido: req.body.apellido,
+    usuario: req.body.usuario,
+    correo: req.body.correo,
+    clave: req.body.clave,
+   // foto: '../public/img/team/ac_generico.jpg',
+    gender: req.body.gender,
+    birthdate:{
+    day: req.body.day,
+    month: req.body.month,
+    year: req.body.year
+ },
+ tipoUsuario: {
+
+_id: req.body.tipoUsuario,
+
+nombreTipoUsuario: req.body.nombreTipoUsuario
+  // `<option value="${res[i]._id}">${res[i].nombre}</option>`
+  // categoria: {
+    //                   _id: req.body.categoria,
+    //                   nombre: req.body.nombreCategoria
+    //           },
+   
+ }
+//  tipoUsuario: req.body.slcTipoUsuario
+//  ,tarjeta:{
+  //                   tipo:req.body.tipoTarjeta,
+  //                   numero:req.body.numeroTarjeta,
+  //                   ccv:req.body.ccvTarjeta,
+  //                   propietario:req.body.propietario,
+  //                   mesExpiracion:req.body.mes,
+  //                   anioExpiracion:req.body.anio,
+  //               },
+
+} ));
+
+   user.save()
+   .then( objeto =>{
+
+
+res.send(objeto);
+res.end();
+   })
+   .catch(error=>{
+          res.send(error);
+      });
+  //  res.send(lodash.pick(user, ['_id', 'nombre', 'correo']));
 
  }
 });
+
+
 // verificacion de login****************************************************************************************************************************************************
 //app.post('/login/:correo', async function(req, res){
 app.post('/login', async function(req, res){ // http://localhost:3000/login     (3)
@@ -65,6 +142,7 @@ if (!validPassword) {
 // res.redirect(`/${user._id}/inicio`);
 res.status(200).redirect('/home');
 });
+
 
 // app.get('/obtener-sesion',function(req, res){
 //     res.send({correo:req.session.correo});
@@ -133,9 +211,33 @@ let newPaginaPrincipal = new paginaPrincipal({
      });
 
 });
+// guardar pagina estatica
+app.post('/paginaestatica/guardaPagina', function(req, res){ // http://localhost/paginaestatica/guardaPagina
 
+
+
+        let newPaginaEstatica = new paginaEstatica({tituloPaginaEstatica: req.body.tituloPaginaEstatica}); 
+    
+        //Promesa
+        newPaginaEstatica.save()
+        .then(function(obj){
+            res.send(obj);
+            res.end();
+        })
+        .catch(function(error){
+            res.send(error);
+            res.end();
+        });
+    });
 //FIN
 }
 
 
 
+
+
+
+
+
+ 
+        

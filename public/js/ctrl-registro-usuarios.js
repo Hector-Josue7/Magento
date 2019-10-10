@@ -21,7 +21,8 @@ var campos = [
 {id: 'clave', valido:false},
 {id: 'day', valido: false},
 {id: 'month', valido:false },
-{id: 'year', valido:false}
+{id: 'year', valido:false},
+{id: 'tipoUsuario', valido:false}
 
 ];
 
@@ -52,6 +53,11 @@ function validarCampos(){
     
     let genderInput = document.querySelector('input[type="radio"][name="gender"]:checked');
     
+
+
+    // let combo = 
+    //  let combo =  document.getElementById("slcTipoUsuario");
+
     let persona = {
  
         nombre: document.getElementById('nombre').value,
@@ -59,12 +65,21 @@ function validarCampos(){
         usuario: document.getElementById('usuario').value,
         correo: document.getElementById('correo').value,
         clave: document.getElementById('clave').value,
+      
         gender: (genderInput==null)?"":genderInput.value, 
         birthdate: {
             day: document.getElementById('day').value,
             month: document.getElementById('month').value,
             year: document.getElementById('year').value
-        }
+        },
+    //   tipoUsuario: combo.options[combo.selectedIndex].text
+        // tipoUsuario: document.getElementById('tipoUsuario')
+        // tipoUsuario=${$('#tipoUsuario option:selected').text()
+tipoUsuario:document.getElementById('tipoUsuario').value,
+nombreTipoUsuario: $("#tipoUsuario option:selected").text()
+
+
+        // "&nombreCategoria="+$("#categoria option:selected").text();
     }
 
     return persona;
@@ -79,7 +94,17 @@ function registrarUsuario(){
     
 
     //Guardar en el servidor
-    let parametros = `nombre=${persona.nombre}&apellido=${persona.apellido}&usuario=${persona.usuario}&correo=${persona.correo}&clave=${persona.clave}&gender=${persona.gender}&day=${persona.birthdate.day}&month=${persona.birthdate.month}&year=${persona.birthdate.year}`;
+    let parametros = `nombre=${persona.nombre}
+                     &apellido=${persona.apellido}
+                     &usuario=${persona.usuario}
+                     &correo=${persona.correo}
+                     &clave=${persona.clave}
+                     &gender=${persona.gender}
+                     &day=${persona.birthdate.day}
+                     &month=${persona.birthdate.month}
+                     &year=${persona.birthdate.year}
+                     &tipoUsuario=${persona.tipoUsuario}
+                     &nombreTipoUsuario=${persona.nombreTipoUsuario}`;                                  
 
 
     console.log('Información a enviar: ' + parametros);
@@ -129,6 +154,105 @@ function marcarInput(id, valido){
     }
 }
 
+
+
+
+$(document).ready(function(){
+    console.log("El DOM ha sido cargado");
+    $.ajax({
+        url:"/tipousuario",
+        method:"GET",
+        dataType:"json",
+        success:function(res){
+            console.log("Respuesta");
+            console.log(res);
+            for (var i=0; i<res.length; i++){
+        
+                $("#tipoUsuario").append(
+                    `<option value="${res[i]._id}">${res[i].nombreTipoUsuario}</option>`
+                );
+            }
+           
+        },
+        error:function(error){
+            console.log(error);
+        }
+    });
+    /**/
+});
+
+
+
+
+// $("#btn-guardar-pelicula").click(function(){
+//     var parametros = $("#formulario").serialize() + "&nombreCategoria="+$("#categoria option:selected").text();
+//     console.log("Información a guardar: " + parametros);
+//     $.ajax({
+//         url:"http://localhost:3335/peliculas/",
+//         method:"post",
+//         data: parametros,
+//         dataType: "json",
+//         success:function(res){
+//             console.log(res);
+//             $("#modalAgregarPelicula").modal("hide");
+//             var estrellas="";
+//             for (var j=0;j<res.calificacion;j++)
+//                 estrellas+='<i class="fas fa-star"></i>';
+//             //Anexar la pelicula guardada
+//             $("#"+res.categoria._id).append( 
+//                 `<div class="col-xl-3 col-sm-12 col-xs-12" id="${res._id}">
+//                     <div>
+//                        <div class="encabezado" style="background-image: url(${res.caratula});"></span><span class="">${ res.original?'<img src="img/logo-netflix-small.png">':'' }</span></div>
+//                         <div class="descripcion">
+//                             <div class="titulo-descripcion">${res.nombre}</div>
+//                             <div class="canal">${res.descripcion}</div>
+//                             <div class="visualizaciones">${estrellas}</div>
+//                             <div class="visualizaciones"><a href="" onclick="verMas(event, '${res._id}')">Ver más</a> | <a href="" onclick="eliminar(event, '${res._id}')">Eliminar</a></div>
+//                         </div>
+//                     </div>
+//                 </div>`);
+//         },
+//         error:function(error){
+//             console.log(error);
+//             $("#modalVerMas").modal("hide");
+//         }
+//     });
+// });
+
+// $("#btn-guardar-pelicula").click(function(){
+//     var parametros = $("#formulario").serialize() + "&nombreCategoria="+$("#categoria option:selected").text();
+//     console.log("Información a guardar: " + parametros);
+//     $.ajax({
+//         url:"http://localhost:3335/peliculas/",
+//         method:"post",
+//         data: parametros,
+//         dataType: "json",
+//         success:function(res){
+//             console.log(res);
+//             $("#modalAgregarPelicula").modal("hide");
+//             var estrellas="";
+//             for (var j=0;j<res.calificacion;j++)
+//                 estrellas+='<i class="fas fa-star"></i>';
+//             //Anexar la pelicula guardada
+//             $("#"+res.categoria._id).append( 
+//                 `<div class="col-xl-3 col-sm-12 col-xs-12" id="${res._id}">
+//                     <div>
+//                        <div class="encabezado" style="background-image: url(${res.caratula});"></span><span class="">${ res.original?'<img src="img/logo-netflix-small.png">':'' }</span></div>
+//                         <div class="descripcion">
+//                             <div class="titulo-descripcion">${res.nombre}</div>
+//                             <div class="canal">${res.descripcion}</div>
+//                             <div class="visualizaciones">${estrellas}</div>
+//                             <div class="visualizaciones"><a href="" onclick="verMas(event, '${res._id}')">Ver más</a> | <a href="" onclick="eliminar(event, '${res._id}')">Eliminar</a></div>
+//                         </div>
+//                     </div>
+//                 </div>`);
+//         },
+//         error:function(error){
+//             console.log(error);
+//             $("#modalVerMas").modal("hide");
+//         }
+//     });
+// });
 
 // function llenarTabla(){
 //     document.getElementById('tabla-registros').innerHTML = '';

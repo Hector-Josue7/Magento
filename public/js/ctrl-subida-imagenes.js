@@ -73,9 +73,21 @@ function fileValidation(){
         var filePath = fileInput.value;
      var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
       if(!allowedExtensions.exec(filePath)){
-          alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+
+            // alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+            Swal.fire({
+                type: 'error',
+                title: 'Ups nos hemos confundido',
+                text: 'esta opción es para subir imagenes',
+                // footer: '<a href>Why do I have this issue?</a>',
+                timer: 4000
+              })
           fileInput.value = '';
+       
           return false;
+
+
+
       }else{
           //Image preview
           if (fileInput.files && fileInput.files[0]) {

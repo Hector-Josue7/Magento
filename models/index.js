@@ -12,8 +12,9 @@ paginaPrincipal: require('./paginaPrincipal'),
 plantillasTemas: require('./plantillasTemas'),
 postCategoria: require('./post_categorias'),
 shortcuts: require('./shortcuts'),
-tipoUsuario: require('./tipoUsuario'),
-usuario: require('./usuario'),
-videos: require('./Videos')
+tipousuario: require('./tipousuario'),
+usuarios: require('./usuario'),
+videos: require('./video'),
+// categoria: require('./tipoUsuario')
   };
   

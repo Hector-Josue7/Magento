@@ -3,7 +3,7 @@ $(document).ready(function(){
     llenarTabla();
 });
 
-var campos =  {id:'nombre-pagina', valido:false};
+var campos =  {id:'tituloPaginaEstatica', valido:false};
 
 
 function validarCampos(){
@@ -18,7 +18,7 @@ campos.valido = validarCampoVacio(campos.id);
     
 
     
-    let pagina = { nombrePagina: document.getElementById('nombre-pagina').value,}
+    let pagina = { tituloPaginaEstatica: document.getElementById('tituloPaginaEstatica').value,}
 
     return pagina;
 }
@@ -31,7 +31,7 @@ function registrarPagina(){
 
     //Guardar en el servidor
     // let parametros = `firstName=${persona.firstName}&lastName=${persona.lastName}&email=${persona.email}&password=${persona.password}&month=${persona.birthdate.month}&day=${persona.birthdate.day}&year=${persona.birthdate.year}&gender=${persona.gender}`;
-   let parametro = `nombrePagina=${pagina.nombrePagina}`
+   let parametro = `paginaEstatica=${pagina.paginaEstatica}`
     console.log('Información a enviar: ' + parametro);
     $.ajax({
         url:'/paginaestatica/guardaPagina',
@@ -72,7 +72,7 @@ function llenarTabla(){
     document.getElementById('tabla-registros').innerHTML = '';
     $.ajax({
         // url:'http://localhost:8888/usuarios/',
-        url: '/paginaestatica/',
+        url: '/paginaestatica',
         method:'GET',
         dataType:'json',
         success:(res)=>{
@@ -91,7 +91,7 @@ function llenarTabla(){
 function anexarFilaTabla(pagina){
     document.getElementById('tabla-registros').innerHTML += 
                     `<tr id="${pagina._id}">
-                        <td>${pagina.nombrePagina}</td>
+                        <td>${pagina.tituloPaginaEstatica}</td>
                        <td><button type="button" onclick="eliminar('${pagina._id}')"><i class="fas fa-trash-alt"></i></button></td>
                         <td><a href="paginaEstaticaDashboard.html"><button type="button"><i class="fas fa-edit"></i></button></a></td>
                     </tr>`;
@@ -100,7 +100,7 @@ function anexarFilaTabla(pagina){
 function eliminar(id){
     $.ajax({
         // url:`http://localhost:8888/usuarios/${id}`,
-        url:`paginaestatica/eliminaPagina/${id}`,
+        url:`/paginaestatica/eliminaPagina/${id}`,
         method:'delete',
         dataType:'json',
         success:(res)=>{

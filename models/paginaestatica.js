@@ -3,11 +3,8 @@ const { Schema } = mongoose;
 
 var esquema = new Schema(
     {
-        tituloPaginaEstatica: String,
-        menu: {_id: Schema.Types.ObjectId, 
-                enlaceFijo: String,
-                estilosCss: String }, // Tendrá que indicar los estilos css del menú o tomarlos directamente del css principal del sitio.
-            // estilosCss: Array },
+        tituloPaginaEstatica: { type: String, required: true, minlength: 3 },
+        menu:[{_id: Schema.Types.ObjectId, tituloMenu: String, enlaceFijo: String, estilosCss: String, estilosCss: Array}],
         descripcion: String, 
         palabrasClave: String, 
         paginaPadre: String,
@@ -19,13 +16,19 @@ var esquema = new Schema(
         breadcrumb: Boolean,
         editor_html_wysiwyg: String,
         shortcuts: Array,
-        idCreador : {type: Schema.Types.ObjectId,
-                    ref: 'usuario',required: true},
+        // idCreador : {type: Schema.Types.ObjectId,
+        //             ref: 'usuario',required: true},
+
+    idUsuarioAdmin: {  // se hace un cruce con la tabla de usuarios, el cual accede al atributo tipousuario, y se extrae el nombre para saber si es un administrador
+        type: Schema.Types.ObjectId,
+        ref: 'usuarios',
+        required: true,
+        "tipoUsuario.nombreTipoUsuario": String
+    }
 
     });
 
-var paginaEstatica = mongoose.model('paginaEstatica', esquema);
-module.exports = paginaEstatica;
+    module.exports = mongoose.model('pagina_estaticas',esquema);
 
 
 // Los menús serán componentes independientes que se podrán incrustar vía shortcut.

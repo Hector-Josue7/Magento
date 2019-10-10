@@ -152,7 +152,7 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
           </div>
      
           <div class="form-group col-md-6">
-              <label for="foto-perfil">Elija su foto</label>
+              <label for="foto">Elija su foto</label>
               <input type="file" class="form-control-file" id="foto-perfil">
             </div>
     </div>
@@ -182,16 +182,100 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
             <div class="valid-feedback">Ok</div>
             <div class="invalid-feedback">Year is required</div>
         </div>
+   
+
+        <div class="form-row">
+            <label for="tipoUsuario">Elija un tipo de usuario </label>
+          <div class="col-lg-6">
+              <select class="form-control" name="tipoUsuario" id="tipoUsuario">
+               
+                  <option value="" selected diabled>Elijalo de aqui</option>
+                <div class="valid-feedback">Ok</div>
+                  <div class="invalid-feedback">Year is required</div>
+                 
+                 
+                </select>
+                <div class="valid-feedback">Ok</div>
+                <div class="invalid-feedback">Year is required</div>
+          </div>
+        
+        
+        </div>
 </div>
-<button onclick="registrarUsuario()" name="boton-registro" id="boton-registro" type="button" class="btn btn-primary btn-block">Vamos</button><br>
+<button style="margin-top:70px" onclick="registrarUsuario()" name="boton-registro" id="boton-registro" type="button" class="btn btn-primary btn-block">Vamos</button><br>
     <p class="form-link">¿Ya tienes una cuenta? <a href="/login">Ingresa aquí</a></p>
-  <!-- </form> -->
+  
   </div>
 </div>
+
+<!-- <div class="row">
+    <h2 style="margin-top: 100px">Incluso puedes pagar para obtener un mejor plan y beneficios como administrador</h2>
+<div class="col-lg-5" style="margin:auto; margin-top:100px">
+
+
+  
+    <form action="#" class="credit-card-div">
+        <div class="panel panel-default" >
+         <div class="panel-heading">
+             
+              <div class="row ">
+                      <div class="col-md-12">
+                          <input type="text" class="form-control" placeholder="Enter Card Number" />
+                      </div>
+                  </div>
+             <div class="row ">
+                      <div class="col-md-3 col-sm-3 col-xs-3">
+                          <span class="help-block text-muted small-font" > Expiry Month</span>
+                          <input type="text" class="form-control" placeholder="MM" />
+                      </div>
+                 <div class="col-md-3 col-sm-3 col-xs-3">
+                          <span class="help-block text-muted small-font" >  Expiry Year</span>
+                          <input type="text" class="form-control" placeholder="YY" />
+                      </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                          <span class="help-block text-muted small-font" >  CCV</span>
+                          <input type="text" class="form-control" placeholder="CCV" />
+                      </div>
+                 <div class="col-md-3 col-sm-3 col-xs-3">
+
+          
+                 </div>
+                  </div>
+             <div class="row ">
+                      <div class="col-md-12 pad-adjust">
+        
+                          <input type="text" class="form-control" placeholder="Name On The Card" />
+                      </div>
+                  </div>
+             <div class="row">
+        <div class="col-md-12 pad-adjust">
+            <div class="checkbox">
+            <label>
+              <input type="checkbox" checked class="text-muted"> Save details for fast payments <a href="#"> learn how ?</a>
+            </label>
+          </div>
+        </div>
+             </div>
+               <div class="row ">
+                    <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                         <input type="submit"  class="btn btn-danger" value="CANCEL" />
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                          <input type="submit"  class="btn btn-warning btn-block" value="PAY NOW" />
+                      </div>
+                  </div>
+             
+                           </div>
+                      </div>
+        </form>
+</div>
+
+</div> -->
 </div>
 
 
- <script src="../public/js/jquery-3.4.1.min.js"></script>
+ <!-- <script src="../public/js/jquery-3.4.1.min.js"></script> -->
+ <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
  <script src="../public/js/bootstrap.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>

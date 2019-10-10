@@ -14,5 +14,5 @@ var esquema = new Schema(
    
     });
 
-var paginaEstatica = mongoose.model('plantilla_tema', esquema);
-module.exports = paginaEstatica;
+var plantilla_tema = mongoose.model('plantilla_tema', esquema);
+module.exports = plantilla_tema;

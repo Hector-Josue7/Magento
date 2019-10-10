@@ -13,9 +13,8 @@ var esquema = new mongoose.Schema({
     palabrasClave: String,
     editorCss: String,
     editorJs: String,
-    idCreador : {type: mongoose.Schema.Types.ObjectId, 
-        ref: 'usuario', required: true},
-   fechaCreacion : {type: Date, default: Date.now},
+    idCreador : {type: mongoose.Schema.Types.ObjectId, ref: 'usuario', required:true, "tipoUsuario.nombreTipoUsuario": String},
+    fechaCreacion : {type: Date, default: Date.now},
     ultimaModificacion : {type: Date, default: Date.now},
 });
 
