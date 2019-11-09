@@ -24,25 +24,8 @@ app.post('/registro',  function(req, res ){ // http://localhost:3000/registro   
 let user =  usuario.findOne({ correo: req.body.correo });
   if (user) {
     return res.status(400).send('Ya existe un usuario registrado con ese correo');
-    
- //res.status(200).redirect('/registro');
-
-
-
- //   var p = new pelicula({
-//           nombre: req.body.nombre,
-//           descripcion: req.body.descripcion,
-//           caratula:req.body.caratula,
-//           categoria: {
-//                   _id: req.body.categoria,
-//                   nombre: req.body.nombreCategoria
-//           },
-//           calificacion: req.body.calificacion,
-//           imagenes: req.body.imagenes,
-//           original: req.body.original
-//   });
-
-    } else {
+//res.status(200).redirect('/registro');
+} else {
      user = new usuario({
         nombre: req.body.nombre,
         apellido: req.body.apellido,
@@ -57,18 +40,11 @@ let user =  usuario.findOne({ correo: req.body.correo });
         year: req.body.year
      },
      tipoUsuario: {
-
 _id: req.body.tipoUsuario,
 // _id: req.body.nombreTipoUsuario,
 nombreTipoUsuario: req.body.nombreTipoUsuario
-
-     }
-
-
-  });
-
-
-   const salt =  bcrypt.genSalt(10);
+}});
+const salt =  bcrypt.genSalt(10);
    user.clave = bcrypt.hash(user.clave, salt);
    console.log(JSON.stringify({
     nombre: req.body.nombre,
