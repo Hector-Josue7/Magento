@@ -1,214 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-  <link rel="stylesheet" href="../public/css/bootstrap4.min.css">
-<style>
-.profile-image {
-  align-self: auto;
-  width: 150px;
-  height: 150px;
-  border: 4px solid white;
-  -webkit-border-radius: 75px;
-  border-radius: 75px;
-  overflow: hidden;
-  margin-bottom: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  margin-top: 10px;
-}
-.profile-image img {
-  width: 100%;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../public/css/bootstrap4.min.css" />
+  <style>
+    .profile-image {
+      align-self: auto;
+      width: 150px;
+      height: 150px;
+      border: 4px solid white;
+      -webkit-border-radius: 75px;
+      border-radius: 75px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-top: 10px;
+    }
 
-@media screen and (max-width: 992px) {
-  .responsive-header .profile-image {
-    float: left;
-    width: 100px;
-    height: 100px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    overflow: hidden;
-    margin-right: 30px;
-  }
-  .responsive-header .profile-content {
-    text-align: left;
-    margin-top: 30px;
-    overflow: hidden;
-  }
-}
+    .profile-image img {
+      width: 100%;
+    }
 
-.perfil-new{
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
-}
+    @media screen and (max-width: 992px) {
+      .responsive-header .profile-image {
+        float: left;
+        width: 100px;
+        height: 100px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        overflow: hidden;
+        margin-right: 30px;
+      }
 
-h3.profile-title {
-  margin-bottom: 3px;
-  color: white;
-  font-size: 18px;
-  font-family: 'robotobold';
-  text-align: center;
-}
-.profile-description{
-  text-align: center;
-  padding-bottom: 1px;
-}
-.tag{
-  text-align: center;
-  font-size: 12px;
-  background-color: #5d5a5ad8;
-  color: white;
-  border-radius: 5px;
-  width: 35%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  cursor: pointer;
-}
+      .responsive-header .profile-content {
+        text-align: left;
+        margin-top: 30px;
+        overflow: hidden;
+      }
+    }
 
-body{
-  background: #0f0c29;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .perfil-new {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: center;
+    }
 
-   
-    margin:0;
-    color:white;
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-}
+    h3.profile-title {
+      margin-bottom: 3px;
+      color: white;
+      font-size: 18px;
+      font-family: "robotobold";
+      text-align: center;
+    }
 
-</style>
-  </head>
+    .profile-description {
+      text-align: center;
+      padding-bottom: 1px;
+    }
+
+    .tag {
+      text-align: center;
+      font-size: 12px;
+      background-color: #5d5a5ad8;
+      color: white;
+      border-radius: 5px;
+      width: 35%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      cursor: pointer;
+    }
+
+    body {
+      background: #0f0c29;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right,
+          #24243e,
+          #302b63,
+          #0f0c29);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      margin: 0;
+      color: white;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+
 <body>
-<br>
+  <br />
 
-         <h2  style ="display: flex; align-items: center; justify-content: center;" >Regístrese con nosotros</h2>
-  <br>
-  
+  <h2 style="display: flex; align-items: center; justify-content: center;">
+    Regístrese con nosotros
+  </h2>
+  <br />
 
-<div class="container">
-  <div class="row">
+  <div class="container">
+    <div class="row">
       <div class="col-lg-4" style="color:white; margin-top:50px; margin-bottom:250px ">
-
-          <div id="div-img-perfil" style=" background-image: url('../public/img/team/ac_generico.jpg');" class="profile-image perfil-new"></div>
-  
+        <div id="div-img-perfil" style=" background-image: url('../public/img/team/ac_generico.jpg');"
+          class="profile-image perfil-new"></div>
       </div>
-    <div class="col-lg-8">
+      <div class="col-lg-8">
         <!-- <form class="w-80"> -->
-            <div class="form-row">
-
-              <div class="form-group col-md-6">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" name ="nombre" id="nombre" placeholder="Nombre">
-                <div class="valid-feedback">Ok</div>
-                <div class="invalid-feedback">Primer nombre es requerido</div>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="apellido">Apellido</label>
-                <input type="text" class="form-control" name ="apellido" id="apellido" placeholder="Apellido">
-                <div class="valid-feedback">Ok</div>
-                <div class="invalid-feedback">Apellido es requerido</div>
-              </div>
-   
-     
-            </div>
-          
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="usuario">Usuario</label>
-          <div class="input-group mb-2 mr-sm-2">
-            <div class="input-group-prepend">
-              <div class="input-group-text">@</div>
-            </div>
-            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" />
             <div class="valid-feedback">Ok</div>
-            <div class="invalid-feedback">El nombre de usuario es requerido</div>
+            <div class="invalid-feedback">Primer nombre es requerido</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido" />
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">Apellido es requerido</div>
           </div>
         </div>
-     
-        <div class=" form-group col-md-6">
-            <label for="correo">Correo</label>
-          <input onkeyup="validarCorreo(this)" id="correo" name="correo" class="form-control" type="text" placeholder="hector@magento.com">
-          <div class="valid-feedback">Ok</div>
-          <div class="invalid-feedback">Correo invalido</div>
-      </div>
-      </div>
 
-    <div class="form-row">
-        <div class="form-group col-md-6">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="usuario">Usuario</label>
+            <div class="input-group mb-2 mr-sm-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+              </div>
+              <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario" />
+              <div class="valid-feedback">Ok</div>
+              <div class="invalid-feedback">
+                El nombre de usuario es requerido
+              </div>
+            </div>
+          </div>
+
+          <div class=" form-group col-md-6">
+            <label for="correo">Correo</label>
+            <input onkeyup="validarCorreo(this)" id="correo" name="correo" class="form-control" type="text"
+              placeholder="hector@magento.com" />
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">Correo invalido</div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
             <label for="clave">Contraseña</label>
-            <input type="password" name="clave" id="clave" class="form-control " placeholder="Contraseña" aria-describedby="passwordHelpInline">
+            <input type="password" name="clave" id="clave" class="form-control " placeholder="Contraseña"
+              aria-describedby="passwordHelpInline" />
             <!-- <small id="passwordHelpInline"  style="color: white">
                 Debe tener entre 8 y 20 caracteres.
             </small> -->
             <div class="valid-feedback">Ok</div>
             <div class="invalid-feedback">Password is required</div>
           </div>
-     
+
           <div class="form-group col-md-6">
-              <label for="foto">Elija su foto</label>
-              <input type="file" class="form-control-file" id="foto-perfil">
-            </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-3">
-            Genero<br>
-            <label><input name="gender" type="radio" value="F">Femenino</label>
-            <label><input name="gender" type="radio" value="M">Masculino</label>
-         
+            <label for="foto">Elija su foto</label>
+            <input type="file" class="form-control-file" id="foto-perfil" />
+          </div>
         </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            Genero<br />
+            <label><input name="gender" type="radio" value="F" />Femenino</label>
+            <label><input name="gender" type="radio" value="M" />Masculino</label>
+          </div>
 
- 
-        Cumpleaños
+          Cumpleaños
 
-       <div class="col-lg-2 col-12">
-            <select id="day" name="day" class="form-control"><option value="">Día</option></select>
+          <div class="col-lg-2 col-12">
+            <select id="day" name="day" class="form-control">
+              <option value="">Día</option>
+            </select>
             <div class="valid-feedback">Ok</div>
             <div class="invalid-feedback">Day is required</div>
-        </div>
-        <div class="col-lg-2 col-12">
-            <select id="month" name="month" class="form-control"><option value="">Mes</option></select>
+          </div>
+          <div class="col-lg-2 col-12">
+            <select id="month" name="month" class="form-control">
+              <option value="">Mes</option>
+            </select>
             <div class="valid-feedback">Ok</div>
             <div class="invalid-feedback">Month is required</div>
-        </div>
-        <div class="col-lg-2 col-12">
-            <select id="year" name="year" class="form-control"><option value="">Año</option></select>
+          </div>
+          <div class="col-lg-2 col-12">
+            <select id="year" name="year" class="form-control">
+              <option value="">Año</option>
+            </select>
             <div class="valid-feedback">Ok</div>
             <div class="invalid-feedback">Year is required</div>
-        </div>
-   
+          </div>
 
-        <div class="form-row">
+          <div class="form-row">
             <label for="tipoUsuario">Elija un tipo de usuario </label>
-          <div class="col-lg-6">
+            <div class="col-lg-6">
               <select class="form-control" name="tipoUsuario" id="tipoUsuario">
-               
-                  <option value="" selected diabled>Elijalo de aqui</option>
-                <div class="valid-feedback">Ok</div>
-                  <div class="invalid-feedback">Year is required</div>
-                 
-                 
-                </select>
+                <option value="" selected diabled>Elijalo de aqui</option>
                 <div class="valid-feedback">Ok</div>
                 <div class="invalid-feedback">Year is required</div>
+              </select>
+              <div class="valid-feedback">Ok</div>
+              <div class="invalid-feedback">Year is required</div>
+            </div>
           </div>
-        
-        
         </div>
-</div>
-<button style="margin-top:70px" onclick="registrarUsuario()" name="boton-registro" id="boton-registro" type="button" class="btn btn-primary btn-block">Vamos</button><br>
-    <p class="form-link">¿Ya tienes una cuenta? <a href="/login">Ingresa aquí</a></p>
-  
-  </div>
-</div>
+        <button style="margin-top:70px" onclick="registrarUsuario()" name="boton-registro" id="boton-registro"
+          type="button" class="btn btn-primary btn-block">
+          Vamos</button><br />
+        <p class="form-link">
+          ¿Ya tienes una cuenta? <a href="/login">Ingresa aquí</a>
+        </p>
+      </div>
+    </div>
 
-<!-- <div class="row">
+    <!-- <div class="row">
     <h2 style="margin-top: 100px">Incluso puedes pagar para obtener un mejor plan y beneficios como administrador</h2>
 <div class="col-lg-5" style="margin:auto; margin-top:100px">
 
@@ -271,14 +283,17 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 </div>
 
 </div> -->
-</div>
+  </div>
 
-
- <!-- <script src="../public/js/jquery-3.4.1.min.js"></script> -->
- <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
- <script src="../public/js/bootstrap.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
- <script src="../public/js/ctrl-registro-usuarios.js"></script> 
+  <!-- <script src="../public/js/jquery-3.4.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="../public/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="../public/js/ctrl-registro-usuarios.js"></script>
 </body>
+
 </html>
